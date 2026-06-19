@@ -1,0 +1,1320 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>初一升初二历史快速复习材料</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f8f6ef;
+      --surface: #ffffff;
+      --ink: #26231d;
+      --muted: #6f675b;
+      --line: #ddd5c5;
+      --accent: #9b2f2f;
+      --accent-2: #1f6f78;
+      --accent-3: #7a5b15;
+      --soft-red: #f8e8e3;
+      --soft-blue: #e6f2f3;
+      --soft-gold: #f4ecd4;
+      --soft-green: #e7f0e1;
+      --shadow: 0 18px 46px rgba(39, 32, 22, 0.12);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.72;
+      font-size: 16px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: 288px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    aside {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 22px 18px;
+      background: #2a241c;
+      color: #f8f3e8;
+      border-right: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .brand {
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+      margin-bottom: 16px;
+    }
+
+    .brand h1 {
+      font-size: 22px;
+      line-height: 1.28;
+      margin: 0 0 8px;
+      letter-spacing: 0;
+    }
+
+    .brand p {
+      margin: 0;
+      color: #d8cdbb;
+      font-size: 13px;
+    }
+
+    .nav-title {
+      color: #cbbda7;
+      font-size: 12px;
+      margin: 18px 8px 8px;
+    }
+
+    nav a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 6px;
+      color: #efe7d7;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.09);
+    }
+
+    .print-btn {
+      width: 100%;
+      margin-top: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      color: #fff;
+      background: #8f2b2b;
+      border-radius: 6px;
+      padding: 10px 12px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    .hero {
+      min-height: 420px;
+      display: grid;
+      align-items: end;
+      padding: 54px clamp(22px, 5vw, 70px) 42px;
+      color: #fff;
+      background:
+        linear-gradient(180deg, rgba(33, 25, 17, 0.25), rgba(33, 25, 17, 0.88)),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Greatwall_large.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-inner {
+      max-width: 980px;
+    }
+
+    .kicker {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 4px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.36);
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.24);
+      color: #f8e5b1;
+      font-size: 13px;
+    }
+
+    .hero h2 {
+      margin: 0;
+      max-width: 880px;
+      font-size: clamp(32px, 5vw, 58px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 16px 0 0;
+      font-size: 18px;
+      color: #f6efe3;
+    }
+
+    .content {
+      width: min(1080px, 100%);
+      margin: 0 auto;
+      padding: 28px clamp(18px, 4vw, 46px) 72px;
+    }
+
+    section {
+      scroll-margin-top: 22px;
+      margin: 28px 0;
+      padding: 26px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 30px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 26px 0 12px;
+      color: #342c20;
+      font-size: 21px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    h4 {
+      margin: 20px 0 8px;
+      font-size: 17px;
+      color: var(--accent);
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    ul, ol {
+      margin-top: 8px;
+      padding-left: 1.3em;
+    }
+
+    li {
+      margin: 4px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0 18px;
+      overflow-wrap: anywhere;
+    }
+
+    th, td {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: #f1eadc;
+      color: #3b3329;
+      font-weight: 700;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: #fffdf8;
+    }
+
+    .card h3,
+    .card h4 {
+      margin-top: 0;
+    }
+
+    .note {
+      border-left: 4px solid var(--accent-2);
+      background: var(--soft-blue);
+      padding: 12px 14px;
+      margin: 14px 0;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .warning {
+      border-left: 4px solid var(--accent);
+      background: var(--soft-red);
+      padding: 12px 14px;
+      margin: 14px 0;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .gold {
+      border-left: 4px solid var(--accent-3);
+      background: var(--soft-gold);
+      padding: 12px 14px;
+      margin: 14px 0;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .answer {
+      margin-top: 10px;
+      padding: 12px 14px;
+      background: var(--soft-green);
+      border: 1px solid #c9d9c0;
+      border-radius: 6px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 2px 8px;
+      margin: 0 4px 6px 0;
+      border-radius: 999px;
+      background: #f2eadb;
+      border: 1px solid #ded1bd;
+      color: #554838;
+      font-size: 13px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 10px;
+      margin: 18px 0;
+    }
+
+    .time-row {
+      display: grid;
+      grid-template-columns: 130px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+    }
+
+    .time-row strong {
+      display: block;
+      color: var(--accent);
+      font-size: 15px;
+    }
+
+    .time-row div {
+      padding: 10px 12px;
+      border-left: 4px solid var(--accent-2);
+      background: #fbfaf5;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .question {
+      margin: 16px 0;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fffefa;
+    }
+
+    .source {
+      padding: 12px 14px;
+      background: #f6f1e8;
+      border: 1px dashed #c6b79c;
+      border-radius: 6px;
+      color: #3f382e;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .checklist {
+      columns: 2;
+      column-gap: 28px;
+    }
+
+    .checklist li {
+      break-inside: avoid;
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 26px;
+    }
+
+    @media (max-width: 920px) {
+      .page {
+        display: block;
+      }
+
+      aside {
+        position: static;
+        height: auto;
+      }
+
+      nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px;
+      }
+
+      .grid,
+      .two {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 360px;
+      }
+
+      .time-row {
+        grid-template-columns: 1fr;
+      }
+
+      .checklist {
+        columns: 1;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+        font-size: 12px;
+      }
+
+      .page {
+        display: block;
+      }
+
+      aside,
+      .hero,
+      .print-btn {
+        display: none;
+      }
+
+      .content {
+        width: 100%;
+        padding: 0;
+      }
+
+      section {
+        box-shadow: none;
+        border: 1px solid #bbb;
+        break-inside: avoid;
+        margin: 12px 0;
+        padding: 14px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      h3 {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside>
+      <div class="brand">
+        <h1>初一升初二历史复习材料</h1>
+        <p>中国古代史主线、考点、材料题、答案解析</p>
+      </div>
+      <nav aria-label="页面目录">
+        <div class="nav-title">复习路径</div>
+        <a href="#how">怎么复习</a>
+        <a href="#exam">现在考什么</a>
+        <a href="#timeline">朝代时间轴</a>
+        <a href="#plan">10 天安排</a>
+        <div class="nav-title">分时期内容</div>
+        <a href="#prehistoric">史前时期</a>
+        <a href="#xia-shang-zhou">夏商周</a>
+        <a href="#spring-autumn">春秋战国</a>
+        <a href="#qin-han">秦汉</a>
+        <a href="#wei-jin">三国两晋南北朝</a>
+        <a href="#sui-tang">隋唐</a>
+        <a href="#song-yuan">宋元</a>
+        <a href="#ming-qing">明清</a>
+        <div class="nav-title">专题与训练</div>
+        <a href="#topics">专题整合</a>
+        <a href="#methods">材料题方法</a>
+        <a href="#tianjin">天津真题</a>
+        <a href="#practice">仿真训练</a>
+        <a href="#recite">默写清单</a>
+      </nav>
+      <button class="print-btn" type="button" onclick="window.print()">打印或保存 PDF</button>
+    </aside>
+
+    <main>
+      <div class="hero">
+        <div class="hero-inner">
+          <span class="kicker">七年级中国古代史复盘</span>
+          <h2>不是只背大纲，而是按现在初中历史考法复习</h2>
+          <p>每个时期都按“主线理解、核心知识、常见设问、材料题答案”组织，适合基础薄弱的孩子快速补框架、补表达、补得分点。</p>
+        </div>
+      </div>
+
+      <div class="content">
+        <section id="how">
+          <h2>一、怎么复习才有效</h2>
+          <div class="grid">
+            <div class="card">
+              <h3>第一步：先搭主线</h3>
+              <p>历史不是散点记忆。先背朝代顺序，再知道每一段的时代特征。比如春秋战国的关键词是“变革”，秦汉的关键词是“大一统”，宋元的关键词是“民族政权并立与经济重心南移”。</p>
+            </div>
+            <div class="card">
+              <h3>第二步：按题型背</h3>
+              <p>现在考试常问“原因、措施、影响、启示”。背知识点时就要顺手整理成这四类，不能只记一个名词。</p>
+            </div>
+            <div class="card">
+              <h3>第三步：练材料题</h3>
+              <p>材料题不是默写题。先从材料提取关键词，再结合所学补充背景和意义。答题要分点，句子短，关键词准。</p>
+            </div>
+          </div>
+          <div class="gold">
+            <strong>给孩子的最低要求：</strong>每个朝代至少说出 3 个关键词、1 个典型制度或事件、1 句历史影响。能做到这一点，成绩会先稳住。
+          </div>
+        </section>
+
+        <section id="exam">
+          <h2>二、现在初中历史主要考什么</h2>
+          <p>现行初中历史更重视核心素养和情境材料。题目往往不会直接问“背诵某段话”，而是给一段史料、图片、地图、表格或观点，让学生判断时代、提取信息、解释原因、评价影响。</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>考查方向</th>
+                <th>孩子要会什么</th>
+                <th>常见题目样子</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>时空观念</td>
+                <td>能把人物、事件放回正确朝代和阶段</td>
+                <td>“下列事件按时间排序正确的是……”</td>
+              </tr>
+              <tr>
+                <td>史料实证</td>
+                <td>能从材料中找依据，不凭感觉答题</td>
+                <td>“根据材料，概括宋代商业发展的表现。”</td>
+              </tr>
+              <tr>
+                <td>历史解释</td>
+                <td>能解释原因、影响、趋势</td>
+                <td>“结合所学，分析商鞅变法成功的原因。”</td>
+              </tr>
+              <tr>
+                <td>唯物史观</td>
+                <td>能理解生产力、制度、经济基础对历史发展的作用</td>
+                <td>“铁农具和牛耕推广产生了什么影响？”</td>
+              </tr>
+              <tr>
+                <td>家国情怀</td>
+                <td>能理解统一、多民族交融、文化自信</td>
+                <td>“从民族交融中得到什么认识？”</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="warning">
+            <strong>常见失分点：</strong>只写“促进发展”“加强交流”这种空话，没有写清楚促进了什么、谁和谁交流、对统一或社会发展有什么作用。
+          </div>
+        </section>
+
+        <section id="timeline">
+          <h2>三、朝代时间轴和阶段特征</h2>
+          <p>先把这条线背熟，再进入每个单元。考试遇到陌生材料，先判断它属于哪一段。</p>
+          <div class="timeline">
+            <div class="time-row">
+              <strong>史前时期</strong>
+              <div>元谋人、北京人、山顶洞人；半坡和河姆渡代表原始农耕生活；炎帝黄帝、尧舜禹体现早期传说和部落联盟。</div>
+            </div>
+            <div class="time-row">
+              <strong>夏商周</strong>
+              <div>早期国家产生和发展。夏朝出现王位世袭制，商朝有甲骨文和青铜文明，西周实行分封制。</div>
+            </div>
+            <div class="time-row">
+              <strong>春秋战国</strong>
+              <div>社会大变革。铁农具和牛耕推动生产力发展，各国变法，思想上百家争鸣，统一趋势加强。</div>
+            </div>
+            <div class="time-row">
+              <strong>秦汉</strong>
+              <div>统一多民族封建国家建立和巩固。秦统一并创立中央集权制度，汉武帝巩固大一统，丝绸之路开通。</div>
+            </div>
+            <div class="time-row">
+              <strong>魏晋南北朝</strong>
+              <div>政权分立、江南开发、民族交融。北方战乱与民族迁徙推动社会变化，北魏孝文帝改革促进交融。</div>
+            </div>
+            <div class="time-row">
+              <strong>隋唐</strong>
+              <div>统一、繁荣、开放。大运河沟通南北，科举制形成，唐朝政治经济文化繁荣，对外交流活跃。</div>
+            </div>
+            <div class="time-row">
+              <strong>宋元</strong>
+              <div>民族政权并立到元朝统一，经济重心南移完成，科技文化和商业发展突出。</div>
+            </div>
+            <div class="time-row">
+              <strong>明清</strong>
+              <div>统一多民族国家进一步巩固，君主专制强化，边疆治理加强，同时闭关锁国使中国逐渐落后。</div>
+            </div>
+          </div>
+          <p><strong>朝代口诀：</strong>夏商西周东周分，秦汉三国两晋承；南北朝后隋唐兴，五代辽宋夏金并；元明清朝古代终。</p>
+        </section>
+
+        <section id="plan">
+          <h2>四、10 天快速复习安排</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>天数</th>
+                <th>复习内容</th>
+                <th>当天必须产出</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>第 1 天</td><td>史前、夏商周</td><td>画“原始农耕到分封制”小时间轴，默写半坡、河姆渡、甲骨文、分封制。</td></tr>
+              <tr><td>第 2 天</td><td>春秋战国</td><td>背“铁农具牛耕、商鞅变法、百家争鸣”三组答案。</td></tr>
+              <tr><td>第 3 天</td><td>秦汉</td><td>按政治、经济、文化、军事整理秦始皇和汉武帝措施。</td></tr>
+              <tr><td>第 4 天</td><td>魏晋南北朝</td><td>会答江南开发原因、北魏孝文帝改革措施和意义。</td></tr>
+              <tr><td>第 5 天</td><td>隋唐</td><td>会答大运河、科举制、贞观之治、开元盛世、唐朝对外交流。</td></tr>
+              <tr><td>第 6 天</td><td>宋元</td><td>会答经济重心南移、宋代商业、元朝行省制度和边疆管理。</td></tr>
+              <tr><td>第 7 天</td><td>明清</td><td>会答君主专制加强、郑和下西洋、清朝边疆治理、闭关锁国。</td></tr>
+              <tr><td>第 8 天</td><td>专题一：制度与统一</td><td>比较分封制、郡县制、科举制、行省制、军机处。</td></tr>
+              <tr><td>第 9 天</td><td>专题二：经济、民族、交流</td><td>整理“江南开发到经济重心南移”“民族交融”“中外交流”。</td></tr>
+              <tr><td>第 10 天</td><td>仿真训练</td><td>做本页 12 道题，订正后重背错题涉及知识点。</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="prehistoric">
+          <h2>五、史前时期：中华文明的起源</h2>
+          <span class="tag">常考选择题</span><span class="tag">图片题</span><span class="tag">比较题</span>
+          <h3>1. 核心内容</h3>
+          <table>
+            <thead>
+              <tr><th>知识点</th><th>必须掌握的内容</th><th>考题常见问法</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>北京人</td><td>生活在北京周口店，使用打制石器，会使用火，过群居生活。</td><td>“能说明北京人已经适应自然的是？”答案常指使用火、群居。</td></tr>
+              <tr><td>半坡居民</td><td>黄河流域，种植粟，住半地穴式房屋，会制作彩陶。</td><td>看到“粟、彩陶、半地穴式房屋”要选半坡。</td></tr>
+              <tr><td>河姆渡居民</td><td>长江流域，种植水稻，住干栏式房屋。</td><td>看到“水稻、干栏式房屋”要选河姆渡。</td></tr>
+              <tr><td>炎帝黄帝</td><td>被尊为中华民族的人文初祖。</td><td>常考“中华民族共同祖先认同”。</td></tr>
+              <tr><td>尧舜禹</td><td>实行禅让制，大禹治水。</td><td>禅让制是推举贤德者，不是父子继承。</td></tr>
+            </tbody>
+          </table>
+
+          <h3>2. 高频设问与答案</h3>
+          <div class="question">
+            <p><strong>问题：</strong>半坡居民和河姆渡居民房屋不同，说明了什么？</p>
+            <div class="answer"><strong>答案：</strong>说明原始居民能够根据自然环境改造生活条件。河姆渡位于长江流域，气候湿热，干栏式房屋有利于防潮；半坡位于黄河流域，半地穴式房屋有利于保暖。</div>
+          </div>
+          <div class="question">
+            <p><strong>问题：</strong>原始农耕生活出现有什么意义？</p>
+            <div class="answer"><strong>答案：</strong>原始农耕使人类从采集狩猎逐渐走向定居生活，推动房屋、陶器、家畜饲养等发展，是文明起源的重要基础。</div>
+          </div>
+        </section>
+
+        <section id="xia-shang-zhou">
+          <h2>六、夏商周：早期国家与社会秩序</h2>
+          <span class="tag">制度题</span><span class="tag">文字题</span><span class="tag">青铜文明</span>
+          <h3>1. 核心内容</h3>
+          <table>
+            <thead>
+              <tr><th>内容</th><th>必背知识</th><th>得分关键词</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>夏朝建立</td><td>禹建立夏朝，是我国历史上第一个王朝。启继承王位，世袭制代替禅让制。</td><td>第一个王朝、世袭制</td></tr>
+              <tr><td>商朝文明</td><td>甲骨文是体系较完整的文字，我国有文字可考的历史从商朝开始。商朝青铜器工艺高超。</td><td>甲骨文、司母戊鼎、四羊方尊</td></tr>
+              <tr><td>西周分封制</td><td>周王把土地和人民分封给宗亲、功臣等，诸侯承担镇守疆土、随从作战、交纳贡品等义务。</td><td>巩固统治、扩大疆域、后期割据</td></tr>
+            </tbody>
+          </table>
+
+          <h3>2. 现在考试怎么考</h3>
+          <div class="source">
+            材料：周王把土地和人民授予诸侯，诸侯在封地内管理人民、征收赋税，并在周王需要时带兵作战。
+          </div>
+          <div class="question">
+            <p><strong>设问：</strong>材料反映了西周哪一制度？这一制度前期有什么作用？</p>
+            <div class="answer"><strong>答案：</strong>制度是分封制。前期作用是稳定周初政治形势，巩固周王朝统治，扩大统治范围，加强对地方的控制。</div>
+          </div>
+          <div class="warning">
+            <strong>易错提醒：</strong>分封制不是中央直接任免地方官。秦朝郡县制才是地方官由朝廷直接任免。
+          </div>
+        </section>
+
+        <section id="spring-autumn">
+          <h2>七、春秋战国：变革、争霸与百家争鸣</h2>
+          <span class="tag">改革题</span><span class="tag">思想题</span><span class="tag">原因影响题</span>
+          <h3>1. 时代特征</h3>
+          <p>春秋战国是社会大变革时期。生产工具上，铁制农具和牛耕推广，生产力提高；经济制度上，井田制逐渐瓦解，土地私有发展；政治上，各国变法图强，诸侯争霸和兼并战争频繁；思想上，出现百家争鸣。</p>
+
+          <h3>2. 商鞅变法必背</h3>
+          <table>
+            <thead>
+              <tr><th>方面</th><th>措施</th><th>作用</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>政治</td><td>建立县制，由国君直接派官吏治理。</td><td>加强中央对地方的控制。</td></tr>
+              <tr><td>经济</td><td>废除井田制，允许土地自由买卖；奖励耕织。</td><td>促进封建经济发展，增加国家收入。</td></tr>
+              <tr><td>军事</td><td>奖励军功，按军功授爵。</td><td>提高军队战斗力。</td></tr>
+            </tbody>
+          </table>
+          <p><strong>总意义：</strong>商鞅变法使秦国国力大增，军队战斗力提高，为秦统一全国奠定基础。</p>
+
+          <h3>3. 百家争鸣必背</h3>
+          <table>
+            <thead>
+              <tr><th>学派</th><th>代表</th><th>思想</th><th>题目关键词</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>儒家</td><td>孔子、孟子</td><td>仁、礼、仁政，重视教育。</td><td>道德教化、以德治国</td></tr>
+              <tr><td>道家</td><td>老子、庄子</td><td>顺应自然，无为而治。</td><td>自然、无为</td></tr>
+              <tr><td>墨家</td><td>墨子</td><td>兼爱、非攻、尚贤、节俭。</td><td>反对战争、平等相爱</td></tr>
+              <tr><td>法家</td><td>韩非</td><td>以法治国，建立中央集权。</td><td>法律、君主权威、严刑峻法</td></tr>
+              <tr><td>兵家</td><td>孙武</td><td>知己知彼，百战不殆。</td><td>军事谋略</td></tr>
+            </tbody>
+          </table>
+
+          <div class="question">
+            <p><strong>高频问题：</strong>为什么说春秋战国是社会大变革时期？</p>
+            <div class="answer"><strong>答案：</strong>铁制农具和牛耕推广，生产力提高；井田制逐渐瓦解，土地私有发展；新兴地主阶级兴起；各国变法图强；诸侯争霸和兼并战争推动统一趋势；思想上出现百家争鸣。</div>
+          </div>
+        </section>
+
+        <section id="qin-han">
+          <h2>八、秦汉：大一统国家的建立与巩固</h2>
+          <span class="tag">大一统</span><span class="tag">制度演变</span><span class="tag">丝绸之路</span>
+          <h3>1. 秦朝统一与中央集权</h3>
+          <table>
+            <thead>
+              <tr><th>类别</th><th>措施</th><th>意义</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>政治</td><td>建立皇帝制度，中央设丞相、太尉、御史大夫，地方实行郡县制。</td><td>加强中央集权，巩固统一。</td></tr>
+              <tr><td>经济</td><td>统一货币和度量衡。</td><td>促进各地经济交流。</td></tr>
+              <tr><td>文化</td><td>统一文字为小篆。</td><td>促进文化交流和政令推行。</td></tr>
+              <tr><td>交通</td><td>统一车辆和道路宽窄。</td><td>便利交通，加强各地联系。</td></tr>
+              <tr><td>军事</td><td>北击匈奴，修筑长城。</td><td>巩固北方边防。</td></tr>
+            </tbody>
+          </table>
+
+          <h3>2. 汉武帝巩固大一统</h3>
+          <table>
+            <thead>
+              <tr><th>方面</th><th>措施</th><th>解决的问题</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>政治</td><td>实行推恩令。</td><td>削弱诸侯王势力，加强中央集权。</td></tr>
+              <tr><td>思想</td><td>尊崇儒术。</td><td>统一思想，使儒家学说成为正统思想。</td></tr>
+              <tr><td>经济</td><td>盐铁专卖，统一铸造五铢钱。</td><td>加强国家对经济的控制，增加财政收入。</td></tr>
+              <tr><td>军事</td><td>派卫青、霍去病北击匈奴。</td><td>巩固北方边疆。</td></tr>
+            </tbody>
+          </table>
+
+          <h3>3. 丝绸之路</h3>
+          <p>张骞通西域加强了汉朝与西域的联系，为丝绸之路开通创造条件。丝绸之路促进了东西方经济文化交流，是古代中外交流的重要通道。</p>
+
+          <div class="question">
+            <p><strong>材料题：</strong></p>
+            <div class="source">材料：秦朝统一后，规定全国使用统一的钱币和度量衡，并把小篆作为全国通用文字。</div>
+            <p><strong>设问：</strong>这些措施有什么共同作用？</p>
+            <div class="answer"><strong>答案：</strong>共同作用是巩固统一，加强中央对全国的管理，促进各地区经济文化交流，有利于统一多民族国家的发展。</div>
+          </div>
+
+          <div class="warning">
+            <strong>易错提醒：</strong>秦始皇“建立”大一统，汉武帝“巩固”大一统。两者都加强中央集权，但所处阶段不同。
+          </div>
+        </section>
+
+        <section id="wei-jin">
+          <h2>九、三国两晋南北朝：分裂中的发展</h2>
+          <span class="tag">江南开发</span><span class="tag">民族交融</span><span class="tag">改革题</span>
+          <h3>1. 三国鼎立</h3>
+          <p>官渡之战中曹操打败袁绍，为统一北方奠定基础。赤壁之战中孙刘联军打败曹操，奠定三国鼎立局面。三国鼎立包括魏、蜀、吴。</p>
+
+          <h3>2. 江南地区开发</h3>
+          <table>
+            <thead>
+              <tr><th>原因</th><th>具体说明</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>人口南迁</td><td>北方人南迁，带来劳动力和先进生产工具、技术。</td></tr>
+              <tr><td>自然条件</td><td>江南雨量充沛，土地肥沃，适合农业发展。</td></tr>
+              <tr><td>社会环境</td><td>南方战乱较少，相对安定。</td></tr>
+              <tr><td>统治政策</td><td>南方统治者重视农业生产。</td></tr>
+            </tbody>
+          </table>
+          <p><strong>影响：</strong>江南经济迅速发展，为后来经济重心南移奠定基础。</p>
+
+          <h3>3. 北魏孝文帝改革</h3>
+          <p>核心措施是迁都洛阳、说汉语、穿汉服、改汉姓、与汉族通婚、学习汉族制度。意义是促进民族交融，增强北魏实力，推动北方社会经济文化发展。</p>
+
+          <div class="question">
+            <p><strong>高频问题：</strong>分裂时期是不是只有倒退？</p>
+            <div class="answer"><strong>答案：</strong>不是。三国两晋南北朝虽然政权分立、战争较多，但也出现江南地区开发、北方民族交融、科技文化发展等进步现象，说明分裂时期也孕育统一和发展的因素。</div>
+          </div>
+        </section>
+
+        <section id="sui-tang">
+          <h2>十、隋唐：繁荣与开放</h2>
+          <span class="tag">大运河</span><span class="tag">科举制</span><span class="tag">开放交流</span>
+          <h3>1. 隋朝重点</h3>
+          <table>
+            <thead>
+              <tr><th>知识点</th><th>内容</th><th>考法</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>统一</td><td>隋灭陈，结束南北长期分裂。</td><td>统一是隋唐繁荣的前提。</td></tr>
+              <tr><td>大运河</td><td>以洛阳为中心，北达涿郡，南至余杭。</td><td>意义：加强南北政治、经济、文化交流。</td></tr>
+              <tr><td>科举制</td><td>隋炀帝时进士科创立，科举制正式形成。</td><td>意义：扩大选官范围，促进社会流动，加强皇权。</td></tr>
+            </tbody>
+          </table>
+
+          <h3>2. 唐朝繁荣</h3>
+          <table>
+            <thead>
+              <tr><th>阶段</th><th>关键词</th><th>原因</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>唐太宗</td><td>贞观之治</td><td>虚心纳谏，知人善任，减轻人民负担，完善制度。</td></tr>
+              <tr><td>武则天</td><td>承上启下</td><td>发展科举，重视人才，社会经济继续发展。</td></tr>
+              <tr><td>唐玄宗前期</td><td>开元盛世</td><td>整顿吏治，发展经济，唐朝进入鼎盛时期。</td></tr>
+              <tr><td>唐玄宗后期</td><td>安史之乱</td><td>唐朝由盛转衰。</td></tr>
+            </tbody>
+          </table>
+
+          <h3>3. 唐朝民族关系和对外交流</h3>
+          <p>民族关系上，唐太宗实行较开明的民族政策，被北方和西北各族首领尊为“天可汗”；文成公主入藏促进唐蕃经济文化交流。对外交流上，日本遣唐使来华，鉴真东渡日本，玄奘西行天竺，说明唐朝开放自信、交流活跃。</p>
+
+          <div class="question">
+            <p><strong>材料题：</strong></p>
+            <div class="source">材料：唐朝时，日本多次派遣使节和留学生到中国，学习唐朝制度、文化和技术。鉴真东渡后，在日本传播佛教、医药、建筑等知识。</div>
+            <p><strong>设问：</strong>材料反映出唐朝对外交流有什么特点？</p>
+            <div class="answer"><strong>答案：</strong>唐朝对外交流开放活跃，具有双向性。外国来华学习唐朝制度文化，中国也向外传播佛教、医药、建筑等文化成果，促进了中外文化交流。</div>
+          </div>
+        </section>
+
+        <section id="song-yuan">
+          <h2>十一、宋元：经济发展与民族交融</h2>
+          <span class="tag">经济重心南移</span><span class="tag">民族政权</span><span class="tag">制度题</span>
+          <h3>1. 宋朝政治和民族关系</h3>
+          <p>宋朝实行重文轻武政策，防止武将专权和地方割据，但也造成军队战斗力削弱。辽、西夏、金与宋并立，有战争也有议和，民族之间交往交流交融不断加强。</p>
+
+          <h3>2. 经济重心南移</h3>
+          <table>
+            <thead>
+              <tr><th>表现</th><th>内容</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>农业</td><td>水稻产量提高，占城稻推广，出现“苏湖熟，天下足”的说法。</td></tr>
+              <tr><td>手工业</td><td>南方丝织业、制瓷业发展，景德镇兴起。</td></tr>
+              <tr><td>商业</td><td>城市商业繁荣，出现世界上较早的纸币“交子”。</td></tr>
+              <tr><td>海外贸易</td><td>广州、泉州等港口繁荣，政府设置市舶司管理海外贸易。</td></tr>
+            </tbody>
+          </table>
+          <p><strong>结论：</strong>南宋时经济重心南移最终完成。</p>
+
+          <h3>3. 元朝统一和行省制度</h3>
+          <p>忽必烈建立元朝，定都大都。元朝结束长期分裂局面，完成全国统一。元朝实行行省制度，中央设中书省，地方设行中书省，加强了中央对地方的管理，对后世地方行政制度影响深远。</p>
+          <p>边疆治理方面，元朝设置澎湖巡检司管辖澎湖和琉球，设置宣政院管理西藏事务，标志中央政府对西藏正式行使行政管辖。</p>
+
+          <div class="question">
+            <p><strong>高频问题：</strong>宋代经济繁荣的表现有哪些？</p>
+            <div class="answer"><strong>答案：</strong>农业上水稻产量提高；手工业上丝织业、制瓷业发展；商业上城市商业繁荣，出现纸币交子；海外贸易发达，广州、泉州等港口繁荣，政府设市舶司管理海外贸易。</div>
+          </div>
+        </section>
+
+        <section id="ming-qing">
+          <h2>十二、明清：巩固统一与走向危机</h2>
+          <span class="tag">君主专制</span><span class="tag">边疆治理</span><span class="tag">闭关锁国</span>
+          <h3>1. 明朝重点</h3>
+          <table>
+            <thead>
+              <tr><th>内容</th><th>具体知识</th><th>影响</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>强化皇权</td><td>朱元璋废除丞相和中书省，权分六部；设厂卫特务机构。</td><td>皇权进一步加强。</td></tr>
+              <tr><td>八股取士</td><td>考试内容和答题格式僵化。</td><td>束缚思想，不利于培养创新人才。</td></tr>
+              <tr><td>郑和下西洋</td><td>最远到达非洲东海岸和红海沿岸。</td><td>增进中国与亚非国家和地区友好往来，展示明朝国力。</td></tr>
+              <tr><td>戚继光抗倭</td><td>基本解除东南沿海倭患。</td><td>维护海防安全。</td></tr>
+            </tbody>
+          </table>
+
+          <h3>2. 清朝重点</h3>
+          <table>
+            <thead>
+              <tr><th>方面</th><th>措施</th><th>意义或影响</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>加强皇权</td><td>雍正时设军机处。</td><td>君主专制进一步强化。</td></tr>
+              <tr><td>思想控制</td><td>大兴文字狱。</td><td>压制思想文化，不利于社会进步。</td></tr>
+              <tr><td>台湾</td><td>郑成功收复台湾；清朝设置台湾府，隶属福建省。</td><td>加强对台湾的管辖。</td></tr>
+              <tr><td>西藏</td><td>册封达赖、班禅；设置驻藏大臣；实行金瓶掣签制度。</td><td>加强中央对西藏的管辖。</td></tr>
+              <tr><td>新疆</td><td>平定大小和卓叛乱，设置伊犁将军。</td><td>巩固西北边疆。</td></tr>
+              <tr><td>东北</td><td>抗击沙俄，签订《尼布楚条约》。</td><td>维护国家主权和边疆稳定。</td></tr>
+              <tr><td>闭关锁国</td><td>严格限制对外贸易，较长时期只开放广州一处对外通商。</td><td>一定程度抵御殖民侵略，但限制中外交流，使中国逐渐落后。</td></tr>
+            </tbody>
+          </table>
+
+          <div class="question">
+            <p><strong>高频问题：</strong>为什么说明清时期既有巩固又有危机？</p>
+            <div class="answer"><strong>答案：</strong>巩固表现为统一多民族国家进一步发展，清朝加强对台湾、西藏、新疆等地的管辖；危机表现为君主专制强化、思想文化受压制、闭关锁国限制中外交流，使中国逐渐落后于世界发展潮流。</div>
+          </div>
+        </section>
+
+        <section id="topics">
+          <h2>十三、专题整合：按考题逻辑复习</h2>
+          <h3>专题 1：制度演变</h3>
+          <table>
+            <thead>
+              <tr><th>制度</th><th>朝代</th><th>核心作用</th><th>容易考的比较</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>禅让制</td><td>尧舜禹时期</td><td>推举贤德者</td><td>不同于世袭制</td></tr>
+              <tr><td>世袭制</td><td>夏朝开始</td><td>王位在家族内传承</td><td>体现早期国家形成</td></tr>
+              <tr><td>分封制</td><td>西周</td><td>巩固统治，扩大疆域</td><td>后期容易导致割据</td></tr>
+              <tr><td>郡县制</td><td>秦朝全国推行</td><td>地方官由中央任免</td><td>比分封制更能加强中央集权</td></tr>
+              <tr><td>科举制</td><td>隋朝形成</td><td>考试选官，扩大选官范围</td><td>促进社会流动和教育发展</td></tr>
+              <tr><td>行省制度</td><td>元朝</td><td>加强中央对地方管理</td><td>影响后世地方行政制度</td></tr>
+              <tr><td>军机处</td><td>清朝</td><td>君主专制进一步强化</td><td>与明朝废丞相都体现皇权加强</td></tr>
+            </tbody>
+          </table>
+
+          <h3>专题 2：经济发展主线</h3>
+          <p>原始农业出现，到春秋战国铁农具和牛耕推动生产力发展，再到魏晋南北朝江南开发，最后南宋经济重心南移完成。这条线最常考“原因和影响”。</p>
+          <div class="answer">
+            <strong>经济发展通用答案：</strong>生产工具进步、劳动力增加、交通改善、国家统一或社会稳定、统治者政策推动，都会促进经济发展。
+          </div>
+
+          <h3>专题 3：民族关系主线</h3>
+          <p>汉朝联系西域，北魏改革促进民族交融，唐朝实行开明民族政策，宋元民族政权并立并交流交融，清朝加强边疆治理。结论是统一多民族国家不断发展。</p>
+
+          <h3>专题 4：中外交流主线</h3>
+          <table>
+            <thead>
+              <tr><th>时期</th><th>事件</th><th>特点</th><th>结论</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>汉朝</td><td>丝绸之路</td><td>陆上交流</td><td>开放交流促进发展</td></tr>
+              <tr><td>唐朝</td><td>遣唐使、鉴真、玄奘</td><td>双向交流，开放自信</td><td>文化交流推动文明发展</td></tr>
+              <tr><td>宋元</td><td>海外贸易、指南针航海</td><td>海上交流活跃</td><td>科技推动交流扩大</td></tr>
+              <tr><td>明朝</td><td>郑和下西洋</td><td>规模大，友好交往</td><td>展示国力，增进友好往来</td></tr>
+              <tr><td>清朝</td><td>闭关锁国</td><td>限制交流</td><td>闭关自守容易落后</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="methods">
+          <h2>十四、材料题答题方法</h2>
+          <div class="grid two">
+            <div class="card">
+              <h3>审题三步</h3>
+              <ol>
+                <li>圈时间、人物、地点、制度名。</li>
+                <li>判断朝代和专题。</li>
+                <li>看设问，是“根据材料”还是“结合所学”。</li>
+              </ol>
+            </div>
+            <div class="card">
+              <h3>作答三步</h3>
+              <ol>
+                <li>先写材料中能看出的信息。</li>
+                <li>再补课本关键词。</li>
+                <li>最后写影响或结论。</li>
+              </ol>
+            </div>
+          </div>
+
+          <h3>常用答题模板</h3>
+          <table>
+            <thead>
+              <tr><th>题型</th><th>可用句式</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>原因类</td><td>政治上……；经济上……；思想文化上……；民族关系上……；对外关系上……。</td></tr>
+              <tr><td>措施类</td><td>政治方面采取……；经济方面采取……；思想方面采取……；军事方面采取……。</td></tr>
+              <tr><td>影响类</td><td>有利于加强中央集权；有利于巩固统一；促进经济发展；促进民族交融；推动中外交流。</td></tr>
+              <tr><td>启示类</td><td>改革要顺应时代潮流；统一稳定有利于发展；开放交流促进进步；闭关自守容易落后。</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="tianjin">
+          <h2>十五、天津近五年七下期末真题整理</h2>
+          <p>说明：天津各区七年级下学期期末历史试卷并非全部由统一官方渠道公开，公开检索到的资料多分布在教习网、学科网、新东方资料 PDF、家长资料号等平台。下面不整卷照搬，而是把能核实的公开题源、题型结构和高频考点整理成可复习材料。</p>
+
+          <h3>1. 已检索到的公开题源</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>年份</th>
+                <th>天津题源</th>
+                <th>可确认信息</th>
+                <th>复习价值</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2024-2025</td>
+                <td>和平区、河东区七年级下学期期末历史试题；天津七下期末模拟卷</td>
+                <td>公开检索结果显示有“和平区2024-2025学年七年级下学期期末历史试题”“河东区2024-2025学年七年级下学期期末历史试题”等资料。</td>
+                <td>最新题源，重点看情境材料、文物图片、制度比较和开放性认识题。</td>
+              </tr>
+              <tr>
+                <td>2023-2024</td>
+                <td>河西区、河北区、和平区、宝坻区等 5 地七年级下学期期末历史试题</td>
+                <td>教习网页面列出河西区原卷/解析版、宝坻区等 5 地、河北区、和平区等七下期末历史试题。</td>
+                <td>区级真题集中，适合归纳天津七下期末的常规考点和题型。</td>
+              </tr>
+              <tr>
+                <td>2022-2023</td>
+                <td>滨海新区七年级下学期期末考试历史试题</td>
+                <td>学科网资料包显示“天津市滨海新区2022-2023学年统编版七年级下学期期末考试历史试题”。</td>
+                <td>可用于确认天津区级期末覆盖七下全册，题型以选择题、材料题为主。</td>
+              </tr>
+              <tr>
+                <td>2021-2022</td>
+                <td>公开全文检索较少</td>
+                <td>能检索到天津七下期末各科资料入口，但历史原卷公开度有限。</td>
+                <td>按前后年份共同高频点补练：隋唐、宋元、明清主干知识。</td>
+              </tr>
+              <tr>
+                <td>2020-2021</td>
+                <td>第二学期七年级期末考试历史试题参考答案及评分标准</td>
+                <td>公开 PDF 显示题型结构：选择题 15 小题 30 分，简答题 18 分，材料解析题 32 分，探究题 20 分。</td>
+                <td>非常适合学习“天津期末如何给分”：答案按关键词给分，材料题重视概括、原因、影响、认识。</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="note">
+            <strong>复习判断：</strong>天津七下历史期末不是只考死记硬背，近年更常把课本主干知识放进文物、地图、材料、表格、地方文化和文化遗产情境中考查。
+          </div>
+
+          <h3>2. 天津七下期末高频考点地图</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>单元</th>
+                <th>高频考点</th>
+                <th>常见设问</th>
+                <th>必须会答的关键词</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>隋唐时期</td>
+                <td>隋朝统一、大运河、科举制、贞观之治、开元盛世、唐朝民族关系和中外交流</td>
+                <td>“大运河的作用是什么？”“唐朝为什么繁荣开放？”“科举制有什么影响？”</td>
+                <td>沟通南北；加强交流；扩大选官范围；开放自信；民族交融；中外文化交流。</td>
+              </tr>
+              <tr>
+                <td>辽宋夏金元时期</td>
+                <td>北宋重文轻武、宋代经济、经济重心南移、交子、市舶司、活字印刷术、指南针、行省制度</td>
+                <td>“宋代商业发展的表现？”“经济重心南移原因？”“元朝如何加强地方和边疆管理？”</td>
+                <td>水稻产量提高；城市商业繁荣；纸币交子；海外贸易；南宋完成；行省制；宣政院；澎湖巡检司。</td>
+              </tr>
+              <tr>
+                <td>明清时期</td>
+                <td>明朝皇权加强、郑和下西洋、戚继光抗倭、李时珍与《本草纲目》、北京城和长城、清朝边疆治理、军机处、闭关锁国</td>
+                <td>“明清君主专制怎样加强？”“郑和下西洋有什么意义？”“闭关锁国产生什么影响？”</td>
+                <td>废丞相；厂卫；八股取士；友好往来；民族英雄；驻藏大臣；伊犁将军；台湾府；军机处；逐渐落后。</td>
+              </tr>
+              <tr>
+                <td>综合探究</td>
+                <td>统一多民族国家、民族交往交流交融、中华优秀传统文化、开放与封闭、文化遗产保护</td>
+                <td>“从材料中得到什么认识？”“概括历史发展趋势。”</td>
+                <td>统一是主流；交融促发展；开放促交流；文化自信；保护传承；国家治理能力提升。</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>3. 天津真题常见题型拆解</h3>
+          <div class="grid two">
+            <div class="card">
+              <h3>选择题：看关键词定位</h3>
+              <p>常见材料很短，可能是一句诗、一幅文物图、一段制度描述。孩子要先抓关键词。</p>
+              <ul>
+                <li>“洛阳、涿郡、余杭”对应隋朝大运河。</li>
+                <li>“进士科、考试选官”对应科举制。</li>
+                <li>“交子、夜市、市舶司”对应宋代商业。</li>
+                <li>“中书省、行中书省”对应元朝行省制度。</li>
+                <li>“军机处、文字狱”对应清朝君主专制强化。</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>材料题：按给分词作答</h3>
+              <p>天津期末答案常按“任意一点得 2 分”给分，所以答题不要写一大段，要分点写关键词。</p>
+              <ul>
+                <li>原因题：自然条件、人口迁移、社会安定、政策推动。</li>
+                <li>表现题：农业、手工业、商业、海外贸易分层写。</li>
+                <li>影响题：加强中央集权、巩固统一、促进经济文化交流。</li>
+                <li>认识题：统一、开放、交融、传承、创新。</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3>4. 近五年天津题源整理出的专项练习</h3>
+          <p class="small">以下为“真题风格整理题”：题目围绕公开题源中反复出现的考点和设问方式重新组织，便于复习使用。</p>
+
+          <div class="question">
+            <p><strong>题 1：大运河与天津地方史</strong></p>
+            <div class="source">材料：天津城市的兴起与大运河密切相关。隋唐以后，南方粮食、丝绸等物资北运，运河沿线逐渐形成重要水陆码头和城镇。</div>
+            <p><strong>设问：</strong>结合所学，说明隋朝大运河的历史作用。天津地方史材料给我们什么认识？</p>
+            <div class="answer"><strong>参考答案：</strong>大运河加强了南北地区政治、经济、文化交流，有利于巩固国家统一和促进经济发展。认识：交通建设能推动区域发展；地方城市发展与国家统一、经济交流密切相关。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>题 2：唐朝繁荣开放</strong></p>
+            <div class="source">材料：唐朝长安汇聚各地商旅和外国使节；日本派遣唐使来华，玄奘西行天竺，鉴真东渡日本。</div>
+            <p><strong>设问：</strong>材料反映了唐朝怎样的时代特征？举一例说明唐朝对外交流的影响。</p>
+            <div class="answer"><strong>参考答案：</strong>时代特征：繁荣开放、对外交流活跃、文化影响力强。举例：鉴真东渡日本，传播佛教、医药、建筑等文化，促进中日文化交流；玄奘西行促进中印佛教文化交流。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>题 3：科举制</strong></p>
+            <div class="source">材料：隋唐以后，读书人可以通过考试进入官僚体系，出身不再是做官的唯一条件。</div>
+            <p><strong>设问：</strong>材料反映的制度是什么？这一制度有什么积极影响？</p>
+            <div class="answer"><strong>参考答案：</strong>制度：科举制。积极影响：扩大官吏选拔范围，使有才学的人能够参政；促进社会阶层流动；推动教育和文学发展；加强皇帝选官用人权。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>题 4：宋代经济发展</strong></p>
+            <div class="source">材料：宋代城市中店铺众多，早市、夜市不断；四川地区出现纸币；广州、泉州等港口商船往来频繁，政府设置机构管理海外贸易。</div>
+            <p><strong>设问：</strong>根据材料概括宋代商业发展的表现。结合所学指出宋代经济格局的变化。</p>
+            <div class="answer"><strong>参考答案：</strong>表现：城市商业繁荣；早市、夜市发展；出现纸币交子；海外贸易发达；政府设置市舶司管理海外贸易。变化：经济重心南移，到南宋时最终完成。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>题 5：宋元科技</strong></p>
+            <div class="source">材料：一种印刷技术降低了制书成本，加快了图书普及和文化传播；一种辨别方向的工具广泛用于航海，推动了海上交通发展。</div>
+            <p><strong>设问：</strong>材料分别指哪两项科技成就？任选一项说明其影响。</p>
+            <div class="answer"><strong>参考答案：</strong>科技成就：活字印刷术、指南针。影响示例：活字印刷术降低制书成本，加快图书普及和文化传播，对人类文明发展产生重大影响；指南针用于航海，促进中外海上交通和贸易发展。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>题 6：元朝制度与边疆治理</strong></p>
+            <div class="source">材料：元朝在地方设置行中书省，又设置宣政院管理西藏事务，设置澎湖巡检司管辖澎湖和琉球。</div>
+            <p><strong>设问：</strong>材料说明元朝在国家治理上有什么特点？</p>
+            <div class="answer"><strong>参考答案：</strong>特点：实行行省制度，加强中央对地方管理；重视边疆治理，加强对西藏、台湾等地区的管辖；巩固了统一多民族国家。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>题 7：明朝皇权加强</strong></p>
+            <div class="source">材料：明太祖废除丞相和中书省，六部直接向皇帝负责；又设立特务机构，监视官民。</div>
+            <p><strong>设问：</strong>材料反映明朝政治制度发生了什么变化？这一变化的实质是什么？</p>
+            <div class="answer"><strong>参考答案：</strong>变化：废除丞相制度，权分六部，并设厂卫特务机构。实质：皇权进一步加强，君主专制强化。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>题 8：故宫、长城与文化遗产</strong></p>
+            <div class="source">材料：北京城宫城沿中轴线展开，布局严整，规模宏大；长城蜿蜒于北方山地，兼具军事防御和文化象征意义。</div>
+            <p><strong>设问：</strong>故宫和长城体现了哪些历史文化价值？</p>
+            <div class="answer"><strong>参考答案：</strong>体现了中国古代建筑技术和规划水平，凝聚古代劳动人民的智慧；故宫体现君主专制时代皇权至上的特点；长城具有防御功能，也体现中华民族勤劳智慧、自强不息的精神。今天应加强保护和传承。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>题 9：李时珍与传统科技文化</strong></p>
+            <div class="source">材料：明代一位医药学家长期实践和考察，编写出总结我国古代药物学成就的巨著。</div>
+            <p><strong>设问：</strong>这位人物是谁？著作是什么？这类题目常考什么价值？</p>
+            <div class="answer"><strong>参考答案：</strong>人物：李时珍。著作：《本草纲目》。价值：总结我国古代药物学成就，丰富我国医药学宝库，在世界医药史上占有重要地位，体现中华优秀传统文化和科学探索精神。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>题 10：清朝边疆治理</strong></p>
+            <div class="source">材料：清朝册封达赖、班禅，设置驻藏大臣；平定大小和卓叛乱后设置伊犁将军；设置台湾府，隶属福建省。</div>
+            <p><strong>设问：</strong>材料反映清朝前期的哪一历史主题？请概括其意义。</p>
+            <div class="answer"><strong>参考答案：</strong>主题：统一多民族国家的巩固和发展。意义：加强中央对西藏、新疆、台湾等地区的管辖，维护国家统一，促进统一多民族国家进一步巩固。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>题 11：闭关锁国</strong></p>
+            <div class="source">材料：清朝严格限制对外贸易，较长时期只开放广州一处对外通商。与此同时，西方国家正在进行工业革命和殖民扩张。</div>
+            <p><strong>设问：</strong>如何评价闭关锁国政策？</p>
+            <div class="answer"><strong>参考答案：</strong>闭关锁国在一定程度上抵御了西方殖民侵略，但限制了中外经济文化交流，使中国错失学习西方先进科学技术的机会，逐渐落后于世界发展潮流。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>题 12：综合探究题</strong></p>
+            <div class="source">材料：从唐朝开放交流，到宋元海上贸易发展，再到明朝郑和下西洋，古代中国长期与外部世界保持联系；清朝后期闭关锁国，逐渐落后。</div>
+            <p><strong>设问：</strong>围绕“开放与发展”提炼一个观点，并结合两个史实加以说明。</p>
+            <div class="answer"><strong>参考答案：</strong>观点：开放交流促进社会发展。说明：唐朝遣唐使、鉴真东渡、玄奘西行促进中外文化交流，体现开放自信；宋元时期海外贸易发达，指南针用于航海，推动海上交通和商业发展；明朝郑和下西洋增进中国与亚非国家和地区友好往来。结论：开放交流有利于文明互鉴和社会进步，闭关自守容易落后。</div>
+          </div>
+
+          <h3>5. 天津期末答题提分句</h3>
+          <table>
+            <thead>
+              <tr><th>题目问法</th><th>建议答法</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>概括材料表现</td><td>先照材料分层概括，不要直接背课本。例如“商业繁荣、城市发展、纸币出现、海外贸易发达”。</td></tr>
+              <tr><td>结合所学分析原因</td><td>从政治稳定、经济发展、交通便利、技术进步、政策推动、民族交融中选合适角度。</td></tr>
+              <tr><td>说明历史意义</td><td>至少写清“对谁有利”和“有利于什么”。例如“有利于加强中央对地方的管理，巩固统一多民族国家”。</td></tr>
+              <tr><td>谈认识/启示</td><td>不要空喊口号，要扣主题。开放题写“开放交流促进发展”；民族题写“交往交流交融推动统一多民族国家发展”。</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="practice">
+          <h2>十六、贴近初中考题的仿真训练</h2>
+          <p class="small">建议先让孩子独立做，再对答案。选择题每题 2 分，材料题按关键词给分。</p>
+
+          <h3>选择题</h3>
+          <div class="question">
+            <p><strong>1.</strong> 考古发现某遗址有水稻遗存、干栏式房屋遗迹。该遗址最可能是：</p>
+            <p>A. 北京人遗址　B. 半坡遗址　C. 河姆渡遗址　D. 殷墟</p>
+            <div class="answer"><strong>答案：C。</strong>“水稻、干栏式房屋”对应河姆渡居民。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>2.</strong> 西周分封制在前期的主要作用是：</p>
+            <p>A. 选拔官吏　B. 巩固统治　C. 统一文字　D. 削弱诸侯</p>
+            <div class="answer"><strong>答案：B。</strong>分封制前期有利于稳定周初形势、巩固统治。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>3.</strong> 商鞅变法中最能提高军队战斗力的措施是：</p>
+            <p>A. 奖励军功　B. 统一度量衡　C. 迁都洛阳　D. 设置行省</p>
+            <div class="answer"><strong>答案：A。</strong>奖励军功直接调动士兵作战积极性。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>4.</strong> 秦朝在地方推行郡县制的主要目的是：</p>
+            <p>A. 发展海外贸易　B. 加强中央集权　C. 推动民族交融　D. 发展科举考试</p>
+            <div class="answer"><strong>答案：B。</strong>郡县长官由朝廷任免，有利于中央控制地方。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>5.</strong> 下列措施属于汉武帝思想方面巩固大一统的是：</p>
+            <p>A. 推恩令　B. 尊崇儒术　C. 盐铁专卖　D. 北击匈奴</p>
+            <div class="answer"><strong>答案：B。</strong>尊崇儒术是思想文化方面措施。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>6.</strong> 南宋时我国经济格局的重要变化是：</p>
+            <p>A. 经济重心南移完成　B. 青铜制造开始出现　C. 世袭制代替禅让制　D. 科举制正式形成</p>
+            <div class="answer"><strong>答案：A。</strong>经济重心南移到南宋最终完成。</div>
+          </div>
+
+          <h3>材料题</h3>
+          <div class="question">
+            <p><strong>7. 阅读材料，回答问题。</strong></p>
+            <div class="source">材料一：战国时期，铁制农具和牛耕进一步推广，社会生产力水平不断提高。各诸侯国为了富国强兵，纷纷实行变法。</div>
+            <p><strong>设问 1：</strong>根据材料，概括战国时期各国变法的背景。</p>
+            <div class="answer"><strong>参考答案：</strong>铁制农具和牛耕推广，生产力提高；各诸侯国为了富国强兵而变法。</div>
+            <p><strong>设问 2：</strong>结合所学，说明商鞅变法的影响。</p>
+            <div class="answer"><strong>参考答案：</strong>商鞅变法使秦国国力大增，军队战斗力提高，为秦统一全国奠定基础。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>8. 阅读材料，回答问题。</strong></p>
+            <div class="source">材料二：秦统一后，把全国分为若干郡，郡下设县。郡县长官均由朝廷直接任免。</div>
+            <p><strong>设问：</strong>材料反映了什么制度？与西周分封制相比，它有什么进步性？</p>
+            <div class="answer"><strong>参考答案：</strong>制度是郡县制。郡县制下地方官由朝廷直接任免，中央能直接控制地方，比诸侯有较大独立性的分封制更有利于加强中央集权、巩固统一。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>9. 阅读材料，回答问题。</strong></p>
+            <div class="source">材料三：魏晋南北朝时期，北方人口大量南迁，带来了劳动力和先进生产技术。江南地区土地肥沃，战乱较少，农业和手工业得到发展。</div>
+            <p><strong>设问：</strong>根据材料，归纳江南地区开发的原因。结合所学说明其影响。</p>
+            <div class="answer"><strong>参考答案：</strong>原因：北方人口南迁，带来劳动力和先进技术；江南自然条件优越；南方战乱较少，相对安定。影响：江南经济得到开发，为后来经济重心南移奠定基础。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>10. 阅读材料，回答问题。</strong></p>
+            <div class="source">材料四：唐朝长安城中有来自亚洲各地的商人、僧侣和使节。日本遣唐使多次来华，玄奘西行天竺，鉴真东渡日本。</div>
+            <p><strong>设问：</strong>材料体现了唐朝怎样的时代特点？你从中得到什么认识？</p>
+            <div class="answer"><strong>参考答案：</strong>特点：唐朝对外交流活跃，社会开放自信，文化影响力大。认识：开放交流有利于不同文明相互学习，推动社会进步和文化发展。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>11. 阅读材料，回答问题。</strong></p>
+            <div class="source">材料五：宋代城市中店铺林立，早市、夜市买卖不绝。四川地区出现纸币“交子”。广州、泉州等港口海外贸易繁荣，政府设机构管理。</div>
+            <p><strong>设问：</strong>根据材料，概括宋代商业发展的表现。</p>
+            <div class="answer"><strong>参考答案：</strong>城市商业繁荣；早市、夜市发展；出现纸币交子；海外贸易发达；政府设置市舶司管理海外贸易。</div>
+          </div>
+
+          <div class="question">
+            <p><strong>12. 阅读材料，回答问题。</strong></p>
+            <div class="source">材料六：清朝前期，中央政府设置驻藏大臣，与达赖、班禅共同管理西藏事务；平定大小和卓叛乱后设置伊犁将军；设置台湾府，隶属福建省。</div>
+            <p><strong>设问：</strong>材料说明清朝前期在国家治理方面有什么特点？</p>
+            <div class="answer"><strong>参考答案：</strong>清朝前期重视边疆治理，加强对西藏、新疆、台湾等地区的管辖，巩固了统一多民族国家。</div>
+          </div>
+        </section>
+
+        <section id="recite">
+          <h2>十七、最后默写清单</h2>
+          <h3>1. 必默 30 个关键词</h3>
+          <ol class="checklist">
+            <li>北京人</li>
+            <li>半坡居民</li>
+            <li>河姆渡居民</li>
+            <li>禅让制</li>
+            <li>世袭制</li>
+            <li>甲骨文</li>
+            <li>分封制</li>
+            <li>铁制农具和牛耕</li>
+            <li>商鞅变法</li>
+            <li>百家争鸣</li>
+            <li>秦统一</li>
+            <li>郡县制</li>
+            <li>统一文字、货币、度量衡</li>
+            <li>陈胜吴广起义</li>
+            <li>文景之治</li>
+            <li>汉武帝大一统</li>
+            <li>张骞通西域</li>
+            <li>丝绸之路</li>
+            <li>江南开发</li>
+            <li>北魏孝文帝改革</li>
+            <li>大运河</li>
+            <li>科举制</li>
+            <li>贞观之治</li>
+            <li>开元盛世</li>
+            <li>安史之乱</li>
+            <li>经济重心南移</li>
+            <li>交子</li>
+            <li>行省制度</li>
+            <li>郑和下西洋</li>
+            <li>闭关锁国</li>
+          </ol>
+
+          <h3>2. 必会 8 句结论</h3>
+          <ol>
+            <li>统一是中国历史发展的主流。</li>
+            <li>生产工具进步推动社会生产力发展。</li>
+            <li>改革要顺应时代发展潮流。</li>
+            <li>中央集权制度有利于巩固统一多民族国家。</li>
+            <li>人口迁徙促进经济开发和民族交融。</li>
+            <li>开放交流促进文明发展。</li>
+            <li>闭关自守容易落后于世界潮流。</li>
+            <li>中华文明具有连续性、多元一体和开放包容的特点。</li>
+          </ol>
+
+          <h3>3. 升初二衔接</h3>
+          <p>初二上册通常进入中国近代史。七年级最后要特别记住明清的两面：一方面，统一多民族国家继续巩固；另一方面，君主专制强化和闭关锁国使中国逐渐落后。理解这个转折，才能接上鸦片战争和中国近代史的开端。</p>
+          <div class="footer">
+            资料依据七年级中国古代史常见教材顺序，并参考《义务教育历史课程标准（2022年版）》关于核心素养和学业质量导向整理；题型设计参考近年中考历史“史料情境、主干知识、综合探究、开放性设问”的命题方向。天津真题整理部分参考公开检索到的天津七年级下学期期末历史资料页面、2020-2021 学年第二学期七年级期末考试历史参考答案及评分标准、学科网/教习网公开预览信息。不同地区教材和考试范围可能略有差异，最终以学校老师要求为准。
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>天津首字母填空真题答案汇总</title>
+  <style>
+    :root {
+      --ink: #18212f;
+      --muted: #627083;
+      --paper: #f5f6f8;
+      --card: #ffffff;
+      --line: #d8dee8;
+      --blue: #1f5ea8;
+      --green: #237457;
+      --orange: #986000;
+      --red: #a84040;
+      --shadow: 0 16px 42px rgba(24, 33, 47, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+    button, input, select { font: inherit; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 30px 20px 56px; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: start;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .label {
+      color: var(--blue);
+      font-weight: 750;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+    .intro { max-width: 880px; margin: 12px 0 0; color: var(--muted); font-size: 15px; }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+    .btn {
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--card);
+      color: var(--ink);
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    .btn:hover { border-color: #99a7ba; background: #fbfcfd; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 22px 0;
+    }
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      box-shadow: 0 10px 26px rgba(24, 33, 47, .04);
+    }
+    .stat b { display: block; font-size: 28px; line-height: 1; }
+    .stat span { display: block; margin-top: 6px; color: var(--muted); font-size: 13px; }
+    .notice {
+      border: 1px solid #ead8a5;
+      background: #fff8e8;
+      border-radius: 8px;
+      padding: 14px;
+      color: #604512;
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 1fr 170px 170px;
+      gap: 10px;
+      padding: 12px;
+      margin: 0 -12px 18px;
+      background: rgba(245, 246, 248, .94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(216, 222, 232, .8);
+    }
+    input[type="search"], select {
+      min-height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--card);
+      color: var(--ink);
+      outline: none;
+      padding: 8px 12px;
+    }
+    input[type="search"]:focus, select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(31, 94, 168, .12);
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: end;
+      margin: 26px 0 12px;
+    }
+    h2 { margin: 0; font-size: 22px; line-height: 1.2; letter-spacing: 0; }
+    .hint { color: var(--muted); font-size: 13px; }
+    .groups { display: grid; gap: 14px; }
+    .group {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .group-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      background: #fbfcfd;
+    }
+    .title { font-size: 18px; font-weight: 800; }
+    .meta { color: var(--muted); font-size: 13px; margin-top: 4px; }
+    .answers {
+      display: grid;
+      grid-template-columns: repeat(10, minmax(0, 1fr));
+      gap: 8px;
+      padding: 14px;
+    }
+    .answer {
+      min-height: 58px;
+      border: 1px solid #e2e7ef;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background: #fff;
+      padding: 6px;
+    }
+    .answer small { display: block; color: var(--muted); font-size: 11px; line-height: 1; }
+    .answer b { display: block; margin-top: 4px; font-size: 16px; line-height: 1.1; overflow-wrap: anywhere; }
+    .tags { display: flex; gap: 6px; flex-wrap: wrap; padding: 0 14px 14px; }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      padding: 2px 8px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .high { color: var(--green); background: #e8f5ef; border-color: #cbe7dc; }
+    .mid { color: var(--blue); background: #edf3fb; border-color: #d5e4f7; }
+    .low { color: var(--red); background: #fff0f0; border-color: #efd0d0; }
+    .src { color: var(--orange); background: #fff4dc; border-color: #eed9a8; }
+    .empty {
+      display: none;
+      text-align: center;
+      background: #fff;
+      border: 1px dashed #b9c4d3;
+      border-radius: 8px;
+      color: var(--muted);
+      padding: 24px;
+    }
+    .sources {
+      margin-top: 26px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .source-list { margin: 0; padding: 0; list-style: none; }
+    .source-list li { padding: 12px 16px; border-bottom: 1px solid #edf0f5; }
+    .source-list li:last-child { border-bottom: 0; }
+    .source-list a { color: var(--blue); text-decoration: none; }
+    .source-list a:hover { text-decoration: underline; }
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; }
+      .actions { justify-content: flex-start; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .toolbar { grid-template-columns: 1fr 1fr; }
+      .toolbar input { grid-column: 1 / -1; }
+      .answers { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    }
+    @media (max-width: 620px) {
+      .wrap { padding: 20px 14px 42px; }
+      .stats, .toolbar { grid-template-columns: 1fr; }
+      .toolbar { position: static; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
+      .section-head, .group-head { flex-direction: column; align-items: flex-start; }
+      .answers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 0; }
+      .actions, .toolbar { display: none; }
+      .group, .stat, .sources { box-shadow: none; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div>
+        <div class="label">天津英语 · 首字母填空答案汇总</div>
+        <h1>七升八各区 + 中考真题最终答案</h1>
+        <p class="intro">按“年份-地区”分组罗列七升八各区期末综合填空答案，并单独列出 2016-2025 天津中考首字母填空最终答案。页面保留来源和置信度，方便后续继续补卷。</p>
+      </div>
+      <div class="actions">
+        <button class="btn" id="copyBtn">复制当前答案</button>
+        <button class="btn" id="printBtn">打印</button>
+      </div>
+    </header>
+
+    <section class="stats">
+      <div class="stat"><b id="groupCount">0</b><span>答案组</span></div>
+      <div class="stat"><b id="answerCount">0</b><span>答案条目</span></div>
+      <div class="stat"><b>2016-2025</b><span>中考真题年份</span></div>
+      <div class="stat"><b id="verifiedCount">0</b><span>高置信组</span></div>
+    </section>
+
+    <div class="notice">七升八各区近 10 年公开资料不完整，很多资料在教习网、学科网或附件包内，需要登录、验证或原卷文件。当前只把已能核验或有公开片段的答案列入正式组；缺口来源列在页面底部。</div>
+
+    <section class="toolbar">
+      <input id="searchInput" type="search" placeholder="搜索：年份 / 地区 / 答案 / 来源，例如 2023、河西、usually">
+      <select id="typeFilter" aria-label="类型筛选">
+        <option value="all">全部类型</option>
+        <option value="七升八">七升八各区</option>
+        <option value="中考">中考真题</option>
+      </select>
+      <select id="confidenceFilter" aria-label="置信度筛选">
+        <option value="all">全部置信度</option>
+        <option value="高">高置信</option>
+        <option value="中">中置信</option>
+        <option value="低">低置信</option>
+      </select>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>按年份-地区分组</h2>
+        <div class="hint" id="resultHint">正在加载</div>
+      </div>
+      <div class="empty" id="emptyState">没有匹配的答案组。</div>
+      <div class="groups" id="groups"></div>
+    </section>
+
+    <section class="sources">
+      <div class="group-head">
+        <div>
+          <div class="title">七升八待补来源</div>
+          <div class="meta">这些来源已找到线索，但还没有取得完整可核验答案。</div>
+        </div>
+      </div>
+      <ul class="source-list" id="gaps"></ul>
+    </section>
+  </main>
+
+  <script>
+    const groups = [
+      {
+        type: "七升八",
+        year: "2023-2024",
+        region: "天津部分区",
+        term: "七上期末",
+        range: "56-65",
+        answers: [
+          ["56", "happens"], ["57", "usually"], ["58", "them"], ["59", "before"], ["60", "sweeping"],
+          ["61", "dinner"], ["62", "much"], ["63", "watch"], ["64", "new"], ["65", "also / always"]
+        ],
+        confidence: "中",
+        source: "教习网搜索片段",
+        url: "https://m.51jiaoxi.com/doc-15346090.html",
+        note: "第 65 题片段显示不清，保留 also / always 两种待核验答案。"
+      },
+      {
+        type: "七升八",
+        year: "2022-2023",
+        region: "河西区",
+        term: "七上期末",
+        range: "61-70",
+        answers: [
+          ["61", "everyone / everybody"], ["62", "night"], ["63", "enough"], ["64", "time"], ["65", "put"],
+          ["66", "breakfast"], ["67", "usually"], ["68", "smile"], ["69", "world"], ["70", "remember"]
+        ],
+        confidence: "高",
+        source: "Word 原文可抽取",
+        url: "https://file.you123.top/upload/xueke/attach/2024/07/09/2022-2023%E5%AD%A6%E5%B9%B4%E5%A4%A9%E6%B4%A5%E5%B8%82%E6%B2%B3%E8%A5%BF%E5%8C%BA%E4%B8%83%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C%E6%9C%9F%E6%9C%AB%E8%8B%B1%E8%AF%AD%E8%AF%95%E5%8D%B7%E5%8F%8A%E7%AD%94%E6%A1%88%28Word%E7%89%88%29.doc",
+        note: "已从 Word 文件正文和答案区抽取。"
+      },
+      {
+        type: "七升八",
+        year: "2022-2023",
+        region: "河北区",
+        term: "七上期末",
+        range: "60-65",
+        answers: [
+          ["60", "over"], ["61", "photos / pictures"], ["62", "lying"], ["63", "where"], ["64", "it"], ["65", "leave"]
+        ],
+        confidence: "中",
+        source: "教习网搜索片段",
+        url: "https://m.51jiaoxi.com/doc-15045727.html",
+        note: "搜索片段只显示 60-65，56-59 暂未取得。"
+      },
+      {
+        type: "中考",
+        year: "2025",
+        region: "天津中考",
+        term: "中考综合填空",
+        range: "76-85",
+        answers: [["76", "ago"], ["77", "colder"], ["78", "call"], ["79", "brought"], ["80", "huge"], ["81", "today"], ["82", "energy"], ["83", "another"], ["84", "light"], ["85", "burning"]],
+        confidence: "高",
+        source: "中考真题整理",
+        url: "tianjin-first-letter-stm.html",
+        note: "来自本地 STM 页面已整理的 2025 天津中考答案。"
+      },
+      {
+        type: "中考",
+        year: "2024",
+        region: "天津中考",
+        term: "中考综合填空",
+        range: "76-85",
+        answers: [["76", "protect"], ["77", "easy"], ["78", "search"], ["79", "anything"], ["80", "until"], ["81", "cover"], ["82", "grew"], ["83", "animals"], ["84", "farmers"], ["85", "larger"]],
+        confidence: "高",
+        source: "中考真题整理",
+        url: "tianjin-first-letter-stm.html",
+        note: "来自本地 STM 页面已整理的 2024 天津中考答案。"
+      },
+      {
+        type: "中考",
+        year: "2023",
+        region: "天津中考",
+        term: "中考综合填空",
+        range: "76-85",
+        answers: [["76", "pleased"], ["77", "reasons"], ["78", "easier"], ["79", "face"], ["80", "look"], ["81", "around"], ["82", "spread"], ["83", "sad"], ["84", "Finally"], ["85", "stay"]],
+        confidence: "高",
+        source: "中考真题整理",
+        url: "tianjin-first-letter-stm.html",
+        note: "来自本地 STM 页面已整理的 2023 天津中考答案。"
+      },
+      {
+        type: "中考",
+        year: "2022",
+        region: "天津中考",
+        term: "中考综合填空",
+        range: "76-85",
+        answers: [["76", "so"], ["77", "walk"], ["78", "books"], ["79", "come"], ["80", "different"], ["81", "libraries"], ["82", "fall"], ["83", "travel"], ["84", "later"], ["85", "world"]],
+        confidence: "高",
+        source: "中考真题整理",
+        url: "tianjin-first-letter-stm.html",
+        note: "来自本地 STM 页面已整理的 2022 天津中考答案。"
+      },
+      {
+        type: "中考",
+        year: "2021",
+        region: "天津中考",
+        term: "中考综合填空",
+        range: "76-85",
+        answers: [["76", "expensive"], ["77", "When"], ["78", "popular"], ["79", "caused"], ["80", "either"], ["81", "method"], ["82", "down"], ["83", "journeys"], ["84", "pleased"], ["85", "working"]],
+        confidence: "高",
+        source: "中考真题整理",
+        url: "tianjin-first-letter-stm.html",
+        note: "来自本地 STM 页面已整理的 2021 天津中考答案。"
+      },
+      {
+        type: "中考",
+        year: "2020",
+        region: "天津中考",
+        term: "中考综合填空",
+        range: "76-85",
+        answers: [["76", "nice"], ["77", "enjoy"], ["78", "another"], ["79", "bed"], ["80", "quiet"], ["81", "stories"], ["82", "like"], ["83", "together"], ["84", "help"], ["85", "when"]],
+        confidence: "高",
+        source: "中考真题整理",
+        url: "tianjin-first-letter-stm.html",
+        note: "来自本地 STM 页面已整理的 2020 天津中考答案。"
+      },
+      {
+        type: "中考",
+        year: "2019",
+        region: "天津中考",
+        term: "中考综合填空",
+        range: "76-85",
+        answers: [["76", "idea"], ["77", "pleased"], ["78", "divided"], ["79", "stop"], ["80", "themselves"], ["81", "spread"], ["82", "actions"], ["83", "ready"], ["84", "difficulties"], ["85", "especially"]],
+        confidence: "高",
+        source: "中考真题整理",
+        url: "tianjin-first-letter-stm.html",
+        note: "来自本地 STM 页面已整理的 2019 天津中考答案。"
+      },
+      {
+        type: "中考",
+        year: "2018",
+        region: "天津中考",
+        term: "中考综合填空",
+        range: "76-85",
+        answers: [["76", "ways"], ["77", "invented"], ["78", "sun"], ["79", "cloudy"], ["80", "first"], ["81", "level"], ["82", "failed"], ["83", "but"], ["84", "improved"], ["85", "change"]],
+        confidence: "高",
+        source: "中考真题整理",
+        url: "tianjin-first-letter-stm.html",
+        note: "来自本地 STM 页面已整理的 2018 天津中考答案。"
+      },
+      {
+        type: "中考",
+        year: "2017",
+        region: "天津中考",
+        term: "中考综合填空",
+        range: "76-85",
+        answers: [["76", "fly"], ["77", "strong"], ["78", "quickly"], ["79", "reduce"], ["80", "dangerous"], ["81", "under"], ["82", "until"], ["83", "country"], ["84", "alive"], ["85", "training"]],
+        confidence: "高",
+        source: "中考真题整理",
+        url: "tianjin-first-letter-stm.html",
+        note: "来自本地 STM 页面已整理的 2017 天津中考答案。"
+      },
+      {
+        type: "中考",
+        year: "2016",
+        region: "天津中考",
+        term: "中考综合填空",
+        range: "76-85",
+        answers: [["76", "experience"], ["77", "how"], ["78", "starts"], ["79", "meal"], ["80", "prepared"], ["81", "delicious"], ["82", "made"], ["83", "whole"], ["84", "electricity"], ["85", "about"]],
+        confidence: "高",
+        source: "中考真题整理",
+        url: "tianjin-first-letter-stm.html",
+        note: "来自本地 STM 页面已整理的 2016 天津中考答案。"
+      }
+    ];
+
+    const gaps = [
+      ["2024-2025", "津南区等5地", "七下期末", "https://m.51jiaoxi.com/doc-17470924.html", "页面索引可见，答案正文受访问限制。"],
+      ["2023-2024", "滨海新区", "七上期末", "https://m.51jiaoxi.com/doc-16217376.html", "试卷索引可见，未取得完整答案。"],
+      ["2023-2024", "和平区耀华中学", "七上期末", "https://www.trjlseng.com/cyst/1816.html", "资料页可见，附件请求返回错误页。"],
+      ["2016-2017", "南开区", "七下期末", "https://www.jyeoo.com/sj/01e26721-ab67-4ee7-a48d-93c1dae0e35e", "题面公开，答案解析受限。"],
+      ["往年", "天津多区", "七下期末", "https://zhuanlan.zhihu.com/p/641576743", "资源索引线索，不直接计入答案。"]
+    ];
+
+    const els = {
+      groupCount: document.getElementById("groupCount"),
+      answerCount: document.getElementById("answerCount"),
+      verifiedCount: document.getElementById("verifiedCount"),
+      searchInput: document.getElementById("searchInput"),
+      typeFilter: document.getElementById("typeFilter"),
+      confidenceFilter: document.getElementById("confidenceFilter"),
+      groups: document.getElementById("groups"),
+      gaps: document.getElementById("gaps"),
+      resultHint: document.getElementById("resultHint"),
+      emptyState: document.getElementById("emptyState"),
+      copyBtn: document.getElementById("copyBtn"),
+      printBtn: document.getElementById("printBtn")
+    };
+
+    function confidenceClass(value) {
+      if (value === "高") return "high";
+      if (value === "中") return "mid";
+      return "low";
+    }
+
+    function currentGroups() {
+      const q = els.searchInput.value.trim().toLowerCase();
+      const type = els.typeFilter.value;
+      const confidence = els.confidenceFilter.value;
+      return groups.filter(group => {
+        const text = [
+          group.type, group.year, group.region, group.term, group.range, group.source, group.note,
+          group.answers.map(([, answer]) => answer).join(" ")
+        ].join(" ").toLowerCase();
+        return (!q || text.includes(q))
+          && (type === "all" || group.type === type)
+          && (confidence === "all" || group.confidence === confidence);
+      });
+    }
+
+    function renderGroups(items) {
+      els.groups.innerHTML = items.map(group => `
+        <article class="group">
+          <div class="group-head">
+            <div>
+              <div class="title">${group.year} - ${group.region}</div>
+              <div class="meta">${group.type} · ${group.term} · 题号 ${group.range}</div>
+            </div>
+            <span class="tag ${confidenceClass(group.confidence)}">${group.confidence}置信</span>
+          </div>
+          <div class="answers">
+            ${group.answers.map(([no, answer]) => `<div class="answer"><small>${no}</small><b>${answer}</b></div>`).join("")}
+          </div>
+          <div class="tags">
+            <span class="tag src">${group.source}</span>
+            <span class="tag mid">${group.answers.map(([, answer]) => answer).join(" / ")}</span>
+          </div>
+          <div class="meta" style="padding:0 14px 14px">${group.note}</div>
+        </article>
+      `).join("");
+    }
+
+    function renderGaps() {
+      els.gaps.innerHTML = gaps.map(([year, region, term, url, note]) => `
+        <li>
+          <a href="${url}" target="_blank" rel="noopener">${year} - ${region} - ${term}</a>
+          <div class="meta">${note}</div>
+        </li>
+      `).join("");
+    }
+
+    function render() {
+      const items = currentGroups();
+      const answerCount = items.reduce((sum, group) => sum + group.answers.length, 0);
+      renderGroups(items);
+      els.resultHint.textContent = `${items.length} 组，${answerCount} 条答案`;
+      els.emptyState.style.display = items.length ? "none" : "block";
+    }
+
+    function copyCurrent() {
+      const text = currentGroups().map(group => {
+        const answers = group.answers.map(([no, answer]) => `${no}.${answer}`).join("  ");
+        return `${group.year} - ${group.region} - ${group.term}: ${answers}`;
+      }).join("\n");
+      navigator.clipboard.writeText(text).then(() => {
+        els.copyBtn.textContent = "已复制";
+        setTimeout(() => { els.copyBtn.textContent = "复制当前答案"; }, 1300);
+      });
+    }
+
+    function init() {
+      els.groupCount.textContent = groups.length;
+      els.answerCount.textContent = groups.reduce((sum, group) => sum + group.answers.length, 0);
+      els.verifiedCount.textContent = groups.filter(group => group.confidence === "高").length;
+      renderGaps();
+      render();
+      [els.searchInput, els.typeFilter, els.confidenceFilter].forEach(el => el.addEventListener("input", render));
+      els.copyBtn.addEventListener("click", copyCurrent);
+      els.printBtn.addEventListener("click", () => window.print());
+    }
+
+    init();
+  </script>
+</body>
+</html>

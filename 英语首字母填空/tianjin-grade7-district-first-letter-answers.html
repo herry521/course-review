@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>天津七年级各区期末首字母填空答案分布</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #637085;
+      --paper: #f5f6f8;
+      --card: #ffffff;
+      --line: #d9e0ea;
+      --blue: #1f5f99;
+      --green: #236b51;
+      --orange: #936014;
+      --red: #a33d3d;
+      --shadow: 0 14px 36px rgba(23, 32, 51, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+    button, input, select { font: inherit; }
+    .wrap { max-width: 1220px; margin: 0 auto; padding: 30px 20px 56px; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: start;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .label {
+      color: var(--blue);
+      font-weight: 750;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+    .intro { max-width: 880px; margin: 12px 0 0; color: var(--muted); font-size: 15px; }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+    .btn {
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--card);
+      color: var(--ink);
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    .btn:hover { border-color: #97a6ba; background: #fbfcfd; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      margin: 22px 0;
+    }
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      box-shadow: 0 8px 24px rgba(23, 32, 51, .05);
+    }
+    .stat b { display: block; font-size: 28px; line-height: 1; }
+    .stat span { display: block; margin-top: 7px; color: var(--muted); font-size: 13px; }
+    .notice {
+      border: 1px solid #ead8a5;
+      background: #fff8e8;
+      border-radius: 8px;
+      padding: 14px;
+      color: #604512;
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 1fr 150px 150px 150px;
+      gap: 10px;
+      padding: 12px;
+      margin: 0 -12px 18px;
+      background: rgba(245, 246, 248, .94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(217, 224, 234, .85);
+    }
+    input[type="search"], select {
+      min-height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--card);
+      color: var(--ink);
+      padding: 8px 12px;
+      outline: none;
+    }
+    input[type="search"]:focus, select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(31, 95, 153, .13);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 16px;
+      align-items: start;
+    }
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: end;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      background: #fbfcfd;
+    }
+    h2 { margin: 0; font-size: 20px; line-height: 1.2; letter-spacing: 0; }
+    .hint { color: var(--muted); font-size: 13px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      padding: 12px;
+    }
+    .card {
+      border: 1px solid #e4e9f1;
+      border-radius: 8px;
+      padding: 12px;
+      min-height: 142px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      background: #fff;
+    }
+    .answer {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .word { font-size: 21px; font-weight: 800; line-height: 1.1; overflow-wrap: anywhere; }
+    .initial {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: #edf4fb;
+      color: var(--blue);
+      font-weight: 800;
+      text-transform: uppercase;
+      flex: 0 0 auto;
+    }
+    .meta, .note { color: var(--muted); font-size: 13px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      padding: 2px 8px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .tag.high { color: var(--green); background: #e9f5ef; border-color: #cce7db; }
+    .tag.mid { color: var(--blue); background: #edf4fb; border-color: #d2e4f5; }
+    .tag.low { color: var(--red); background: #fff0f0; border-color: #efd0d0; }
+    .tag.src { color: var(--orange); background: #fff5df; border-color: #ecd9aa; }
+    .bars { padding: 12px 16px 16px; display: grid; gap: 9px; }
+    .bar-row {
+      display: grid;
+      grid-template-columns: 42px 1fr 38px;
+      gap: 10px;
+      align-items: center;
+      font-size: 13px;
+    }
+    .track { height: 11px; border-radius: 999px; background: #edf1f6; overflow: hidden; }
+    .fill { height: 100%; border-radius: inherit; background: var(--blue); min-width: 4px; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid #edf0f5; text-align: left; vertical-align: top; }
+    th { color: #425066; background: #fbfcfd; font-size: 12px; white-space: nowrap; }
+    td a { color: var(--blue); text-decoration: none; }
+    td a:hover { text-decoration: underline; }
+    .status-ok { color: var(--green); font-weight: 700; }
+    .status-mid { color: var(--orange); font-weight: 700; }
+    .status-wait { color: var(--red); font-weight: 700; }
+    .empty { display: none; padding: 22px; text-align: center; color: var(--muted); }
+    .wide { grid-column: 1 / -1; }
+    .source-list { padding: 0; margin: 0; list-style: none; }
+    .source-list li { padding: 12px 16px; border-bottom: 1px solid #edf0f5; }
+    .source-list li:last-child { border-bottom: 0; }
+    .source-title { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-weight: 750; }
+    .source-title a { color: var(--ink); text-decoration: none; }
+    .source-title a:hover { color: var(--blue); text-decoration: underline; }
+    .source-detail { margin-top: 5px; color: var(--muted); font-size: 13px; }
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; }
+      .actions { justify-content: flex-start; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .toolbar { grid-template-columns: 1fr 1fr; }
+      .toolbar input { grid-column: 1 / -1; }
+      .grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      .wrap { padding: 20px 14px 42px; }
+      .stats, .toolbar, .cards { grid-template-columns: 1fr; }
+      .toolbar { position: static; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
+      .card { min-height: 0; }
+      .panel-head { align-items: flex-start; flex-direction: column; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 0; }
+      .actions, .toolbar { display: none; }
+      .panel, .stat { box-shadow: none; break-inside: avoid; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div>
+        <div class="label">天津七年级期末 · 首字母答案分布</div>
+        <h1>近年各区首字母填空最终答案清单</h1>
+        <p class="intro">当前版本把公开网页、可下载 Word 和搜索片段中能核验到的答案拆成逐题数据。受平台验证、会员下载和附件失效影响，不能把它称为天津各区近 10 年全量库；页面中单独保留了缺口来源，便于后续补齐。</p>
+      </div>
+      <div class="actions">
+        <button class="btn" id="printBtn">打印</button>
+        <button class="btn" id="csvBtn">复制 CSV</button>
+      </div>
+    </header>
+
+    <section class="stats">
+      <div class="stat"><b id="answerCount">0</b><span>已整理答案行</span></div>
+      <div class="stat"><b id="sourceCount">0</b><span>检索到的来源</span></div>
+      <div class="stat"><b id="districtCount">0</b><span>涉及区/联考</span></div>
+      <div class="stat"><b id="verifiedCount">0</b><span>原文可抽取答案</span></div>
+      <div class="stat"><b id="letterCount">0</b><span>出现首字母</span></div>
+    </section>
+
+    <div class="notice">统计口径：高置信度来自已下载并抽取的原始 Word；中低置信度来自搜索片段，只用于初步考点观察，正式错题本建议用原卷复核后再定稿。</div>
+
+    <section class="toolbar">
+      <input id="searchInput" type="search" placeholder="搜索：区名 / 年份 / 答案 / 题号 / 来源">
+      <select id="districtFilter" aria-label="区县筛选"></select>
+      <select id="termFilter" aria-label="学期筛选"></select>
+      <select id="confidenceFilter" aria-label="置信度筛选"></select>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>答案卡片</h2>
+          <div class="hint" id="resultHint">正在加载</div>
+        </div>
+        <div class="empty" id="emptyState">没有匹配的答案。</div>
+        <div class="cards" id="answerCards"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>首字母分布</h2>
+          <div class="hint">按当前筛选实时计算</div>
+        </div>
+        <div class="bars" id="letterBars"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>高频答案</h2>
+          <div class="hint">同词多来源累加</div>
+        </div>
+        <div class="bars" id="wordBars"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>逐题表</h2>
+          <div class="hint" id="tableHint">0 行</div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>年份</th>
+                <th>学期</th>
+                <th>区/联考</th>
+                <th>题号</th>
+                <th>首字母</th>
+                <th>答案</th>
+                <th>置信度</th>
+                <th>来源</th>
+              </tr>
+            </thead>
+            <tbody id="answerRows"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel wide">
+        <div class="panel-head">
+          <h2>来源与缺口</h2>
+          <div class="hint">用于判断后续补卷优先级</div>
+        </div>
+        <ul class="source-list" id="sourceList"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const sources = [
+      {
+        id: "HX-2022-2023-QS",
+        schoolYear: "2022-2023",
+        term: "七上期末",
+        district: "河西区",
+        exam: "天津市河西区七年级上册期末英语试卷及答案",
+        url: "https://file.you123.top/upload/xueke/attach/2024/07/09/2022-2023%E5%AD%A6%E5%B9%B4%E5%A4%A9%E6%B4%A5%E5%B8%82%E6%B2%B3%E8%A5%BF%E5%8C%BA%E4%B8%83%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C%E6%9C%9F%E6%9C%AB%E8%8B%B1%E8%AF%AD%E8%AF%95%E5%8D%B7%E5%8F%8A%E7%AD%94%E6%A1%88%28Word%E7%89%88%29.doc",
+        status: "原始Word可抽取",
+        coverage: "61-70",
+        confidence: "高",
+        note: "已下载 Word 并抽取题目与答案，适合计入正式统计。"
+      },
+      {
+        id: "TJBQ-2023-2024-QS",
+        schoolYear: "2023-2024",
+        term: "七上期末",
+        district: "天津部分区",
+        exam: "天津市部分区2023-2024七年级上学期期末英语试卷及答案",
+        url: "https://m.51jiaoxi.com/doc-15346090.html",
+        status: "搜索片段可见",
+        coverage: "56-65",
+        confidence: "中",
+        note: "教习网页面正文受验证限制；第 65 题片段显示 also/always 变体不清。"
+      },
+      {
+        id: "HB-2022-2023-QS",
+        schoolYear: "2022-2023",
+        term: "七上期末",
+        district: "河北区",
+        exam: "2022-2023学年天津市河北区七年级上册期末英语试卷及答案",
+        url: "https://m.51jiaoxi.com/doc-15045727.html",
+        status: "搜索片段可见",
+        coverage: "60-65",
+        confidence: "中",
+        note: "搜索片段只显示 60-65；56-59 暂未取得。"
+      },
+      {
+        id: "NK-2016-2017-QX",
+        schoolYear: "2016-2017",
+        term: "七下期末",
+        district: "南开区",
+        exam: "2016-2017学年天津市南开区七年级（下）期末英语试卷",
+        url: "https://www.jyeoo.com/sj/01e26721-ab67-4ee7-a48d-93c1dae0e35e",
+        status: "题面公开，答案受限",
+        coverage: "综合填空题面可见",
+        confidence: "待核验",
+        note: "题面为词形、音标、介词等混合提示，答案解析未公开，不计入答案频次。"
+      },
+      {
+        id: "BH-2023-2024-QS",
+        schoolYear: "2023-2024",
+        term: "七上期末",
+        district: "滨海新区",
+        exam: "2023-2024学年天津市滨海新区七年级（上）期末英语试卷",
+        url: "https://m.51jiaoxi.com/doc-16217376.html",
+        status: "索引可见，答案未取得",
+        coverage: "综合填空栏目可见",
+        confidence: "待核验",
+        note: "公开搜索能确认试卷存在，但正文/答案未能直接获取。"
+      },
+      {
+        id: "HP-YH-2023-2024-QS",
+        schoolYear: "2023-2024",
+        term: "七上期末",
+        district: "和平区",
+        exam: "天津市和平区耀华中学2023-2024学年七年级上学期1月期末英语试题",
+        url: "https://www.trjlseng.com/cyst/1816.html",
+        status: "附件下载失败",
+        coverage: "资料页可见",
+        confidence: "待核验",
+        note: "中学英语网页面可见，RAR 附件请求返回 502，暂未取得答案。"
+      },
+      {
+        id: "JN5-2024-2025-QX",
+        schoolYear: "2024-2025",
+        term: "七下期末",
+        district: "津南区等5地",
+        exam: "2024-2025学年天津市津南区等5地七年级下学期6月期末考试英语试题",
+        url: "https://m.51jiaoxi.com/doc-17470924.html",
+        status: "索引可见，答案未取得",
+        coverage: "含详细答案解析标记",
+        confidence: "待核验",
+        note: "页面受访问限制，未能抽出最终答案。"
+      },
+      {
+        id: "TJZX-PAST-QX",
+        schoolYear: "往年",
+        term: "七下期末",
+        district: "天津多区",
+        exam: "天津试卷 七年级下期末各科真题",
+        url: "https://zhuanlan.zhihu.com/p/641576743",
+        status: "资源索引",
+        coverage: "往年期末真题索引",
+        confidence: "待核验",
+        note: "作为补卷线索，不直接计入答案统计。"
+      }
+    ];
+
+    const answers = [
+      ["HX-2022-2023-QS", "61", "e", "everyone", "everybody", "高", "Word 文件正文与答案均已抽取"],
+      ["HX-2022-2023-QS", "62", "n", "night", "", "高", "Word 文件正文与答案均已抽取"],
+      ["HX-2022-2023-QS", "63", "e", "enough", "", "高", "Word 文件正文与答案均已抽取"],
+      ["HX-2022-2023-QS", "64", "t", "time", "", "高", "Word 文件正文与答案均已抽取"],
+      ["HX-2022-2023-QS", "65", "p", "put", "", "高", "Word 文件正文与答案均已抽取"],
+      ["HX-2022-2023-QS", "66", "b", "breakfast", "", "高", "Word 文件正文与答案均已抽取"],
+      ["HX-2022-2023-QS", "67", "u", "usually", "", "高", "Word 文件正文与答案均已抽取"],
+      ["HX-2022-2023-QS", "68", "s", "smile", "", "高", "Word 文件正文与答案均已抽取"],
+      ["HX-2022-2023-QS", "69", "w", "world", "", "高", "Word 文件正文与答案均已抽取"],
+      ["HX-2022-2023-QS", "70", "r", "remember", "", "高", "Word 文件正文与答案均已抽取"],
+      ["TJBQ-2023-2024-QS", "56", "h", "happens", "", "中", "页面正文受验证限制；答案来自搜索片段"],
+      ["TJBQ-2023-2024-QS", "57", "u", "usually", "", "中", "页面正文受验证限制；答案来自搜索片段"],
+      ["TJBQ-2023-2024-QS", "58", "t", "them", "", "中", "页面正文受验证限制；答案来自搜索片段"],
+      ["TJBQ-2023-2024-QS", "59", "b", "before", "", "中", "搜索片段有拼写缺字；按语义校正为 before，需原卷复核"],
+      ["TJBQ-2023-2024-QS", "60", "s", "sweeping", "", "中", "页面正文受验证限制；答案来自搜索片段"],
+      ["TJBQ-2023-2024-QS", "61", "d", "dinner", "", "中", "页面正文受验证限制；答案来自搜索片段"],
+      ["TJBQ-2023-2024-QS", "62", "m", "much", "", "中", "页面正文受验证限制；答案来自搜索片段"],
+      ["TJBQ-2023-2024-QS", "63", "w", "watch", "", "中", "页面正文受验证限制；答案来自搜索片段"],
+      ["TJBQ-2023-2024-QS", "64", "n", "new", "", "中", "页面正文受验证限制；答案来自搜索片段"],
+      ["TJBQ-2023-2024-QS", "65", "a", "also", "always", "低", "搜索片段显示 also/always 变体不清，需原卷复核"],
+      ["HB-2022-2023-QS", "60", "o", "over", "", "中", "搜索片段只显示 60-65；56-59 未取得"],
+      ["HB-2022-2023-QS", "61", "p", "photos", "pictures", "中", "搜索片段显示 photos/pictures"],
+      ["HB-2022-2023-QS", "62", "l", "lying", "", "中", "搜索片段只显示 60-65；56-59 未取得"],
+      ["HB-2022-2023-QS", "63", "w", "where", "", "中", "搜索片段只显示 60-65；56-59 未取得"],
+      ["HB-2022-2023-QS", "64", "i", "it", "", "中", "搜索片段只显示 60-65；56-59 未取得"],
+      ["HB-2022-2023-QS", "65", "l", "leave", "", "中", "搜索片段只显示 60-65；56-59 未取得"]
+    ].map(([sourceId, questionNo, initial, answer, alternatives, confidence, note]) => {
+      const source = sources.find(item => item.id === sourceId);
+      return { ...source, sourceId, questionNo, initial, answer, alternatives, rowConfidence: confidence, rowNote: note };
+    });
+
+    const els = {
+      answerCount: document.getElementById("answerCount"),
+      sourceCount: document.getElementById("sourceCount"),
+      districtCount: document.getElementById("districtCount"),
+      verifiedCount: document.getElementById("verifiedCount"),
+      letterCount: document.getElementById("letterCount"),
+      searchInput: document.getElementById("searchInput"),
+      districtFilter: document.getElementById("districtFilter"),
+      termFilter: document.getElementById("termFilter"),
+      confidenceFilter: document.getElementById("confidenceFilter"),
+      answerCards: document.getElementById("answerCards"),
+      answerRows: document.getElementById("answerRows"),
+      letterBars: document.getElementById("letterBars"),
+      wordBars: document.getElementById("wordBars"),
+      resultHint: document.getElementById("resultHint"),
+      tableHint: document.getElementById("tableHint"),
+      emptyState: document.getElementById("emptyState"),
+      sourceList: document.getElementById("sourceList"),
+      printBtn: document.getElementById("printBtn"),
+      csvBtn: document.getElementById("csvBtn")
+    };
+
+    function fillSelect(select, label, values) {
+      select.innerHTML = [`<option value="all">${label}</option>`]
+        .concat(values.map(value => `<option value="${value}">${value}</option>`))
+        .join("");
+    }
+
+    function countBy(items, getter) {
+      return items.reduce((acc, item) => {
+        const key = getter(item);
+        acc[key] = (acc[key] || 0) + 1;
+        return acc;
+      }, {});
+    }
+
+    function statusClass(status) {
+      if (status.includes("Word")) return "status-ok";
+      if (status.includes("片段") || status.includes("题面")) return "status-mid";
+      return "status-wait";
+    }
+
+    function confidenceClass(confidence) {
+      if (confidence === "高") return "high";
+      if (confidence === "中") return "mid";
+      return "low";
+    }
+
+    function currentRows() {
+      const q = els.searchInput.value.trim().toLowerCase();
+      const district = els.districtFilter.value;
+      const term = els.termFilter.value;
+      const confidence = els.confidenceFilter.value;
+      return answers.filter(row => {
+        const text = [
+          row.schoolYear, row.term, row.district, row.exam, row.questionNo,
+          row.initial, row.answer, row.alternatives, row.rowConfidence, row.status, row.rowNote
+        ].join(" ").toLowerCase();
+        return (!q || text.includes(q))
+          && (district === "all" || row.district === district)
+          && (term === "all" || row.term === term)
+          && (confidence === "all" || row.rowConfidence === confidence);
+      });
+    }
+
+    function renderBars(container, counts, labelMap = value => value) {
+      const entries = Object.entries(counts).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+      const max = Math.max(1, ...entries.map(([, count]) => count));
+      container.innerHTML = entries.length ? entries.slice(0, 12).map(([key, count]) => `
+        <div class="bar-row">
+          <strong>${labelMap(key)}</strong>
+          <div class="track"><div class="fill" style="width:${Math.max(8, count / max * 100)}%"></div></div>
+          <span>${count}</span>
+        </div>
+      `).join("") : `<div class="empty" style="display:block">暂无数据</div>`;
+    }
+
+    function renderCards(rows) {
+      els.answerCards.innerHTML = rows.map(row => `
+        <article class="card">
+          <div class="answer">
+            <div>
+              <div class="word">${row.answer}${row.alternatives ? ` / ${row.alternatives}` : ""}</div>
+              <div class="meta">${row.district} · ${row.schoolYear} · ${row.term} · 第 ${row.questionNo} 题</div>
+            </div>
+            <div class="initial">${row.initial}</div>
+          </div>
+          <div class="note">${row.rowNote}</div>
+          <div class="tags">
+            <span class="tag ${confidenceClass(row.rowConfidence)}">${row.rowConfidence}置信</span>
+            <span class="tag src">${row.status}</span>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function renderRows(rows) {
+      els.answerRows.innerHTML = rows.map(row => `
+        <tr>
+          <td>${row.schoolYear}</td>
+          <td>${row.term}</td>
+          <td>${row.district}</td>
+          <td>${row.questionNo}</td>
+          <td>${row.initial.toUpperCase()}</td>
+          <td><strong>${row.answer}</strong>${row.alternatives ? `<br><span class="hint">可接受：${row.alternatives}</span>` : ""}</td>
+          <td>${row.rowConfidence}</td>
+          <td><a href="${row.url}" target="_blank" rel="noopener">${row.status}</a></td>
+        </tr>
+      `).join("");
+    }
+
+    function renderSources() {
+      els.sourceList.innerHTML = sources.map(source => `
+        <li>
+          <div class="source-title">
+            <a href="${source.url}" target="_blank" rel="noopener">${source.schoolYear} ${source.district} ${source.term}</a>
+            <span class="${statusClass(source.status)}">${source.status}</span>
+          </div>
+          <div class="source-detail">${source.exam}；覆盖：${source.coverage}；置信度：${source.confidence}。${source.note}</div>
+        </li>
+      `).join("");
+    }
+
+    function render() {
+      const rows = currentRows();
+      renderCards(rows);
+      renderRows(rows);
+      renderBars(els.letterBars, countBy(rows, row => row.initial.toUpperCase()));
+      renderBars(els.wordBars, countBy(rows, row => row.answer));
+      els.resultHint.textContent = `${rows.length} / ${answers.length} 条`;
+      els.tableHint.textContent = `${rows.length} 行`;
+      els.emptyState.style.display = rows.length ? "none" : "block";
+    }
+
+    function csvValue(value) {
+      return `"${String(value ?? "").replaceAll('"', '""')}"`;
+    }
+
+    function copyCsv() {
+      const header = ["source_id","school_year","term","grade","district","exam_name","question_no","initial","answer","alternatives","source_type","confidence","source_url","note"];
+      const lines = [header.join(",")].concat(answers.map(row => [
+        row.sourceId, row.schoolYear, row.term, "七年级", row.district, row.exam,
+        row.questionNo, row.initial, row.answer, row.alternatives, row.status,
+        row.rowConfidence, row.url, row.rowNote
+      ].map(csvValue).join(",")));
+      navigator.clipboard.writeText(lines.join("\n")).then(() => {
+        els.csvBtn.textContent = "已复制";
+        setTimeout(() => { els.csvBtn.textContent = "复制 CSV"; }, 1300);
+      });
+    }
+
+    function init() {
+      fillSelect(els.districtFilter, "全部区/联考", [...new Set(answers.map(row => row.district))].sort());
+      fillSelect(els.termFilter, "全部学期", [...new Set(answers.map(row => row.term))].sort());
+      fillSelect(els.confidenceFilter, "全部置信度", ["高", "中", "低"]);
+      els.answerCount.textContent = answers.length;
+      els.sourceCount.textContent = sources.length;
+      els.districtCount.textContent = new Set(sources.map(source => source.district)).size;
+      els.verifiedCount.textContent = answers.filter(row => row.rowConfidence === "高").length;
+      els.letterCount.textContent = new Set(answers.map(row => row.initial)).size;
+      renderSources();
+      render();
+      [els.searchInput, els.districtFilter, els.termFilter, els.confidenceFilter].forEach(el => el.addEventListener("input", render));
+      els.printBtn.addEventListener("click", () => window.print());
+      els.csvBtn.addEventListener("click", copyCsv);
+    }
+
+    init();
+  </script>
+</body>
+</html>

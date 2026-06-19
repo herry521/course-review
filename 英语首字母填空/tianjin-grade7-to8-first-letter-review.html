@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>天津七升八英语期末首字母填空常用词</title>
+  <style>
+    :root {
+      --ink: #18212f;
+      --muted: #627083;
+      --line: #d8dee8;
+      --paper: #f5f6f8;
+      --card: #ffffff;
+      --blue: #1f5ea8;
+      --green: #237457;
+      --orange: #986000;
+      --red: #a84040;
+      --shadow: 0 16px 42px rgba(24, 33, 47, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+    button, input, select { font: inherit; }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 30px 20px 56px; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: start;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--line);
+    }
+    .label {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.08;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 14px 0 0;
+      max-width: 820px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+    .btn {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--card);
+      color: var(--ink);
+      min-height: 38px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    .btn:hover, .letter:hover { border-color: #99a7ba; background: #fbfcfd; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 22px 0;
+    }
+    .stat {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--card);
+      padding: 14px;
+      box-shadow: 0 10px 26px rgba(24, 33, 47, .04);
+    }
+    .stat b { display: block; font-size: 28px; line-height: 1; }
+    .stat span { display: block; margin-top: 6px; color: var(--muted); font-size: 13px; }
+    .method {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+    .method-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .method-card strong { display: block; font-size: 16px; margin-bottom: 5px; }
+    .method-card p { margin: 0; color: var(--muted); font-size: 13px; }
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 1fr auto auto auto;
+      gap: 10px;
+      padding: 12px;
+      margin: 0 -12px 18px;
+      background: rgba(245, 246, 248, .94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(216, 222, 232, .8);
+    }
+    input[type="search"], select {
+      min-height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--card);
+      color: var(--ink);
+      outline: none;
+      padding: 8px 12px;
+    }
+    input[type="search"] { width: 100%; }
+    input[type="search"]:focus, select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(31, 94, 168, .12);
+    }
+    .toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+    .toggle input {
+      appearance: none;
+      width: 38px;
+      height: 22px;
+      border-radius: 999px;
+      background: #cfd6e2;
+      position: relative;
+      cursor: pointer;
+    }
+    .toggle input::after {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 1px 4px rgba(0,0,0,.25);
+      transition: .18s ease;
+    }
+    .toggle input:checked { background: var(--blue); }
+    .toggle input:checked::after { transform: translateX(16px); }
+    .letters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 8px 0 24px;
+    }
+    .letter {
+      width: 34px;
+      height: 34px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--card);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .letter.active { color: white; background: var(--ink); border-color: var(--ink); }
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 14px;
+      margin: 24px 0 12px;
+    }
+    h2 { margin: 0; font-size: 22px; line-height: 1.2; letter-spacing: 0; }
+    .hint { color: var(--muted); font-size: 13px; }
+    .groups { display: grid; gap: 16px; }
+    .group {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .group-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      background: #fbfcfd;
+      border-bottom: 1px solid var(--line);
+      padding: 12px 14px;
+    }
+    .group-head strong { font-size: 20px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      padding: 12px;
+    }
+    .card {
+      border: 1px solid #e2e7ef;
+      border-radius: 8px;
+      padding: 12px;
+      background: #fff;
+      min-height: 174px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .word {
+      font-size: 20px;
+      line-height: 1.1;
+      font-weight: 750;
+      overflow-wrap: anywhere;
+    }
+    .cn { color: var(--muted); font-size: 13px; }
+    body.hide-cn .cn, body.hide-cn .pattern, body.hide-cn .cue { filter: blur(5px); user-select: none; }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      min-height: 24px;
+      padding: 2px 8px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+      border: 1px solid transparent;
+    }
+    .must { color: var(--green); background: #e8f5ef; border-color: #cbe7dc; }
+    .high { color: var(--blue); background: #edf3fb; border-color: #d5e4f7; }
+    .form { color: var(--orange); background: #fff4dc; border-color: #eed9a8; }
+    .plus { color: var(--red); background: #fff0f0; border-color: #efd0d0; }
+    .pattern {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 12px;
+    }
+    .pattern span {
+      border-radius: 999px;
+      background: #f1f4f8;
+      border: 1px solid #e2e7ef;
+      padding: 2px 7px;
+      color: #425166;
+    }
+    .cue {
+      margin-top: auto;
+      border-top: 1px solid #edf0f4;
+      padding-top: 8px;
+      color: #465469;
+      font-size: 13px;
+    }
+    .empty {
+      display: none;
+      text-align: center;
+      background: #fff;
+      border: 1px dashed #b9c4d3;
+      border-radius: 8px;
+      color: var(--muted);
+      padding: 24px;
+    }
+    .notes {
+      margin-top: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 16px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .notes b { color: var(--ink); }
+    @media (max-width: 980px) {
+      .hero, .section-title { grid-template-columns: 1fr; display: flex; flex-direction: column; align-items: flex-start; }
+      .actions { justify-content: flex-start; }
+      .stats, .method { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .toolbar { grid-template-columns: 1fr 1fr; }
+      .toolbar input[type="search"] { grid-column: 1 / -1; }
+      .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 620px) {
+      .wrap { padding: 20px 14px 42px; }
+      .stats, .method, .toolbar, .cards { grid-template-columns: 1fr; }
+      .toolbar { position: static; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
+      .toggle { justify-content: space-between; }
+      .card { min-height: 0; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 0; }
+      .actions, .toolbar, .letters { display: none; }
+      .stats { grid-template-columns: repeat(4, 1fr); }
+      .method { grid-template-columns: repeat(3, 1fr); }
+      .cards { grid-template-columns: repeat(3, 1fr); }
+      .card, .group, .stat, .method-card, .notes { break-inside: avoid; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div>
+        <div class="label">七升八期末复习 · 首字母填空</div>
+        <h1>天津七升八英语首字母填空常用词表</h1>
+        <p class="intro">面向初一升初二、七下期末复习。词表按天津初中期末常见语篇主题整理，重点覆盖家庭生活、校园活动、天气旅行、人物描述、方位交通、过去经历和常见词形变化。</p>
+      </div>
+      <div class="actions">
+        <button class="btn" id="dailyBtn">今日30词</button>
+        <button class="btn" id="printBtn">打印</button>
+      </div>
+    </header>
+
+    <section class="stats">
+      <div class="stat"><b id="totalCount">0</b><span>常用词条</span></div>
+      <div class="stat"><b>4</b><span>复习层级</span></div>
+      <div class="stat"><b>26</b><span>A-Z 首字母索引</span></div>
+      <div class="stat"><b>30</b><span>每日建议背诵量</span></div>
+    </section>
+
+    <section class="method">
+      <div class="method-card"><strong>1. 先判词性</strong><p>看空前空后，先判断名词、动词、形容词、副词、介词或连词。</p></div>
+      <div class="method-card"><strong>2. 再看语境</strong><p>首字母只是限制，真正答案来自前后句逻辑、固定搭配和文章主题。</p></div>
+      <div class="method-card"><strong>3. 最后查词形</strong><p>重点检查三单、过去式、复数、比较级、副词和代词形式。</p></div>
+    </section>
+
+    <section class="toolbar">
+      <input id="searchInput" type="search" placeholder="搜索：英文 / 中文 / 词性 / 搭配，例如 weather、过去式、方位">
+      <select id="levelFilter" aria-label="复习层级">
+        <option value="all">全部层级</option>
+        <option value="必会">必会核心</option>
+        <option value="高频">期末高频</option>
+        <option value="变形">易错变形</option>
+        <option value="拔高">拔高储备</option>
+      </select>
+      <select id="posFilter" aria-label="词性">
+        <option value="all">全部词性</option>
+        <option value="名词">名词</option>
+        <option value="动词">动词</option>
+        <option value="形容词">形容词</option>
+        <option value="副词">副词</option>
+        <option value="介词/连词">介词/连词</option>
+        <option value="代词/限定词">代词/限定词</option>
+      </select>
+      <label class="toggle"><span>隐藏中文自测</span><input id="hideCn" type="checkbox"></label>
+    </section>
+
+    <nav class="letters" id="letters"></nav>
+
+    <section>
+      <div class="section-title">
+        <h2>按首字母索引</h2>
+        <div class="hint" id="resultHint">正在加载</div>
+      </div>
+      <div class="empty" id="emptyState">没有匹配词条。可以清空搜索或切换筛选条件。</div>
+      <div class="groups" id="groups"></div>
+    </section>
+
+    <section class="notes">
+      <b>使用建议：</b>期末前 10 天，每天先背“今日30词”，再用“隐藏中文自测”检查能否根据英文说中文、根据中文说英文、根据提示句说出最终答案。七升八阶段优先保证必会词和易错变形词正确率，拔高词用于冲刺满分。
+      <br><br>
+      <b>资料口径：</b>本表参考天津七年级下期末公开试卷资源、七下首字母专项训练和初中首字母高频词清单整理，重点服务七升八期末复习；不同学校和区统考材料会有差异，如你有学校往年 PDF，我可以继续合并成“校内真题版”。
+    </section>
+  </main>
+
+  <script>
+    const words = [
+      ["able","能够的","形容词","高频","be able to","He is a____ to swim."],
+      ["about","关于；大约","介词/连词","必会","about + 数字/主题","There are a____ thirty students."],
+      ["across","穿过；在对面","介词/连词","高频","go across","Walk a____ the street carefully."],
+      ["afraid","害怕的","形容词","高频","be afraid of","She is a____ of dogs."],
+      ["again","再一次","副词","必会","once again","Please say it a____."],
+      ["ago","以前","副词","必会","时间 + ago","I visited Beijing two years a____."],
+      ["air","空气","名词","高频","fresh air","The a____ is clean after rain."],
+      ["almost","几乎","副词","高频","almost all/every","A____ all students like PE."],
+      ["alone","独自","形容词","高频","live/stay alone","He stayed at home a____."],
+      ["along","沿着","介词/连词","高频","walk along","Walk a____ the river."],
+      ["also","也","副词","必会","句中 also","She can a____ play the piano."],
+      ["always","总是","副词","必会","频率副词","He a____ gets up early."],
+      ["another","另一个","代词/限定词","高频","another + 单数名词","Would you like a____ apple?"],
+      ["answer","回答；答案","名词","必会","answer the question","Please write down the a____."],
+      ["anything","任何事物","代词/限定词","高频","否定/疑问句","I can't see a____ in the box."],
+      ["arrive","到达","动词","必会","arrive in/at","They a____ at school at eight."],
+      ["around","在周围；大约","介词/连词","高频","around the world","Children sat a____ the table."],
+      ["away","离开","副词","高频","run/go away","The dog ran a____."],
+      ["beautiful","美丽的","形容词","必会","beautiful city","Tianjin is a b____ city."],
+      ["because","因为","介词/连词","必会","because + 句子","I stayed home b____ it rained."],
+      ["become","变得","动词","高频","become + adj.","The weather b____ warm."],
+      ["before","在……以前","介词/连词","必会","before dinner/class","Wash hands b____ dinner."],
+      ["begin","开始","动词","必会","begin to do","Classes b____ at 8:00."],
+      ["behind","在……后面","介词/连词","必会","behind the door","The ball is b____ the chair."],
+      ["believe","相信","动词","高频","believe sb.","I b____ you can do it."],
+      ["better","更好","形容词","变形","good/well 比较级","You will do b____ next time."],
+      ["between","在两者之间","介词/连词","高频","between A and B","The shop is b____ the bank and school."],
+      ["both","两者都","代词/限定词","高频","both A and B","B____ of them are friendly."],
+      ["bring","带来","动词","必会","bring sth. to","Please b____ your book tomorrow."],
+      ["build","建造","动词","高频","build a house","People b____ many new buildings."],
+      ["busy","忙碌的","形容词","必会","be busy doing","Mum is b____ cooking."],
+      ["called","叫作；被称为","动词","变形","be called","The boy is c____ Tom."],
+      ["careful","仔细的","形容词","高频","be careful","Be c____ when crossing roads."],
+      ["carefully","仔细地","副词","变形","副词修饰动词","Read the passage c____."],
+      ["carry","携带；搬运","动词","高频","carry books","He c____ a heavy bag."],
+      ["center","中心","名词","高频","city center","The park is in the c____ of town."],
+      ["change","改变；变化","动词","高频","change into","The weather can c____ quickly."],
+      ["cheap","便宜的","形容词","高频","cheap/expensive","This shirt is c____."],
+      ["children","孩子们","名词","变形","child 复数","Many c____ are playing."],
+      ["city","城市","名词","必会","city life","Which c____ do you live in?"],
+      ["clean","干净的；打扫","动词","必会","clean the room","We c____ our classroom every day."],
+      ["close","关闭；近的","动词","高频","close to / close the door","Please c____ the window."],
+      ["cloudy","多云的","形容词","变形","cloud + y","It is c____ today."],
+      ["club","俱乐部","名词","必会","English club","I joined the music c____."],
+      ["collect","收集","动词","高频","collect stamps","He likes to c____ old coins."],
+      ["comfortable","舒服的","形容词","高频","comfortable bed","This chair is c____."],
+      ["country","国家；乡村","名词","高频","in the country","China is a great c____."],
+      ["cross","穿过","动词","高频","cross the street","Don't c____ the road now."],
+      ["dance","跳舞","动词","必会","dance well","She can d____ very well."],
+      ["dangerous","危险的","形容词","高频","It is dangerous to do","It is d____ to play on the road."],
+      ["delicious","美味的","形容词","高频","delicious food","The noodles are d____."],
+      ["different","不同的","形容词","高频","be different from","My school is d____ from yours."],
+      ["difficult","困难的","形容词","必会","find it difficult","Math is d____ for him."],
+      ["during","在……期间","介词/连词","高频","during the holiday","D____ the summer, I read books."],
+      ["each","每个","代词/限定词","高频","each student","E____ child has a book."],
+      ["early","早地；早的","副词","必会","get up early","I get up e____ every day."],
+      ["easy","容易的","形容词","必会","It is easy to do","This question is e____."],
+      ["enjoy","喜欢；享受","动词","必会","enjoy doing","I e____ reading stories."],
+      ["enough","足够的","代词/限定词","高频","enough + 名词","We have e____ time."],
+      ["everything","每件事","代词/限定词","高频","everything is ready","E____ is ready."],
+      ["exercise","锻炼；练习","名词","必会","do exercise","We should do e____ every day."],
+      ["expensive","昂贵的","形容词","高频","cheap/expensive","The bike is too e____."],
+      ["family","家庭","名词","必会","family members","My f____ are watching TV."],
+      ["famous","著名的","形容词","高频","be famous for","Tianjin is f____ for its food."],
+      ["far","远的","副词","必会","far from","My home is f____ from school."],
+      ["favourite","最喜欢的","形容词","必会","favourite subject","English is my f____ subject."],
+      ["festival","节日","名词","高频","Spring Festival","The Spring F____ is important."],
+      ["finish","完成","动词","必会","finish doing","Please f____ your homework first."],
+      ["forget","忘记","动词","高频","forget to do","Don't f____ to bring your pen."],
+      ["friendly","友好的","形容词","高频","be friendly to","Our teacher is f____ to us."],
+      ["future","未来","名词","高频","in the future","What will life be like in the f____?"],
+      ["garden","花园","名词","高频","in the garden","There are flowers in the g____."],
+      ["gift","礼物","名词","高频","birthday gift","This is a g____ for you."],
+      ["grow","生长；种植","动词","高频","grow vegetables","Farmers g____ rice."],
+      ["happen","发生","动词","高频","What happened?","What h____ yesterday?"],
+      ["happy","开心的","形容词","必会","feel happy","The children are h____."],
+      ["hard","努力地；困难的","副词","必会","work hard","He studies h____."],
+      ["healthy","健康的","形容词","高频","healthy food","Fruit is h____ food."],
+      ["hear","听见","动词","必会","hear from","I can h____ birds singing."],
+      ["heavy","重的；大的","形容词","高频","heavy rain/bag","There was h____ rain."],
+      ["helpful","有帮助的","形容词","高频","be helpful to","This dictionary is h____."],
+      ["history","历史","名词","必会","history museum","We visited a h____ museum."],
+      ["holiday","假期","名词","必会","summer holiday","Where did you go on h____?"],
+      ["hospital","医院","名词","必会","go to hospital","She works in a h____."],
+      ["hungry","饥饿的","形容词","必会","feel hungry","I am h____ after school."],
+      ["important","重要的","形容词","高频","It is important to do","English is i____."],
+      ["interesting","有趣的","形容词","必会","interesting story","This book is i____."],
+      ["invite","邀请","动词","高频","invite sb. to","I will i____ my friends."],
+      ["join","加入","动词","必会","join a club","Would you like to j____ us?"],
+      ["kind","友善的；种类","形容词","必会","kind of / be kind to","She is very k____."],
+      ["kitchen","厨房","名词","必会","in the kitchen","Mum is cooking in the k____."],
+      ["language","语言","名词","高频","foreign language","English is a useful l____."],
+      ["large","大的","形容词","高频","large room","There is a l____ lake."],
+      ["later","后来；以后","副词","高频","two days later","See you l____."],
+      ["learn","学习","动词","必会","learn English","We l____ English at school."],
+      ["leave","离开；留下","动词","高频","leave for / leave sth.","Don't l____ your bag here."],
+      ["library","图书馆","名词","必会","go to the library","I borrow books from the l____."],
+      ["listen","听","动词","必会","listen to","Please l____ to the teacher."],
+      ["little","小的；少量","形容词","必会","a little","There is a l____ water."],
+      ["lucky","幸运的","形容词","高频","be lucky to do","You are l____."],
+      ["maybe","也许","副词","高频","句首 maybe","M____ he is at home."],
+      ["message","信息；消息","名词","高频","leave a message","Can I take a m____?"],
+      ["minute","分钟","名词","必会","ten minutes","Wait a m____."],
+      ["modern","现代的","形容词","高频","modern city","Tianjin has many m____ buildings."],
+      ["money","钱","名词","必会","save money","He has little m____."],
+      ["museum","博物馆","名词","必会","visit a museum","We went to the science m____."],
+      ["near","在附近","介词/连词","必会","near my home","The shop is n____ school."],
+      ["need","需要","动词","必会","need to do","You n____ to practise more."],
+      ["never","从不","副词","必会","频率副词","He is n____ late."],
+      ["noisy","吵闹的","形容词","高频","noise-noisy","The street is n____."],
+      ["nothing","没有什么","代词/限定词","高频","nothing to do","There is n____ in the bag."],
+      ["outside","在外面","副词","高频","go outside","It is cold o____."],
+      ["popular","受欢迎的","形容词","高频","be popular with","Basketball is p____ with students."],
+      ["practice","练习","动词","高频","practice doing","You should p____ speaking English."],
+      ["prepare","准备","动词","高频","prepare for","We p____ for the exam."],
+      ["problem","问题","名词","必会","solve a problem","I have a p____ with spelling."],
+      ["quiet","安静的","形容词","高频","keep quiet","Please be q____ in the library."],
+      ["quickly","快速地","副词","变形","quick + ly","He ran q____ to school."],
+      ["rainy","下雨的","形容词","变形","rain + y","It was a r____ day."],
+      ["read","阅读","动词","必会","read books","I like to r____ after dinner."],
+      ["really","真正地；很","副词","高频","really like","I r____ like this song."],
+      ["remember","记得","动词","高频","remember to do","R____ to close the door."],
+      ["restaurant","餐馆","名词","高频","go to a restaurant","We had dinner in a r____."],
+      ["river","河流","名词","必会","along the river","There is a r____ near my home."],
+      ["road","道路","名词","必会","cross the road","Be careful on the r____."],
+      ["same","相同的","形容词","必会","the same as","We are in the s____ class."],
+      ["scared","害怕的","形容词","高频","be scared of","The little girl was s____."],
+      ["school","学校","名词","必会","after school","I go to s____ by bus."],
+      ["search","搜寻","动词","高频","search for","They s____ for the lost dog."],
+      ["share","分享","动词","高频","share sth. with sb.","I s____ a room with my brother."],
+      ["shop","商店；购物","名词","必会","go shopping","There is a s____ near here."],
+      ["show","展示；演出","动词","必会","show sb. sth.","Can you s____ me your photo?"],
+      ["slowly","慢慢地","副词","变形","slow + ly","Walk s____ in the rain."],
+      ["sometimes","有时","副词","必会","频率副词","I s____ play tennis."],
+      ["special","特别的","形容词","高频","special day","Today is a s____ day."],
+      ["spend","花费；度过","动词","高频","spend time/money doing","I s____ two hours reading."],
+      ["station","车站","名词","高频","bus/train station","Meet me at the s____."],
+      ["stay","停留；保持","动词","高频","stay at home / stay healthy","We s____ at home yesterday."],
+      ["story","故事","名词","必会","tell a story","Grandpa told me a s____."],
+      ["street","街道","名词","必会","on the street","There are trees along the s____."],
+      ["strong","强壮的","形容词","高频","strong wind/body","The wind is s____."],
+      ["student","学生","名词","必会","middle school student","Every s____ has a card."],
+      ["study","学习","动词","必会","study hard","We s____ English every day."],
+      ["summer","夏天","名词","必会","summer holiday","I like s____ best."],
+      ["sunny","晴朗的","形容词","变形","sun + ny","It is s____ today."],
+      ["surprise","惊讶；惊喜","名词","拔高","to one's surprise","To my s____, he won."],
+      ["take","拿；花费；乘坐","动词","必会","take a bus / take photos","I t____ many photos."],
+      ["together","一起","副词","高频","work/play together","Let's go t____."],
+      ["tomorrow","明天","副词","必会","时间状语","See you t____."],
+      ["traffic","交通","名词","高频","traffic lights","The t____ is heavy."],
+      ["travel","旅行","动词","高频","travel around","I want to t____ around China."],
+      ["trip","旅行","名词","必会","school trip","We had a school t____."],
+      ["try","尝试；努力","动词","必会","try to do","T____ your best."],
+      ["turn","转向；轮到","动词","必会","turn left/right","T____ left at the crossing."],
+      ["usually","通常","副词","必会","频率副词","I u____ go to school by bike."],
+      ["village","村庄","名词","高频","small village","They live in a v____."],
+      ["visit","参观；拜访","动词","必会","visit a museum","We v____ our grandparents."],
+      ["wait","等待","动词","必会","wait for","Please w____ for me."],
+      ["walk","步行","动词","必会","walk to school","I w____ to school."],
+      ["weather","天气","名词","必会","weather report","The w____ is warm."],
+      ["weekend","周末","名词","必会","on weekends","What do you do on w____?"],
+      ["welcome","欢迎","动词","必会","welcome to","W____ to Tianjin."],
+      ["without","没有","介词/连词","拔高","without doing","He left w____ saying goodbye."],
+      ["wonderful","精彩的","形容词","高频","wonderful time","We had a w____ day."],
+      ["world","世界","名词","高频","around the world","People around the w____ like music."],
+      ["write","写","动词","必会","write to sb.","Please w____ your name here."],
+      ["yesterday","昨天","副词","必会","过去时标志","I went there y____."],
+      ["young","年轻的","形容词","必会","young people","The y____ man is a teacher."]
+    ];
+
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+    let activeLetter = "ALL";
+    let dailyOnly = false;
+
+    const groups = document.querySelector("#groups");
+    const lettersEl = document.querySelector("#letters");
+    const searchInput = document.querySelector("#searchInput");
+    const levelFilter = document.querySelector("#levelFilter");
+    const posFilter = document.querySelector("#posFilter");
+    const resultHint = document.querySelector("#resultHint");
+    const emptyState = document.querySelector("#emptyState");
+    document.querySelector("#totalCount").textContent = words.length;
+
+    function levelClass(level) {
+      return level === "必会" ? "must" : level === "高频" ? "high" : level === "变形" ? "form" : "plus";
+    }
+
+    function renderLetters() {
+      lettersEl.innerHTML = `<button class="letter ${activeLetter === "ALL" ? "active" : ""}" data-letter="ALL">全</button>` +
+        letters.map(letter => `<button class="letter ${activeLetter === letter ? "active" : ""}" data-letter="${letter}">${letter}</button>`).join("");
+    }
+
+    function todayList(list) {
+      const day = Math.floor(Date.now() / 86400000);
+      return list.filter((_, index) => ((index * 11 + day) % 5) === 0).slice(0, 30);
+    }
+
+    function entryMatches(entry, query) {
+      if (!query) return true;
+      return entry.join(" ").toLowerCase().includes(query);
+    }
+
+    function renderCards() {
+      const query = searchInput.value.trim().toLowerCase();
+      const level = levelFilter.value;
+      const pos = posFilter.value;
+      let list = words.filter(entry => {
+        const [word, , wordPos, wordLevel] = entry;
+        return (activeLetter === "ALL" || word[0].toUpperCase() === activeLetter) &&
+          (level === "all" || wordLevel === level) &&
+          (pos === "all" || wordPos === pos) &&
+          entryMatches(entry, query);
+      });
+      if (dailyOnly) {
+        const dailyWords = new Set(todayList(words).map(entry => entry[0]));
+        list = list.filter(entry => dailyWords.has(entry[0]));
+      }
+
+      const grouped = list.reduce((acc, entry) => {
+        const letter = entry[0][0].toUpperCase();
+        (acc[letter] ||= []).push(entry);
+        return acc;
+      }, {});
+
+      groups.innerHTML = Object.keys(grouped).sort().map(letter => `
+        <section class="group">
+          <div class="group-head"><strong>${letter}</strong><span class="hint">${grouped[letter].length} 个</span></div>
+          <div class="cards">
+            ${grouped[letter].map(([word, cn, pos, level, pattern, cue]) => `
+              <article class="card">
+                <div class="topline">
+                  <div><div class="word">${word}</div><div class="cn">${cn}</div></div>
+                  <span class="tag ${levelClass(level)}">${level}</span>
+                </div>
+                <div class="pattern"><span>${pos}</span><span>${pattern}</span></div>
+                <div class="cue">${cue}</div>
+              </article>
+            `).join("")}
+          </div>
+        </section>
+      `).join("");
+
+      resultHint.textContent = dailyOnly ? `今日抽背 ${list.length} 个词` : `当前显示 ${list.length} 个词`;
+      emptyState.style.display = list.length ? "none" : "block";
+      groups.style.display = list.length ? "grid" : "none";
+    }
+
+    lettersEl.addEventListener("click", event => {
+      const button = event.target.closest("button[data-letter]");
+      if (!button) return;
+      activeLetter = button.dataset.letter;
+      dailyOnly = false;
+      renderLetters();
+      renderCards();
+    });
+    searchInput.addEventListener("input", () => { dailyOnly = false; renderCards(); });
+    levelFilter.addEventListener("change", () => { dailyOnly = false; renderCards(); });
+    posFilter.addEventListener("change", () => { dailyOnly = false; renderCards(); });
+    document.querySelector("#hideCn").addEventListener("change", event => {
+      document.body.classList.toggle("hide-cn", event.target.checked);
+    });
+    document.querySelector("#dailyBtn").addEventListener("click", () => {
+      activeLetter = "ALL";
+      dailyOnly = true;
+      renderLetters();
+      renderCards();
+      document.querySelector("#groups").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    document.querySelector("#printBtn").addEventListener("click", () => window.print());
+
+    renderLetters();
+    renderCards();
+  </script>
+</body>
+</html>

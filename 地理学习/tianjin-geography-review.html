@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>天津七年级与八年级地理期末复习</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    @media print {
+      .no-print { display: none !important; }
+      .print-break { break-inside: avoid; }
+      body { background: #fff !important; }
+      section, article { box-shadow: none !important; border-color: #d6d3d1 !important; }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-stone-50 text-slate-950 antialiased">
+  <div class="mx-auto flex min-h-screen max-w-[1500px]">
+    <aside class="no-print sticky top-0 hidden h-screen w-72 shrink-0 border-r border-stone-200 bg-white/90 px-5 py-6 backdrop-blur lg:block">
+      <div class="mb-8 flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 bg-slate-950 text-sm font-semibold tracking-tight text-white">G</div>
+        <div>
+          <div class="text-sm font-semibold tracking-tight text-slate-950">天津地理复习</div>
+          <div class="text-xs text-slate-500">七上 · 七下 · 八年级 · 期末</div>
+        </div>
+      </div>
+
+      <nav class="space-y-1 text-sm">
+        <a href="#overview" class="nav-link flex items-center gap-2 rounded-md px-3 py-2 text-slate-700 hover:bg-stone-100 hover:text-slate-950"><i data-lucide="layout-dashboard" class="h-4 w-4"></i>总览</a>
+        <a href="#seven-upper" class="nav-link flex items-center gap-2 rounded-md px-3 py-2 text-slate-700 hover:bg-stone-100 hover:text-slate-950"><i data-lucide="earth" class="h-4 w-4"></i>七上地理基础</a>
+        <a href="#seven" class="nav-link flex items-center gap-2 rounded-md px-3 py-2 text-slate-700 hover:bg-stone-100 hover:text-slate-950"><i data-lucide="globe-2" class="h-4 w-4"></i>七下世界区域</a>
+        <a href="#eight" class="nav-link flex items-center gap-2 rounded-md px-3 py-2 text-slate-700 hover:bg-stone-100 hover:text-slate-950"><i data-lucide="map" class="h-4 w-4"></i>八年级中国地理</a>
+        <a href="#patterns" class="nav-link flex items-center gap-2 rounded-md px-3 py-2 text-slate-700 hover:bg-stone-100 hover:text-slate-950"><i data-lucide="route" class="h-4 w-4"></i>真题脉络</a>
+        <a href="#drills" class="nav-link flex items-center gap-2 rounded-md px-3 py-2 text-slate-700 hover:bg-stone-100 hover:text-slate-950"><i data-lucide="file-question" class="h-4 w-4"></i>考题训练</a>
+        <a href="#cards" class="nav-link flex items-center gap-2 rounded-md px-3 py-2 text-slate-700 hover:bg-stone-100 hover:text-slate-950"><i data-lucide="layers-3" class="h-4 w-4"></i>速记卡</a>
+        <a href="#quiz" class="nav-link flex items-center gap-2 rounded-md px-3 py-2 text-slate-700 hover:bg-stone-100 hover:text-slate-950"><i data-lucide="check-circle-2" class="h-4 w-4"></i>自测</a>
+        <a href="#plan" class="nav-link flex items-center gap-2 rounded-md px-3 py-2 text-slate-700 hover:bg-stone-100 hover:text-slate-950"><i data-lucide="calendar-days" class="h-4 w-4"></i>10天安排</a>
+      </nav>
+
+      <div class="mt-8 rounded-lg border border-stone-200 bg-stone-50 p-4">
+        <div class="mb-2 flex items-center justify-between text-xs text-slate-500">
+          <span>复习进度</span>
+          <span id="progressText">0%</span>
+        </div>
+        <div class="h-2 overflow-hidden rounded-full bg-stone-200">
+          <div id="progressBar" class="h-full w-0 rounded-full bg-teal-600 transition-all"></div>
+        </div>
+      </div>
+
+      <button id="printBtn" class="mt-4 flex w-full items-center justify-center gap-2 rounded-md border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 shadow-sm hover:border-slate-300 hover:bg-stone-50">
+        <i data-lucide="printer" class="h-4 w-4"></i>打印
+      </button>
+    </aside>
+
+    <main class="w-full px-4 py-5 sm:px-6 lg:px-8">
+      <header id="overview" class="print-break rounded-lg border border-stone-200 bg-white shadow-sm">
+        <div class="border-b border-stone-200 p-5 sm:p-7">
+          <div class="flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">
+            <div>
+              <div class="mb-3 inline-flex items-center gap-2 rounded-md border border-teal-200 bg-teal-50 px-2.5 py-1 text-xs font-medium text-teal-800">
+                <i data-lucide="compass" class="h-3.5 w-3.5"></i>天津七年级升八年级地理
+              </div>
+              <h1 class="max-w-4xl text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">七上、七下与八年级衔接复习材料</h1>
+              <p class="mt-3 max-w-3xl text-sm leading-6 text-slate-600 sm:text-base">按天津七年级期末和七升八衔接常见命题方式整理：七上补工具和基础概念，七下抓世界区域，八年级提前接入中国地理。做题顺序是先定位、再读图、再解释自然与人文关系。</p>
+            </div>
+            <div class="grid min-w-full grid-cols-2 gap-3 sm:min-w-[420px] sm:grid-cols-4">
+              <div class="rounded-lg border border-stone-200 bg-stone-50 p-4">
+                <div class="text-2xl font-semibold tracking-tight text-slate-950">4</div>
+                <div class="mt-1 text-xs text-slate-500">答题入口</div>
+              </div>
+              <div class="rounded-lg border border-stone-200 bg-amber-50 p-4">
+                <div class="text-2xl font-semibold tracking-tight text-slate-950">39</div>
+                <div class="mt-1 text-xs text-slate-500">高频清单</div>
+              </div>
+              <div class="rounded-lg border border-stone-200 bg-cyan-50 p-4">
+                <div class="text-2xl font-semibold tracking-tight text-slate-950">30</div>
+                <div class="mt-1 text-xs text-slate-500">速记卡</div>
+              </div>
+              <div class="rounded-lg border border-stone-200 bg-rose-50 p-4">
+                <div class="text-2xl font-semibold tracking-tight text-slate-950">24</div>
+                <div class="mt-1 text-xs text-slate-500">自测题</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid gap-4 p-5 sm:grid-cols-2 sm:p-7 xl:grid-cols-4">
+          <article class="rounded-lg border border-stone-200 p-4">
+            <div class="mb-3 flex h-9 w-9 items-center justify-center rounded-md bg-slate-950 text-white"><i data-lucide="scan-search" class="h-4 w-4"></i></div>
+            <h2 class="text-sm font-semibold text-slate-950">定位</h2>
+            <p class="mt-2 text-sm leading-6 text-slate-600">半球、纬度、海陆、轮廓、邻国、山河、城市。地图题先找最明显标志。</p>
+          </article>
+          <article class="rounded-lg border border-stone-200 p-4">
+            <div class="mb-3 flex h-9 w-9 items-center justify-center rounded-md bg-teal-700 text-white"><i data-lucide="cloud-sun" class="h-4 w-4"></i></div>
+            <h2 class="text-sm font-semibold text-slate-950">自然</h2>
+            <p class="mt-2 text-sm leading-6 text-slate-600">地形地势、气候、河流、资源。先读图例，再写特征，少写空话。</p>
+          </article>
+          <article class="rounded-lg border border-stone-200 p-4">
+            <div class="mb-3 flex h-9 w-9 items-center justify-center rounded-md bg-amber-600 text-white"><i data-lucide="factory" class="h-4 w-4"></i></div>
+            <h2 class="text-sm font-semibold text-slate-950">人文</h2>
+            <p class="mt-2 text-sm leading-6 text-slate-600">人口、城市、农业、工业、交通、旅游。分布题要答原因，不只答位置。</p>
+          </article>
+          <article class="rounded-lg border border-stone-200 p-4">
+            <div class="mb-3 flex h-9 w-9 items-center justify-center rounded-md bg-rose-700 text-white"><i data-lucide="git-branch" class="h-4 w-4"></i></div>
+            <h2 class="text-sm font-semibold text-slate-950">关系</h2>
+            <p class="mt-2 text-sm leading-6 text-slate-600">自然影响生产生活；人类活动改变环境。原因、问题、措施连成链。</p>
+          </article>
+        </div>
+      </header>
+
+      <section class="no-print mt-5 rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
+        <div class="flex flex-col gap-3 md:flex-row md:items-center">
+          <div class="relative flex-1">
+            <i data-lucide="search" class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"></i>
+            <input id="searchInput" type="search" placeholder="搜索：经纬网、比例尺、等高线、日本、秦岭-淮河、黄河、马六甲、气候..." class="w-full rounded-md border border-stone-200 bg-stone-50 py-2.5 pl-9 pr-3 text-sm outline-none ring-teal-200 placeholder:text-slate-400 focus:border-teal-500 focus:bg-white focus:ring-4">
+          </div>
+          <div class="flex gap-2 overflow-x-auto no-scrollbar">
+            <button data-filter="all" class="filter-btn rounded-md bg-slate-950 px-3 py-2 text-sm font-medium text-white">全部</button>
+            <button data-filter="七上" class="filter-btn rounded-md border border-stone-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:bg-stone-50">七上</button>
+            <button data-filter="七下" class="filter-btn rounded-md border border-stone-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:bg-stone-50">七下</button>
+            <button data-filter="八上" class="filter-btn rounded-md border border-stone-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:bg-stone-50">八上</button>
+            <button data-filter="八下" class="filter-btn rounded-md border border-stone-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:bg-stone-50">八下</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="seven-upper" class="mt-5 rounded-lg border border-stone-200 bg-white shadow-sm">
+        <div class="flex flex-col gap-2 border-b border-stone-200 p-5 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="text-xs font-medium uppercase tracking-[0.18em] text-indigo-700">Grade 7 Upper</p>
+            <h2 class="mt-1 text-2xl font-semibold tracking-tight text-slate-950">七上：工具、地球与世界基础</h2>
+          </div>
+          <p class="max-w-2xl text-sm leading-6 text-slate-600">七上是七下和八年级读图题的底座。近三年七年级期末常把经纬网、比例尺、等高线、气候图和大洲大洋放在选择题与读图题前半部分考。</p>
+        </div>
+        <div id="sevenUpperGrid" class="grid gap-4 p-5 md:grid-cols-2 xl:grid-cols-3"></div>
+      </section>
+
+      <section id="seven" class="mt-5 rounded-lg border border-stone-200 bg-white shadow-sm">
+        <div class="flex flex-col gap-2 border-b border-stone-200 p-5 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="text-xs font-medium uppercase tracking-[0.18em] text-teal-700">Grade 7 Lower</p>
+            <h2 class="mt-1 text-2xl font-semibold tracking-tight text-slate-950">七下：世界区域地理</h2>
+          </div>
+          <p class="max-w-2xl text-sm leading-6 text-slate-600">核心不是背国家，而是会用地图说明“区域在哪里、自然环境怎样、生产生活为什么这样”。七年级升八年级前，世界区域题仍是综合题主要来源。</p>
+        </div>
+        <div id="sevenGrid" class="grid gap-4 p-5 md:grid-cols-2 xl:grid-cols-3"></div>
+      </section>
+
+      <section id="eight" class="mt-5 rounded-lg border border-stone-200 bg-white shadow-sm">
+        <div class="flex flex-col gap-2 border-b border-stone-200 p-5 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="text-xs font-medium uppercase tracking-[0.18em] text-amber-700">Grade 8</p>
+            <h2 class="mt-1 text-2xl font-semibold tracking-tight text-slate-950">八年级：中国地理</h2>
+          </div>
+          <p class="max-w-2xl text-sm leading-6 text-slate-600">八上看中国整体，八下看四大区域。天津八年级地理为闭卷笔试、等级记分，读图与综合分析要提前练。</p>
+        </div>
+        <div id="eightGrid" class="grid gap-4 p-5 md:grid-cols-2 xl:grid-cols-3"></div>
+      </section>
+
+      <section id="patterns" class="mt-5 grid gap-5 xl:grid-cols-[1.2fr_0.8fr]">
+        <div class="rounded-lg border border-stone-200 bg-white shadow-sm">
+          <div class="border-b border-stone-200 p-5">
+            <p class="text-xs font-medium uppercase tracking-[0.18em] text-rose-700">Exam Pattern</p>
+            <h2 class="mt-1 text-2xl font-semibold tracking-tight text-slate-950">天津各区真题常见路径</h2>
+          </div>
+          <div class="divide-y divide-stone-200">
+            <article class="print-break p-5">
+              <div class="flex items-start gap-3">
+                <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-slate-950 text-sm font-semibold text-white">1</span>
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-950">地图定位题</h3>
+                  <p class="mt-2 text-sm leading-6 text-slate-600">看轮廓、经纬度、海陆位置、山脉河流、城市名称。七下常见日本、东南亚、印度、俄罗斯、中东、美国、巴西；八年级常见秦岭-淮河、长江黄河、四大地理区域。</p>
+                </div>
+              </div>
+            </article>
+            <article class="print-break p-5">
+              <div class="flex items-start gap-3">
+                <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-teal-700 text-sm font-semibold text-white">2</span>
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-950">气候判读题</h3>
+                  <p class="mt-2 text-sm leading-6 text-slate-600">先判断温度带，再判断降水季节。热带季风是全年高温、降水分旱雨两季；温带海洋性是全年温和湿润；温带大陆性是冬冷夏热、降水较少。</p>
+                </div>
+              </div>
+            </article>
+            <article class="print-break p-5">
+              <div class="flex items-start gap-3">
+                <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-amber-600 text-sm font-semibold text-white">3</span>
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-950">分布原因题</h3>
+                  <p class="mt-2 text-sm leading-6 text-slate-600">农业看气候、地形、水源、土壤、劳动力、市场；工业看资源、交通、市场、科技、劳动力、政策；人口城市看地形、气候、水源、交通、开发历史。</p>
+                </div>
+              </div>
+            </article>
+            <article class="print-break p-5">
+              <div class="flex items-start gap-3">
+                <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-rose-700 text-sm font-semibold text-white">4</span>
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-950">问题措施题</h3>
+                  <p class="mt-2 text-sm leading-6 text-slate-600">常见问题有水旱灾害、荒漠化、水土流失、雨林破坏、淡水短缺、资源依赖。答题结构：成因 + 影响 + 措施。</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="rounded-lg border border-stone-200 bg-white shadow-sm">
+          <div class="border-b border-stone-200 p-5">
+            <h2 class="text-xl font-semibold tracking-tight text-slate-950">错题复盘表</h2>
+            <p class="mt-2 text-sm leading-6 text-slate-600">每套真题只记录“错因”和“下次入口”。</p>
+          </div>
+          <div class="overflow-x-auto p-5">
+            <table class="w-full min-w-[520px] border-collapse text-left text-sm">
+              <thead>
+                <tr class="border-b border-stone-200 text-xs text-slate-500">
+                  <th class="py-2 pr-3 font-medium">题型</th>
+                  <th class="py-2 pr-3 font-medium">考点</th>
+                  <th class="py-2 pr-3 font-medium">错因</th>
+                  <th class="py-2 font-medium">入口</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-stone-100 text-slate-700">
+                <tr><td class="py-3 pr-3">地图题</td><td class="py-3 pr-3">东南亚</td><td class="py-3 pr-3">没认出海峡</td><td class="py-3">先找马六甲</td></tr>
+                <tr><td class="py-3 pr-3">气候题</td><td class="py-3 pr-3">印度</td><td class="py-3 pr-3">季风风向反了</td><td class="py-3">夏季西南风</td></tr>
+                <tr><td class="py-3 pr-3">原因题</td><td class="py-3 pr-3">黄河</td><td class="py-3 pr-3">少写中游</td><td class="py-3">中游黄土高原水土流失</td></tr>
+                <tr><td class="py-3 pr-3">分布题</td><td class="py-3 pr-3">人口城市</td><td class="py-3 pr-3">只写位置</td><td class="py-3">地形、气候、交通、水源</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-5 rounded-lg border border-stone-200 bg-white shadow-sm">
+        <div class="border-b border-stone-200 p-5">
+          <p class="text-xs font-medium uppercase tracking-[0.18em] text-slate-500">Recent Papers</p>
+          <h2 class="mt-1 text-2xl font-semibold tracking-tight text-slate-950">近三年公开卷高频归纳</h2>
+          <p class="mt-2 text-sm leading-6 text-slate-600">公开可检索的天津七年级地理原卷多在学科网、教习网、二一教育等资源站，完整题面常需登录或下载。这里按公开索引、教材范围和七年级期末常规命题方式归纳高频考点，不直接搬运整卷。</p>
+        </div>
+        <div class="overflow-x-auto p-5">
+          <table class="w-full min-w-[760px] border-collapse text-left text-sm">
+            <thead>
+              <tr class="border-b border-stone-200 text-xs text-slate-500">
+                <th class="py-2 pr-4 font-medium">年份口径</th>
+                <th class="py-2 pr-4 font-medium">常见卷型</th>
+                <th class="py-2 pr-4 font-medium">高频考点</th>
+                <th class="py-2 font-medium">解题入口</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-100 text-slate-700">
+              <tr><td class="py-3 pr-4">2024-2025</td><td class="py-3 pr-4">七上/七下区级期末、期末真题卷</td><td class="py-3 pr-4">经纬网、地球运动、等高线、气候图、亚洲与日本、东南亚、印度</td><td class="py-3">先找地图要素，再用“位置-自然-人文”作答</td></tr>
+              <tr><td class="py-3 pr-4">2023-2024</td><td class="py-3 pr-4">七上天津卷、七下往年期末卷</td><td class="py-3 pr-4">比例尺、方向、七大洲四大洋、板块运动、天气符号、人口聚落、区域工业农业</td><td class="py-3">选择题抓概念，综合题抓图例和因果链</td></tr>
+              <tr><td class="py-3 pr-4">2022-2023</td><td class="py-3 pr-4">七年级期末综合卷、升八复习卷</td><td class="py-3 pr-4">地形图判读、气温降水、世界气候类型、语言宗教、俄罗斯、中东、欧洲西部、美国、巴西、极地</td><td class="py-3">先判断区域，再解释分布和问题措施</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="drills" class="mt-5 rounded-lg border border-stone-200 bg-white shadow-sm">
+        <div class="flex flex-col gap-2 border-b border-stone-200 p-5 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="text-xs font-medium uppercase tracking-[0.18em] text-fuchsia-700">Exam Drills</p>
+            <h2 class="mt-1 text-2xl font-semibold tracking-tight text-slate-950">按真题方向改编的考题</h2>
+          </div>
+          <p class="max-w-2xl text-sm leading-6 text-slate-600">题目按天津七年级期末常见材料题方式改编，覆盖七上基础、七下区域和八年级衔接。先独立作答，再看“答案要点”。</p>
+        </div>
+        <div id="drillGrid" class="grid gap-4 p-5 xl:grid-cols-2"></div>
+      </section>
+
+      <section id="cards" class="mt-5 rounded-lg border border-stone-200 bg-white shadow-sm">
+        <div class="flex flex-col gap-3 border-b border-stone-200 p-5 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Flash Cards</p>
+            <h2 class="mt-1 text-2xl font-semibold tracking-tight text-slate-950">速记卡</h2>
+          </div>
+          <button id="shuffleCards" class="no-print inline-flex items-center justify-center gap-2 rounded-md border border-stone-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 hover:bg-stone-50">
+            <i data-lucide="shuffle" class="h-4 w-4"></i>换一组
+          </button>
+        </div>
+        <div id="cardGrid" class="grid gap-4 p-5 md:grid-cols-2 xl:grid-cols-3"></div>
+      </section>
+
+      <section id="quiz" class="mt-5 rounded-lg border border-stone-200 bg-white shadow-sm">
+        <div class="flex flex-col gap-3 border-b border-stone-200 p-5 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p class="text-xs font-medium uppercase tracking-[0.18em] text-emerald-700">Quiz</p>
+            <h2 class="mt-1 text-2xl font-semibold tracking-tight text-slate-950">24题自测</h2>
+          </div>
+          <div class="rounded-md border border-stone-200 bg-stone-50 px-3 py-2 text-sm font-medium text-slate-700">得分：<span id="score">0</span>/<span id="quizTotal">24</span></div>
+        </div>
+        <div id="quizList" class="divide-y divide-stone-200"></div>
+      </section>
+
+      <section id="plan" class="mt-5 rounded-lg border border-stone-200 bg-white shadow-sm">
+        <div class="border-b border-stone-200 p-5">
+          <p class="text-xs font-medium uppercase tracking-[0.18em] text-indigo-700">10 Days</p>
+          <h2 class="mt-1 text-2xl font-semibold tracking-tight text-slate-950">10天高效安排</h2>
+        </div>
+        <div id="planGrid" class="grid gap-4 p-5 md:grid-cols-2 xl:grid-cols-4"></div>
+      </section>
+
+      <footer class="mt-5 rounded-lg border border-stone-200 bg-white p-5 text-sm leading-6 text-slate-600 shadow-sm">
+        <div class="font-medium text-slate-900">资料口径</div>
+        <p class="mt-2">整理依据包括天津初中地理人教版七年级上册、七年级下册目录，公开可检索的天津七年级期末真题索引，以及天津八年级地理学业水平考试闭卷、等级记分的公开考试信息。检索真题可用：天津卷C 七年级地理 期末真题 必刷卷 2023-2024；天津 七年级上 地理 期末 2024 2025；天津 各区 七年级下学期 地理 期末试题；天津 七升八 地理 真题。</p>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    const topics = [
+      {stage:"七上", title:"地球形状与大小", tag:"基础概念", color:"indigo", points:["地球是一个两极稍扁、赤道略鼓的不规则球体。","平均半径约6371千米，赤道周长约4万千米。","证明地球是球体的证据：麦哲伦船队环球航行、月食影像、卫星照片、远航船只先见桅杆。"], exam:"常以生活情境选择题出现，问能否证明地球形状，注意不要把地图或传说当证据。"},
+      {stage:"七上", title:"经线纬线与经纬网", tag:"定位", color:"teal", points:["纬线指示东西方向，纬度从赤道向南北各90度。","经线指示南北方向，经度从本初子午线向东西各180度。","低纬0度-30度，中纬30度-60度，高纬60度-90度；东西半球分界是20度W和160度E。"], exam:"近三年七上卷高频：读经纬网判断半球、方向、纬度带和某点坐标。"},
+      {stage:"七上", title:"地球自转", tag:"昼夜与时差", color:"amber", points:["地球自转方向是自西向东，周期约24小时。","自转产生昼夜更替、时间差异和日月星辰东升西落的视觉现象。","同纬度地区，位置越靠东，时间越早。"], exam:"常考晨昏线、昼夜更替原因、天津与其他城市时间早晚。"},
+      {stage:"七上", title:"地球公转", tag:"季节", color:"rose", points:["地球公转方向自西向东，周期约一年。","公转和地轴倾斜共同产生四季变化、昼夜长短变化、五带划分。","北半球夏至太阳直射北回归线，冬至直射南回归线，春分秋分直射赤道。"], exam:"常给二分二至图，问太阳直射点、昼夜长短、天津季节。"},
+      {stage:"七上", title:"地图三要素", tag:"比例尺方向图例", color:"slate", points:["地图三要素是比例尺、方向、图例。","比例尺越大，表示范围越小，内容越详细。","无指向标地图通常按上北下南、左西右东判断方向。"], exam:"期末常考比例尺大小比较、两地实地距离计算、指向标地图方向判断。"},
+      {stage:"七上", title:"等高线地形图", tag:"判读", color:"orange", points:["等高线密集坡陡，稀疏坡缓。","山峰、山脊、山谷、鞍部、陡崖要能识别；山谷常发育河流。","等高距相同，闭合等高线中心数值高为山峰，中心低为盆地或洼地。"], exam:"近三年高频综合题：判断山体部位、河流流向、登山路线难易、是否适合修路或建村。"},
+      {stage:"七上", title:"七大洲四大洋", tag:"世界地图", color:"cyan", points:["七大洲面积从大到小常记为亚非北南美，南极欧大洋。","四大洋面积从大到小为太平洋、大西洋、印度洋、北冰洋。","大洲分界：亚欧乌拉尔山等，亚非苏伊士运河，南北美巴拿马运河。"], exam:"常给世界轮廓图，考大洲大洋名称、分界线、跨经度最广的大洲或大洋。"},
+      {stage:"七上", title:"世界地形", tag:"地形类型", color:"green", points:["五种基本地形：平原、高原、山地、丘陵、盆地。","平原海拔低且地面起伏小；高原海拔高但内部较平坦；山地海拔高、坡陡。","世界两大山系：环太平洋沿岸山脉带、横贯亚欧大陆南部和非洲西北部山脉带。"], exam:"常和分层设色地形图结合，考颜色、海拔、地形类型判断。"},
+      {stage:"七上", title:"海陆变迁与板块", tag:"板块运动", color:"rose", points:["海陆变迁证据包括海洋生物化石出现在陆地、古老地层连续、轮廓吻合等。","全球大致划分为六大板块，板块内部较稳定，交界处地壳活跃。","板块碰撞挤压形成山脉，张裂形成裂谷或海洋。"], exam:"常考喜马拉雅山、地中海缩小、红海扩大、日本多地震原因。"},
+      {stage:"七上", title:"天气与天气符号", tag:"生活地理", color:"sky", points:["天气是短时间大气状况，气候是多年平均状况。","会识别晴、阴、雨、雪、雾、霾、台风、风向风力等常见符号。","空气质量指数越大，空气污染越重。"], exam:"常以天津某日天气预报材料考出行建议、风向风力和空气质量。"},
+      {stage:"七上", title:"气温变化与分布", tag:"曲线图", color:"amber", points:["日最高气温通常出现在午后2时左右，最低气温出现在日出前后。","气温日较差等于日最高气温减日最低气温，年较差同理。","世界气温大致从低纬向高纬递减，同纬度夏季陆地高于海洋，冬季相反。"], exam:"常给气温曲线图，考最高最低月、年较差、南北半球判断。"},
+      {stage:"七上", title:"降水变化与分布", tag:"柱状图", color:"blue", points:["降水柱状图要看总量和季节分配。","赤道附近降水多，两极地区降水少；回归线附近大陆西岸少、东岸多。","山地迎风坡降水多，背风坡降水少。"], exam:"常和气温曲线组合成气候资料图，判断气候类型与农业影响。"},
+      {stage:"七上", title:"世界气候类型", tag:"气候判读", color:"emerald", points:["先看最冷月气温判断热带、亚热带、温带或寒带。","再看降水季节分配：全年多雨、全年少雨、夏雨型、冬雨型、全年湿润。","热带雨林全年高温多雨，地中海气候夏季炎热干燥、冬季温和多雨。"], exam:"七上综合题高频：给气温降水图，判断气候类型、分布地区、对生产生活影响。"},
+      {stage:"七上", title:"人口、人种、语言宗教", tag:"人文基础", color:"fuchsia", points:["人口自然增长率等于出生率减死亡率。","世界人口稠密区多在中低纬度沿海平原，干旱、湿热、高寒地区人口稀疏。","汉语使用人数最多，英语使用范围广；三大宗教是基督教、伊斯兰教、佛教。"], exam:"常考人口稠密原因、人口问题、语言宗教建筑图片识别。"},
+      {stage:"七上", title:"聚落与发展差异", tag:"综合应用", color:"indigo", points:["聚落形成有利条件：地形平坦、土壤肥沃、水源充足、交通便利、自然资源较丰富。","乡村与城市景观差异与生产方式相关。","发达国家与发展中国家在经济、产业、生活水平等方面存在差异，国际合作很重要。"], exam:"常用景观图或材料题考聚落选址、传统民居与自然环境关系。"},
+      {stage:"七下", title:"亚洲", tag:"地图+气候", color:"teal", points:["位置范围：跨纬度广，东西距离长，面积最大。","地势中部高、四周低，河流多呈放射状流向周边海洋。","气候复杂多样，季风气候显著，温带大陆性气候分布广。"], exam:"常给亚洲地形图或气候分布图，考地势、河流流向、气候差异。"},
+      {stage:"七下", title:"日本", tag:"工业分布", color:"rose", points:["岛国，多山，多火山地震，平原狭小。","资源贫乏，工业原料和燃料依赖进口。","工业集中在太平洋沿岸和濑户内海沿岸，便于进口原料、出口产品。"], exam:"问工业沿海分布原因时，先写资源短缺，再写海运便利。"},
+      {stage:"七下", title:"东南亚", tag:"十字路口", color:"amber", points:["位于亚洲与大洋洲、太平洋与印度洋之间。","马六甲海峡是重要海上通道。","中南半岛山河相间、纵列分布，城市多沿河分布。"], exam:"常考马六甲海峡位置、水稻种植和热带经济作物。"},
+      {stage:"七下", title:"印度", tag:"季风农业", color:"cyan", points:["热带季风气候显著，旱雨季分明。","西南季风不稳定，容易发生旱涝灾害。","人口众多，软件外包产业发展快。"], exam:"气候图与季风风向是高频；农业题答水热、劳动力和灾害。"},
+      {stage:"七下", title:"俄罗斯", tag:"资源工业", color:"slate", points:["纬度较高，气候寒冷，国土辽阔。","自然资源丰富，重工业发达。","交通以铁路为主，西伯利亚大铁路连接东西。"], exam:"工业区与资源分布结合考，交通线多分布在南部。"},
+      {stage:"七下", title:"中东", tag:"石油+水", color:"orange", points:["三洲五海之地，地理位置重要。","石油资源丰富，主要分布在波斯湾及其沿岸。","气候干旱，淡水资源短缺。"], exam:"石油输出路线、霍尔木兹海峡、水资源紧张原因常考。"},
+      {stage:"七下", title:"欧洲西部", tag:"畜牧业", color:"emerald", points:["发达国家集中，服务业比重大。","温带海洋性气候广，全年温和湿润。","适合多汁牧草生长，畜牧业发达。"], exam:"问畜牧业发达原因时，核心是气候与地形。"},
+      {stage:"七下", title:"撒哈拉以南非洲", tag:"发展问题", color:"yellow", points:["黑种人的故乡，热带草原气候分布广。","许多国家出口初级农矿产品，单一商品经济明显。","人口、粮食、环境问题相互影响。"], exam:"经济结构图和可持续发展措施题常出现。"},
+      {stage:"七下", title:"澳大利亚", tag:"特有生物", color:"lime", points:["独占一个大陆，长期孤立，特有生物多。","畜牧业发达，被称为骑在羊背上的国家。","矿产资源丰富，被称为坐在矿车上的国家。"], exam:"人口城市集中在东南沿海，答气候、交通、开发历史。"},
+      {stage:"七下", title:"美国", tag:"农业带", color:"blue", points:["本土三大地形区，平原面积广。","农业地区专业化和机械化水平高。","高新技术产业发达，硅谷是代表。"], exam:"农业带判断题要结合纬度、地形、气候和市场。"},
+      {stage:"七下", title:"巴西", tag:"雨林保护", color:"green", points:["热带面积广大，亚马孙平原和巴西高原显著。","亚马孙雨林有重要生态功能。","人口城市多分布在东南沿海。"], exam:"雨林开发与保护、东南沿海人口城市分布原因常考。"},
+      {stage:"七下", title:"极地地区", tag:"方向+科考", color:"sky", points:["南极比北极更寒冷，海拔高且冰雪反射强。","南极科考通常选当地暖季，即北半球冬季。","生态环境脆弱，需要国际合作保护。"], exam:"极地俯视图方向判断和科考时间是易错点。"},
+      {stage:"八上", title:"疆域与行政区", tag:"中国地图", color:"slate", points:["我国位于亚洲东部、太平洋西岸，海陆兼备。","陆地面积约960万平方千米，临海多，邻国多。","省级行政区简称和行政中心要结合轮廓记。"], exam:"常考邻国、临海、省区轮廓、简称与行政中心。"},
+      {stage:"八上", title:"人口与民族", tag:"黑河-腾冲", color:"teal", points:["人口分布东多西少，黑河-腾冲线是重要界线。","民族分布特点是大散居、小聚居、交错居住。","少数民族主要分布在西南、西北和东北。"], exam:"人口密度图和民族分布图常考。"},
+      {stage:"八上", title:"地形地势", tag:"三级阶梯", color:"amber", points:["地势西高东低，呈三级阶梯状分布。","西高东低有利于海洋湿润气流深入，许多大河向东流。","阶梯交界处落差大，水能资源丰富。"], exam:"山脉、地形区和阶梯交界处读图是重点。"},
+      {stage:"八上", title:"气候", tag:"秦岭-淮河", color:"rose", points:["季风气候显著，雨热同期。","秦岭-淮河是1月0℃等温线和800毫米年降水量线大致经过处。","南北方在温度带、干湿、耕地类型、作物熟制上差异明显。"], exam:"秦岭-淮河意义几乎必会，注意一线多义。"},
+      {stage:"八上", title:"河流", tag:"长江黄河", color:"cyan", points:["长江水量大、航运价值高，被称为黄金水道。","黄河中游流经黄土高原，水土流失严重。","黄河下游泥沙淤积形成地上河，治理重在中游保持水土。"], exam:"长江开发、黄河泥沙、地上河成因与治理措施常考。"},
+      {stage:"八上", title:"自然资源", tag:"总量与人均", color:"emerald", points:["我国自然资源总量丰富，但人均不足。","土地资源类型齐全，耕地比重偏小。","水资源南多北少、东多西少，时间分配夏秋多、冬春少。"], exam:"南水北调、节水、土地利用类型图是高频。"},
+      {stage:"八上", title:"经济发展", tag:"因地制宜", color:"indigo", points:["农业要因地制宜，平原发展种植业，山区发展林牧业。","工业基地分布与资源、交通、市场、科技有关。","交通运输方式选择看货物性质、距离、时效和成本。"], exam:"农业分布、工业基地和交通选择常以材料题出现。"},
+      {stage:"八下", title:"四大地理区域", tag:"分界线", color:"slate", points:["北方、南方、西北、青藏四大区域。","北方与南方分界大致为秦岭-淮河。","西北地区主导因素是干旱，青藏地区主导因素是高寒。"], exam:"区域界线和主导因素是八下开篇重点。"},
+      {stage:"八下", title:"北方地区", tag:"旱作农业", color:"amber", points:["以温带季风气候为主，耕地多为旱地。","东北黑土地肥沃，是重要商品粮基地。","华北春旱突出，与降水少、升温快、需水多有关。"], exam:"东北商品粮、华北春旱、黄土高原水土流失常考。"},
+      {stage:"八下", title:"南方地区", tag:"水田农业", color:"green", points:["气候湿热，耕地多为水田。","长江中下游平原河湖众多，水稻种植发达。","长江三角洲经济发达，交通便利，城市密集。"], exam:"水田农业、长三角区位、南方湿热环境影响常考。"},
+      {stage:"八下", title:"西北地区", tag:"干旱", color:"orange", points:["深居内陆，距海远，降水少，干旱是突出特征。","农业多分布在有水源的绿洲、河套、宁夏平原等地。","生态问题有荒漠化、草场退化。"], exam:"灌溉农业、坎儿井、荒漠化治理是高频。"},
+      {stage:"八下", title:"青藏地区", tag:"高寒", color:"sky", points:["地势高，气温低，高寒是突出特征。","农业多分布在海拔较低、热量较好的河谷。","三江源地区生态价值高，需要保护。"], exam:"河谷农业、牦牛、太阳能、三江源保护常考。"},
+      {stage:"八下", title:"台湾与港澳", tag:"区域联系", color:"rose", points:["台湾山地多，西部平原人口城市较集中。","台湾外向型经济明显，与祖国大陆联系密切。","港澳服务业发达，土地资源紧张。"], exam:"台湾自然条件、人口分布、港澳与内地合作常考。"}
+    ];
+
+    const flashCards = [
+      ["东西半球怎么判？", "用20度W和160度E划分。小于20度W或小于160度E的东经多在东半球；大于20度W的西经、多于160度E的东经多在西半球。"],
+      ["经纬网题先看什么？", "先写经纬度，再判南北半球、东西半球、纬度带，最后按经纬线判断方向。"],
+      ["比例尺大小口诀", "图上1厘米代表的实地距离越小，比例尺越大，范围越小，内容越详细。"],
+      ["等高线密集说明什么？", "坡度陡；等高线稀疏说明坡度缓。爬山路线通常选等高线较稀疏处。"],
+      ["山谷和山脊怎么分？", "等高线向高处凸为山谷，可能有河流；向低处凸为山脊。"],
+      ["地球自转产生什么？", "昼夜更替、时间差异、日月星辰东升西落的视觉现象。"],
+      ["地球公转产生什么？", "四季变化、昼夜长短变化、正午太阳高度变化、五带划分。"],
+      ["气候图判读步骤", "先看最冷月气温定温度带，再看降水季节分配定气候类型。"],
+      ["板块交界处特点", "地壳活跃，多火山地震；碰撞形成山脉，张裂形成裂谷或海洋。"],
+      ["人口稠密区共同条件", "中低纬、沿海、平原、气候适宜、交通便利、开发历史较早。"],
+      ["日本工业为什么沿海？", "资源贫乏，需要进口原料和燃料；产品多出口；沿海港口多，海运便利。"],
+      ["东南亚水稻种植广泛的原因", "热量充足、降水多；平原和河口三角洲较多；人口稠密，劳动力丰富；水稻是主食。"],
+      ["印度旱涝灾害原因", "西南季风强弱和进退时间不稳定，降水年际变化大。"],
+      ["俄罗斯交通线为什么多在南部？", "南部纬度较低，气候较温和；人口城市较多；资源和工业区较集中。"],
+      ["欧洲西部畜牧业发达原因", "温带海洋性气候全年温和湿润，适合多汁牧草生长；地形平坦；市场需求大。"],
+      ["巴西人口城市为什么集中东南沿海？", "气候较适宜，交通便利，开发历史早，工农业和城市基础好。"],
+      ["秦岭-淮河的意义", "大致为1月0℃等温线、800毫米年降水量线、南北方分界线、旱地水田分界线。"],
+      ["黄河下游地上河成因", "中游黄土高原水土流失严重，泥沙入河；下游地势平坦、水流变慢，泥沙淤积，河床抬高。"],
+      ["西北地区干旱原因", "深居内陆，距海远，山脉阻挡湿润气流，降水少。"],
+      ["青藏地区河谷农业原因", "河谷海拔较低，气温较高，水源较充足，土壤条件相对好。"],
+      ["南极比北极冷的原因", "南极以陆地为主、海拔高、冰雪反射强；北极以海洋为主，海水调节气温。"],
+      ["农业因地制宜怎么答？", "先看地形、气候、水源、土壤，再看市场、劳动力、交通，判断适合种植、畜牧、林业或渔业。"],
+      ["亚洲河流为什么放射状？", "亚洲地势中部高、四周低，河流从中部高原山地流向周边海洋。"],
+      ["中东为什么缺水？", "热带沙漠气候广，降水少，蒸发强，河流少，淡水资源紧张。"],
+      ["撒哈拉以南非洲经济问题", "很多国家长期出口初级农矿产品，价格低且受国际市场影响大，经济结构单一。"],
+      ["澳大利亚特有生物多的原因", "长期孤立于南半球海洋中，自然环境相对单一，生物进化缓慢。"],
+      ["美国农业专业化好处", "便于机械化和规模化生产，提高产量和效率。"],
+      ["巴西雨林为什么要保护？", "能涵养水源、调节气候、维护生物多样性，也影响全球碳氧平衡。"],
+      ["长江为什么叫黄金水道？", "流量大、通航里程长、流域经济发达、航运价值高。"],
+      ["我国水资源分布特点", "空间上南多北少、东多西少；时间上夏秋多、冬春少，年际变化大。"]
+    ];
+
+    const quiz = [
+      {q:"下列最能直接证明地球是球体的是？", opts:["天圆地方的说法","地球卫星照片","普通城市地图","每天太阳东升西落"], a:1},
+      {q:"经线指示的方向是？", opts:["东西方向","南北方向","东北-西南方向","西北-东南方向"], a:1},
+      {q:"在同一幅等高线地形图上，等高线越密集表示？", opts:["坡越陡","坡越缓","海拔越低","降水越多"], a:0},
+      {q:"比例尺1:10000与1:100000相比，前者表示的范围通常？", opts:["更大","更小","完全相同","无法判断"], a:1},
+      {q:"地球自转产生的地理现象是？", opts:["四季变化","昼夜更替","五带划分","正午太阳高度年变化"], a:1},
+      {q:"北半球夏至日，太阳直射点在？", opts:["赤道","北回归线","南回归线","北极圈"], a:1},
+      {q:"世界面积最大的大洲是？", opts:["非洲","亚洲","北美洲","南极洲"], a:1},
+      {q:"板块交界处通常容易发生？", opts:["火山地震","人口减少","河流断流","气温降低"], a:0},
+      {q:"气候与天气相比，气候强调的是？", opts:["短时间变化","多年平均状况","每天风力","某小时降水"], a:1},
+      {q:"人口自然增长率等于？", opts:["出生率+死亡率","出生率-死亡率","死亡率-出生率","迁入率-迁出率"], a:1},
+      {q:"亚洲河流多呈放射状流向周边海洋，主要原因是？", opts:["面积最大","地势中部高、四周低","气候复杂","人口众多"], a:1},
+      {q:"日本工业集中在太平洋沿岸和濑户内海沿岸，关键区位是？", opts:["森林丰富","海运便利","煤炭丰富","平原广阔"], a:1},
+      {q:"东南亚被称为海上交通十字路口，最重要的海峡是？", opts:["霍尔木兹海峡","白令海峡","马六甲海峡","直布罗陀海峡"], a:2},
+      {q:"印度容易发生旱涝灾害，主要与哪种风有关？", opts:["西南季风","东北信风","西风","极地东风"], a:0},
+      {q:"秦岭-淮河大致对应的年降水量线是？", opts:["200毫米","400毫米","800毫米","1600毫米"], a:2},
+      {q:"黄河下游形成地上河的根本泥沙来源主要在？", opts:["青藏高原","内蒙古高原","黄土高原","东北平原"], a:2},
+      {q:"西北地区最突出的自然特征是？", opts:["高寒","干旱","湿热","冷湿"], a:1},
+      {q:"青藏地区农业多分布在河谷，主要因为河谷？", opts:["海拔较低，热量较好","矿产丰富","人口稀少","森林广布"], a:0},
+      {q:"欧洲西部畜牧业发达的重要自然原因是？", opts:["温带海洋性气候广","热带雨林广","山地面积最大","沙漠广布"], a:0},
+      {q:"南极科考通常选择北半球冬季，原因是南极此时？", opts:["极夜且寒冷","暖季且白昼较长","风暴最多","没有冰雪"], a:1},
+      {q:"中东地区长期受到世界关注的重要资源是？", opts:["煤炭","石油","森林","淡水"], a:1},
+      {q:"俄罗斯工业发展最突出的有利条件之一是？", opts:["矿产资源丰富","全年高温多雨","劳动力极多","岛国海运便利"], a:0},
+      {q:"我国人口地理分界线通常是？", opts:["秦岭-淮河","黑河-腾冲","昆仑山-祁连山","大兴安岭-太行山"], a:1},
+      {q:"我国地势西高东低的影响不包括？", opts:["大河多向东流","有利于海洋湿润气流深入","阶梯交界处水能丰富","全国冬季都温暖湿润"], a:3}
+    ];
+
+    const examDrills = [
+      {type:"经纬网选择题", source:"七上期末高频", title:"读经纬网判断位置", question:"某点位于30度N、120度E。判断该点所在半球和纬度带。", answer:"北半球、东半球、中纬度。步骤：30度N在赤道以北；120度E位于20度W向东到160度E之间，属东半球；30度-60度为中纬度。"},
+      {type:"比例尺计算题", source:"七上期末高频", title:"图上距离换算", question:"地图比例尺为1:500000，甲乙两地在图上相距4厘米，实地距离是多少千米？", answer:"20千米。1厘米代表5千米，4厘米代表20千米。"},
+      {type:"等高线综合题", source:"七升八常见读图", title:"登山路线选择", question:"A路线等高线稀疏，B路线等高线密集。若组织七年级学生登山研学，应优先选择哪条路线？说明理由。", answer:"选A路线。等高线稀疏表示坡度较缓，攀登难度较小，更安全。"},
+      {type:"地球运动题", source:"七上期末高频", title:"天津昼夜长短", question:"当地球运行到夏至日前后，天津昼夜长短情况怎样？太阳直射哪里？", answer:"天津昼长夜短；太阳直射北回归线。"},
+      {type:"气候图判读", source:"近三年高频", title:"热带季风气候", question:"某地各月气温都在20摄氏度以上，降水集中在6-9月，其他月份较少。判断气候类型并说明农业风险。", answer:"热带季风气候；雨季和旱季明显，西南季风不稳定时容易发生旱涝灾害。"},
+      {type:"大洲大洋图", source:"七上期末高频", title:"大洲分界线", question:"亚洲与非洲的分界线是什么？南、北美洲的分界线是什么？", answer:"亚洲与非洲分界线是苏伊士运河；南、北美洲分界线是巴拿马运河。"},
+      {type:"板块运动题", source:"七上期末高频", title:"日本多地震", question:"日本多火山地震的主要原因是什么？", answer:"日本位于板块交界地带，地壳活跃，因此多火山地震。"},
+      {type:"亚洲读图题", source:"七下期末高频", title:"亚洲河流流向", question:"为什么亚洲许多大河从中部流向周边海洋？", answer:"亚洲地势中部高、四周低，河流受地势影响由高处流向低处，呈放射状流向周边海洋。"},
+      {type:"日本工业题", source:"七下期末高频", title:"沿海工业带", question:"日本工业为什么主要分布在太平洋沿岸和濑户内海沿岸？", answer:"日本矿产资源贫乏，工业原料和燃料依赖进口，工业产品大量出口；沿海港口多、海运便利，便于进口原料和出口产品。"},
+      {type:"东南亚位置题", source:"七下期末高频", title:"马六甲海峡", question:"东南亚被称为海上交通十字路口，与哪一海峡关系密切？该海峡沟通哪两个大洋？", answer:"马六甲海峡；沟通太平洋和印度洋。"},
+      {type:"印度农业题", source:"七下期末高频", title:"季风与农业", question:"印度水稻种植区为什么容易受季风影响？", answer:"印度以热带季风气候为主，农业生产依赖西南季风带来的降水；季风强弱和进退异常会造成旱涝灾害。"},
+      {type:"俄罗斯交通题", source:"七下期末高频", title:"铁路南密北疏", question:"俄罗斯亚洲部分铁路为什么多分布在南部？", answer:"南部纬度相对较低，气候较温和；人口和城市较多；矿产资源和工业区较集中，运输需求大。"},
+      {type:"中东资源题", source:"七下期末高频", title:"石油与水", question:"中东地区一方面石油丰富，另一方面淡水紧张。分别说明原因。", answer:"石油主要分布在波斯湾及其沿岸；淡水紧张是因为热带沙漠气候广，降水少，蒸发强，河流少。"},
+      {type:"欧洲西部农业题", source:"七下期末高频", title:"畜牧业发达", question:"欧洲西部畜牧业发达的自然原因是什么？", answer:"温带海洋性气候广，全年温和湿润，适合多汁牧草生长；地形以平原为主，草场广布。"},
+      {type:"巴西生态题", source:"七下期末高频", title:"雨林保护", question:"亚马孙热带雨林被破坏会带来哪些影响？", answer:"生物多样性减少，水土流失加剧，调节气候和涵养水源功能下降，并可能影响全球碳氧平衡。"},
+      {type:"中国地理衔接题", source:"七升八预备", title:"秦岭-淮河", question:"秦岭-淮河一线有哪些重要地理意义？至少写三条。", answer:"大致是1月0摄氏度等温线、800毫米年降水量线、南北方分界线、旱地和水田分界线、暖温带和亚热带分界线。"},
+      {type:"黄河治理题", source:"八上高频衔接", title:"地上河", question:"黄河下游为什么形成地上河？治理关键在哪里？", answer:"中游流经黄土高原，水土流失严重，大量泥沙入河；下游地势平坦，流速变慢，泥沙淤积抬高河床。治理关键在中游保持水土。"},
+      {type:"区域差异题", source:"七升八预备", title:"西北与青藏", question:"西北地区和青藏地区的突出自然特征分别是什么？主导因素分别是什么？", answer:"西北地区突出特征是干旱，主导因素是海陆位置；青藏地区突出特征是高寒，主导因素是地势高。"}
+    ];
+
+    const plan = [
+      ["第1天", "七上地球与经纬网", "练半球、纬度带、方向、地球自转和公转。"],
+      ["第2天", "七上地图与等高线", "练比例尺计算、方向判断、山谷山脊、坡度和路线选择。"],
+      ["第3天", "七上大洲大洋、板块、天气气候", "默写大洲大洋，练气候资料图和板块运动原因题。"],
+      ["第4天", "七上人口聚落与发展差异", "练人口稠密原因、语言宗教、聚落选址和民居环境关系。"],
+      ["第5天", "七下亚洲、日本、东南亚", "画亚洲地势河流、日本工业带、马六甲海峡。"],
+      ["第6天", "印度、俄罗斯、中东", "练季风风向、俄罗斯资源工业、中东石油路线和水资源问题。"],
+      ["第7天", "欧洲西部、非洲、澳大利亚", "练气候影响农业、单一商品经济、人口城市分布。"],
+      ["第8天", "美国、巴西、极地", "练农业带、雨林保护、极地方向与科考时间。"],
+      ["第9天", "八年级衔接：中国地形气候河流", "默画三级阶梯、秦岭-淮河、长江黄河。"],
+      ["第10天", "天津近三年真题化训练", "做改编题和真题卷，按地图题、气候题、区域题、原因题分类改错。"]
+    ];
+
+    const colorMap = {
+      teal:"bg-teal-50 text-teal-800 border-teal-200",
+      rose:"bg-rose-50 text-rose-800 border-rose-200",
+      amber:"bg-amber-50 text-amber-800 border-amber-200",
+      cyan:"bg-cyan-50 text-cyan-800 border-cyan-200",
+      slate:"bg-slate-100 text-slate-800 border-slate-200",
+      orange:"bg-orange-50 text-orange-800 border-orange-200",
+      emerald:"bg-emerald-50 text-emerald-800 border-emerald-200",
+      yellow:"bg-yellow-50 text-yellow-800 border-yellow-200",
+      lime:"bg-lime-50 text-lime-800 border-lime-200",
+      blue:"bg-blue-50 text-blue-800 border-blue-200",
+      green:"bg-green-50 text-green-800 border-green-200",
+      sky:"bg-sky-50 text-sky-800 border-sky-200",
+      indigo:"bg-indigo-50 text-indigo-800 border-indigo-200",
+      fuchsia:"bg-fuchsia-50 text-fuchsia-800 border-fuchsia-200"
+    };
+
+    function topicCard(topic, index) {
+      const checked = localStorage.getItem("geo-check-" + topic.stage + topic.title) === "1";
+      return `
+        <article class="topic-card print-break rounded-lg border border-stone-200 bg-white p-4 shadow-sm transition hover:border-stone-300" data-stage="${topic.stage}" data-text="${[topic.title, topic.stage, topic.tag, topic.points.join(" "), topic.exam].join(" ")}">
+          <div class="mb-3 flex items-start justify-between gap-3">
+            <div>
+              <div class="mb-2 inline-flex rounded-md border px-2 py-1 text-xs font-medium ${colorMap[topic.color] || colorMap.slate}">${topic.stage} · ${topic.tag}</div>
+              <h3 class="text-lg font-semibold tracking-tight text-slate-950">${topic.title}</h3>
+            </div>
+            <label class="no-print relative mt-1 flex h-6 w-6 shrink-0 cursor-pointer items-center justify-center">
+              <input type="checkbox" class="progress-check peer sr-only" data-key="geo-check-${topic.stage}${topic.title}" ${checked ? "checked" : ""}>
+              <span class="h-5 w-5 rounded-md border border-stone-300 bg-white peer-checked:border-teal-600 peer-checked:bg-teal-600"></span>
+              <i data-lucide="check" class="pointer-events-none absolute h-3.5 w-3.5 text-white opacity-0 peer-checked:opacity-100"></i>
+            </label>
+          </div>
+          <ul class="space-y-2 text-sm leading-6 text-slate-600">
+            ${topic.points.map(point => `<li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-300"></span><span>${point}</span></li>`).join("")}
+          </ul>
+          <div class="mt-4 rounded-md border border-stone-200 bg-stone-50 p-3 text-sm leading-6 text-slate-700">
+            <span class="font-medium text-slate-950">真题入口：</span>${topic.exam}
+          </div>
+        </article>`;
+    }
+
+    function renderTopics() {
+      document.getElementById("sevenUpperGrid").innerHTML = topics.filter(t => t.stage === "七上").map(topicCard).join("");
+      document.getElementById("sevenGrid").innerHTML = topics.filter(t => t.stage === "七下").map(topicCard).join("");
+      document.getElementById("eightGrid").innerHTML = topics.filter(t => t.stage === "八上" || t.stage === "八下").map(topicCard).join("");
+      bindChecks();
+      lucide.createIcons({ attrs: { "stroke-width": 1.5 } });
+    }
+
+    function renderCards(offset = 0) {
+      const cards = [...flashCards.slice(offset), ...flashCards.slice(0, offset)].slice(0, 6);
+      document.getElementById("cardGrid").innerHTML = cards.map(([front, back], i) => `
+        <article class="print-break rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
+          <div class="mb-3 flex items-center justify-between">
+            <span class="rounded-md border border-cyan-200 bg-cyan-50 px-2 py-1 text-xs font-medium text-cyan-800">Card ${i + 1}</span>
+            <i data-lucide="book-open-check" class="h-4 w-4 text-slate-400"></i>
+          </div>
+          <h3 class="text-base font-semibold tracking-tight text-slate-950">${front}</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-600">${back}</p>
+        </article>`).join("");
+      lucide.createIcons({ attrs: { "stroke-width": 1.5 } });
+    }
+
+    function renderQuiz() {
+      document.getElementById("quizTotal").textContent = quiz.length;
+      document.getElementById("quizList").innerHTML = quiz.map((item, index) => `
+        <article class="quiz-item print-break p-5" data-answer="${item.a}">
+          <h3 class="text-sm font-semibold text-slate-950">${index + 1}. ${item.q}</h3>
+          <div class="mt-3 grid gap-2 sm:grid-cols-2">
+            ${item.opts.map((opt, optIndex) => `
+              <button class="quiz-option rounded-md border border-stone-200 bg-white px-3 py-2 text-left text-sm text-slate-700 hover:border-teal-300 hover:bg-teal-50" data-index="${optIndex}">${String.fromCharCode(65 + optIndex)}. ${opt}</button>
+            `).join("")}
+          </div>
+        </article>`).join("");
+    }
+
+    function renderDrills() {
+      document.getElementById("drillGrid").innerHTML = examDrills.map((item, index) => `
+        <article class="print-break rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
+          <div class="mb-3 flex flex-wrap items-center gap-2">
+            <span class="rounded-md border border-fuchsia-200 bg-fuchsia-50 px-2 py-1 text-xs font-medium text-fuchsia-800">${item.type}</span>
+            <span class="rounded-md border border-stone-200 bg-stone-50 px-2 py-1 text-xs font-medium text-slate-600">${item.source}</span>
+          </div>
+          <h3 class="text-base font-semibold tracking-tight text-slate-950">${index + 1}. ${item.title}</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-700">${item.question}</p>
+          <details class="no-print mt-4 rounded-md border border-stone-200 bg-stone-50 p-3">
+            <summary class="cursor-pointer text-sm font-medium text-slate-900">答案要点</summary>
+            <p class="mt-2 text-sm leading-6 text-slate-600">${item.answer}</p>
+          </details>
+          <div class="hidden print:block mt-4 rounded-md border border-stone-200 bg-stone-50 p-3 text-sm leading-6 text-slate-700">
+            <span class="font-medium text-slate-950">答案要点：</span>${item.answer}
+          </div>
+        </article>`).join("");
+    }
+
+    function renderPlan() {
+      document.getElementById("planGrid").innerHTML = plan.map(([day, title, detail], index) => `
+        <article class="print-break rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
+          <div class="mb-3 flex items-center justify-between">
+            <span class="rounded-md border border-indigo-200 bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-800">${day}</span>
+            <label class="no-print relative flex h-6 w-6 cursor-pointer items-center justify-center">
+              <input type="checkbox" class="progress-check peer sr-only" data-key="geo-plan-${index}" ${localStorage.getItem("geo-plan-" + index) === "1" ? "checked" : ""}>
+              <span class="h-5 w-5 rounded-md border border-stone-300 bg-white peer-checked:border-indigo-600 peer-checked:bg-indigo-600"></span>
+              <i data-lucide="check" class="pointer-events-none absolute h-3.5 w-3.5 text-white opacity-0 peer-checked:opacity-100"></i>
+            </label>
+          </div>
+          <h3 class="text-base font-semibold tracking-tight text-slate-950">${title}</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-600">${detail}</p>
+        </article>`).join("");
+      bindChecks();
+      lucide.createIcons({ attrs: { "stroke-width": 1.5 } });
+    }
+
+    function bindChecks() {
+      document.querySelectorAll(".progress-check").forEach(input => {
+        input.addEventListener("change", () => {
+          localStorage.setItem(input.dataset.key, input.checked ? "1" : "0");
+          updateProgress();
+        });
+      });
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const checks = [...document.querySelectorAll(".progress-check")];
+      const done = checks.filter(input => input.checked).length;
+      const pct = checks.length ? Math.round(done / checks.length * 100) : 0;
+      document.getElementById("progressText").textContent = pct + "%";
+      document.getElementById("progressBar").style.width = pct + "%";
+    }
+
+    function bindSearch() {
+      const search = document.getElementById("searchInput");
+      let active = "all";
+      function apply() {
+        const q = search.value.trim().toLowerCase();
+        document.querySelectorAll(".topic-card").forEach(card => {
+          const stageMatch = active === "all" || card.dataset.stage === active;
+          const textMatch = !q || card.dataset.text.toLowerCase().includes(q);
+          card.style.display = stageMatch && textMatch ? "" : "none";
+        });
+      }
+      search.addEventListener("input", apply);
+      document.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          active = btn.dataset.filter;
+          document.querySelectorAll(".filter-btn").forEach(item => {
+            item.className = "filter-btn rounded-md border border-stone-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:bg-stone-50";
+          });
+          btn.className = "filter-btn rounded-md bg-slate-950 px-3 py-2 text-sm font-medium text-white";
+          apply();
+        });
+      });
+    }
+
+    function bindQuiz() {
+      document.querySelectorAll(".quiz-option").forEach(button => {
+        button.addEventListener("click", () => {
+          const item = button.closest(".quiz-item");
+          const answer = Number(item.dataset.answer);
+          const selected = Number(button.dataset.index);
+          item.querySelectorAll(".quiz-option").forEach(opt => {
+            const optIndex = Number(opt.dataset.index);
+            opt.disabled = true;
+            opt.classList.remove("hover:border-teal-300", "hover:bg-teal-50");
+            if (optIndex === answer) opt.className = "quiz-option rounded-md border border-emerald-300 bg-emerald-50 px-3 py-2 text-left text-sm font-medium text-emerald-800";
+            if (optIndex === selected && selected !== answer) opt.className = "quiz-option rounded-md border border-rose-300 bg-rose-50 px-3 py-2 text-left text-sm font-medium text-rose-800";
+          });
+          updateScore();
+        });
+      });
+    }
+
+    function updateScore() {
+      let score = 0;
+      document.querySelectorAll(".quiz-item").forEach(item => {
+        const correct = item.querySelector(".border-emerald-300");
+        const wrong = item.querySelector(".border-rose-300");
+        if (correct && !wrong) score += 1;
+      });
+      document.getElementById("score").textContent = score;
+    }
+
+    let cardOffset = 0;
+    renderTopics();
+    renderCards();
+    renderQuiz();
+    renderDrills();
+    renderPlan();
+    bindSearch();
+    bindQuiz();
+
+    document.getElementById("shuffleCards").addEventListener("click", () => {
+      cardOffset = (cardOffset + 3) % flashCards.length;
+      renderCards(cardOffset);
+    });
+    document.getElementById("printBtn").addEventListener("click", () => window.print());
+    lucide.createIcons({ attrs: { "stroke-width": 1.5 } });
+  </script>
+</body>
+</html>

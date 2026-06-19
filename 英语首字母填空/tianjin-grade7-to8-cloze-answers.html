@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>天津七升八近五年完形填空答案罗列</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #5f6f84;
+      --paper: #f5f6f8;
+      --card: #ffffff;
+      --line: #d8e0ea;
+      --blue: #1f5f99;
+      --green: #236b51;
+      --orange: #936014;
+      --red: #a33d3d;
+      --shadow: 0 14px 36px rgba(23, 32, 51, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+    button, input, select { font: inherit; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 30px 20px 56px; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: start;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .label {
+      color: var(--blue);
+      font-weight: 750;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+    .intro { max-width: 880px; margin: 12px 0 0; color: var(--muted); font-size: 15px; }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+    .btn {
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--card);
+      color: var(--ink);
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    .btn:hover { border-color: #97a6ba; background: #fbfcfd; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      margin: 22px 0;
+    }
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      box-shadow: 0 8px 24px rgba(23, 32, 51, .05);
+    }
+    .stat b { display: block; font-size: 28px; line-height: 1; }
+    .stat span { display: block; margin-top: 7px; color: var(--muted); font-size: 13px; }
+    .notice {
+      border: 1px solid #ead8a5;
+      background: #fff8e8;
+      border-radius: 8px;
+      padding: 14px;
+      color: #604512;
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 1fr 150px 150px 150px;
+      gap: 10px;
+      padding: 12px;
+      margin: 0 -12px 18px;
+      background: rgba(245, 246, 248, .94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(217, 224, 234, .85);
+    }
+    input[type="search"], select {
+      min-height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--card);
+      color: var(--ink);
+      padding: 8px 12px;
+      outline: none;
+    }
+    input[type="search"]:focus, select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(31, 95, 153, .13);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr .9fr;
+      gap: 16px;
+      align-items: start;
+    }
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: end;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      background: #fbfcfd;
+    }
+    h2 { margin: 0; font-size: 20px; line-height: 1.2; letter-spacing: 0; }
+    .hint { color: var(--muted); font-size: 13px; }
+    .sets { display: grid; gap: 12px; padding: 12px; }
+    .set {
+      border: 1px solid #e4e9f1;
+      border-radius: 8px;
+      background: #fff;
+      padding: 14px;
+    }
+    .set-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+      margin-bottom: 12px;
+    }
+    .exam { font-weight: 800; font-size: 17px; }
+    .meta { color: var(--muted); font-size: 13px; margin-top: 3px; }
+    .answer-line {
+      display: grid;
+      grid-template-columns: repeat(10, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .answer {
+      min-height: 50px;
+      border: 1px solid #dfe7f0;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: #f9fbfd;
+    }
+    .answer span { display: block; color: var(--muted); font-size: 11px; line-height: 1; }
+    .answer b { display: block; font-size: 22px; line-height: 1.05; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      padding: 2px 8px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .high { color: var(--green); background: #e9f5ef; border-color: #cce7db; }
+    .mid { color: var(--blue); background: #edf4fb; border-color: #d2e4f5; }
+    .wait { color: var(--red); background: #fff0f0; border-color: #efd0d0; }
+    .src { color: var(--orange); background: #fff5df; border-color: #ecd9aa; }
+    .bars { padding: 12px 16px 16px; display: grid; gap: 9px; }
+    .bar-row {
+      display: grid;
+      grid-template-columns: 42px 1fr 38px;
+      gap: 10px;
+      align-items: center;
+      font-size: 13px;
+    }
+    .track { height: 11px; border-radius: 999px; background: #edf1f6; overflow: hidden; }
+    .fill { height: 100%; border-radius: inherit; background: var(--blue); min-width: 4px; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid #edf0f5; text-align: left; vertical-align: top; }
+    th { color: #425066; background: #fbfcfd; font-size: 12px; white-space: nowrap; }
+    td a { color: var(--blue); text-decoration: none; }
+    td a:hover { text-decoration: underline; }
+    .wide { grid-column: 1 / -1; }
+    .empty { display: none; padding: 22px; text-align: center; color: var(--muted); }
+    .source-list { padding: 0; margin: 0; list-style: none; }
+    .source-list li { padding: 12px 16px; border-bottom: 1px solid #edf0f5; }
+    .source-list li:last-child { border-bottom: 0; }
+    .source-title { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-weight: 750; }
+    .source-title a { color: var(--ink); text-decoration: none; }
+    .source-title a:hover { color: var(--blue); text-decoration: underline; }
+    .source-detail { margin-top: 5px; color: var(--muted); font-size: 13px; }
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; }
+      .actions { justify-content: flex-start; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .toolbar { grid-template-columns: 1fr 1fr; }
+      .toolbar input { grid-column: 1 / -1; }
+      .grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      .wrap { padding: 20px 14px 42px; }
+      .stats, .toolbar { grid-template-columns: 1fr; }
+      .toolbar { position: static; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
+      .panel-head, .set-head { align-items: flex-start; flex-direction: column; }
+      .answer-line { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 0; }
+      .actions, .toolbar { display: none; }
+      .panel, .stat { box-shadow: none; break-inside: avoid; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div>
+        <div class="label">七升八期末复习 · 完形填空答案</div>
+        <h1>天津近五年七年级完形填空答案罗列</h1>
+        <p class="intro">按年份、学期、区/联考直接列出完形填空最终选项。高置信度为页面原文或本地 Word 可抽取；中置信度为搜索片段可见；待核验来源只作为后续补卷清单，不进入答案频次统计。</p>
+      </div>
+      <div class="actions">
+        <button class="btn" id="printBtn">打印</button>
+        <button class="btn" id="copyBtn">复制答案</button>
+      </div>
+    </header>
+
+    <section class="stats">
+      <div class="stat"><b id="setCount">0</b><span>已整理试卷</span></div>
+      <div class="stat"><b id="answerCount">0</b><span>答案选项</span></div>
+      <div class="stat"><b>2020-2025</b><span>近五年框架</span></div>
+      <div class="stat"><b id="highCount">0</b><span>高置信试卷</span></div>
+      <div class="stat"><b id="gapCount">0</b><span>待补来源</span></div>
+    </section>
+
+    <div class="notice">说明：公开网络暂未能取得天津各区近五年全量原卷答案，尤其是七下期末多在教习网、学科网或附件包内。当前页面先服务“快速看答案考点分布”，并保留缺口清单，后续拿到 PDF/Word 后可继续合并。</div>
+
+    <section class="toolbar">
+      <input id="searchInput" type="search" placeholder="搜索：年份 / 区 / 学期 / 答案串 / 来源">
+      <select id="yearFilter" aria-label="年份筛选"></select>
+      <select id="termFilter" aria-label="学期筛选"></select>
+      <select id="confidenceFilter" aria-label="置信度筛选"></select>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>答案罗列</h2>
+          <div class="hint" id="resultHint">正在加载</div>
+        </div>
+        <div class="empty" id="emptyState">没有匹配的试卷。</div>
+        <div class="sets" id="sets"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>选项分布</h2>
+          <div class="hint">按当前筛选计算</div>
+        </div>
+        <div class="bars" id="choiceBars"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>逐题频次</h2>
+          <div class="hint">观察常考位置偏好</div>
+        </div>
+        <div class="bars" id="positionBars"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>逐题表</h2>
+          <div class="hint" id="tableHint">0 行</div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>年份</th>
+                <th>学期</th>
+                <th>区/联考</th>
+                <th>题号</th>
+                <th>答案</th>
+                <th>来源</th>
+              </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel wide">
+        <div class="panel-head">
+          <h2>近五年缺口来源</h2>
+          <div class="hint">找到原卷后优先补这些</div>
+        </div>
+        <ul class="source-list" id="gaps"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const exams = [
+      {
+        id: "HD-2024-2025-QS",
+        schoolYear: "2024-2025",
+        term: "七上期末",
+        district: "河东区",
+        exam: "天津市河东区2024-2025学年七年级上学期期末英语试题",
+        range: "16-25",
+        answers: "A B A D C B D C A D".split(" "),
+        confidence: "高",
+        sourceType: "页面原文含解析",
+        sourceUrl: "https://zy.21cnjy.com/24495245",
+        note: "21世纪教育网页面原文给出答案解析：16-25 A B A D C B D C A D。"
+      },
+      {
+        id: "TJBQ-2023-2024-QS",
+        schoolYear: "2023-2024",
+        term: "七上期末",
+        district: "天津部分区",
+        exam: "天津市部分区2023-2024学年七年级上学期期末英语试题",
+        range: "36-45",
+        answers: "C B A A D D A C B C".split(" "),
+        confidence: "高",
+        sourceType: "页面原文含答案",
+        sourceUrl: "https://zy.21cnjy.com/18806657",
+        note: "21世纪教育网页面原文参考答案：36-40 CBAAD，41-45 DACBC。"
+      },
+      {
+        id: "HX-2022-2023-QS",
+        schoolYear: "2022-2023",
+        term: "七上期末",
+        district: "河西区",
+        exam: "天津市河西区七年级上册期末英语试卷及答案",
+        range: "16-25",
+        answers: "C A C C B A B A C C".split(" "),
+        confidence: "高",
+        sourceType: "Word原文可抽取",
+        sourceUrl: "https://file.you123.top/upload/xueke/attach/2024/07/09/2022-2023%E5%AD%A6%E5%B9%B4%E5%A4%A9%E6%B4%A5%E5%B8%82%E6%B2%B3%E8%A5%BF%E5%8C%BA%E4%B8%83%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C%E6%9C%9F%E6%9C%AB%E8%8B%B1%E8%AF%AD%E8%AF%95%E5%8D%B7%E5%8F%8A%E7%AD%94%E6%A1%88%28Word%E7%89%88%29.doc",
+        note: "本地已抽取 Word 版答案：16-25 C A C C B A B A C C。"
+      },
+      {
+        id: "TJQZ-2022-2023-QS",
+        schoolYear: "2022-2023",
+        term: "七上期末",
+        district: "天津七中",
+        exam: "天津市第七中学2022-2023学年七年级上学期期末英语试题",
+        range: "36-45",
+        answers: "A D B A B C B A D C".split(" "),
+        confidence: "中",
+        sourceType: "搜索片段",
+        sourceUrl: "https://m.51jiaoxi.com/doc-15213937.html",
+        note: "教习网搜索片段显示：36-40 ADBAB，41-45 CBADC；页面正文受访问限制。"
+      }
+    ];
+
+    const gaps = [
+      {
+        schoolYear: "2024-2025",
+        term: "七下期末",
+        district: "津南区等5地",
+        exam: "2024-2025学年天津市津南区等5地七年级下学期6月期末考试英语试题",
+        status: "题库索引可见，答案未取得",
+        url: "https://m.51jiaoxi.com/doc-17470924.html",
+        note: "教习网页面显示含详细答案解析，但正文 403，无法抽取完形最终答案。"
+      },
+      {
+        schoolYear: "2023-2024",
+        term: "七下期末",
+        district: "宝坻区等5地",
+        exam: "天津市宝坻区等5地2023-2024学年七年级下学期7月期末英语试题",
+        status: "相关资源索引可见",
+        url: "https://m.51jiaoxi.com/doc-16099116.html",
+        note: "在相关资源中可见七下期末试题入口，未能取得答案正文。"
+      },
+      {
+        schoolYear: "2023-2024",
+        term: "七上期末",
+        district: "滨海新区",
+        exam: "2023-2024学年天津市滨海新区七年级（上）期末英语试卷",
+        status: "索引可见，答案未取得",
+        url: "https://m.51jiaoxi.com/doc-16217376.html",
+        note: "搜索结果确认试卷存在，未能直接取得完形答案。"
+      },
+      {
+        schoolYear: "2023-2024",
+        term: "七上期末",
+        district: "和平区耀华中学",
+        exam: "天津市和平区耀华中学2023-2024学年七年级上学期1月期末英语试题",
+        status: "附件下载失败",
+        url: "https://www.trjlseng.com/cyst/1816.html",
+        note: "中学英语网页面可见，RAR 附件请求返回 502。"
+      },
+      {
+        schoolYear: "2021-2022",
+        term: "七下期末",
+        district: "红桥区等",
+        exam: "天津市红桥区2021-2022学年七年级下学期期末练习试题",
+        status: "索引线索可见",
+        url: "https://cz.jb1000.com/Resources/ExamPaperDetails.aspx?id=24",
+        note: "教学资源网中可见相关期末条目，但未获取英语完形答案。"
+      },
+      {
+        schoolYear: "2020-2021",
+        term: "七上/七下期末",
+        district: "天津部分地区",
+        exam: "天津市2020-2021学年七年级英语期末分类汇编",
+        status: "附件不可下载",
+        url: "https://www.trjlseng.com/st/",
+        note: "中学英语网相关 RAR 附件直连返回错误页，暂不能抽取答案。"
+      }
+    ];
+
+    const els = {
+      setCount: document.getElementById("setCount"),
+      answerCount: document.getElementById("answerCount"),
+      highCount: document.getElementById("highCount"),
+      gapCount: document.getElementById("gapCount"),
+      searchInput: document.getElementById("searchInput"),
+      yearFilter: document.getElementById("yearFilter"),
+      termFilter: document.getElementById("termFilter"),
+      confidenceFilter: document.getElementById("confidenceFilter"),
+      sets: document.getElementById("sets"),
+      rows: document.getElementById("rows"),
+      choiceBars: document.getElementById("choiceBars"),
+      positionBars: document.getElementById("positionBars"),
+      resultHint: document.getElementById("resultHint"),
+      tableHint: document.getElementById("tableHint"),
+      emptyState: document.getElementById("emptyState"),
+      gaps: document.getElementById("gaps"),
+      printBtn: document.getElementById("printBtn"),
+      copyBtn: document.getElementById("copyBtn")
+    };
+
+    function fillSelect(select, label, values) {
+      select.innerHTML = [`<option value="all">${label}</option>`]
+        .concat(values.map(value => `<option value="${value}">${value}</option>`))
+        .join("");
+    }
+
+    function confidenceClass(confidence) {
+      if (confidence === "高") return "high";
+      if (confidence === "中") return "mid";
+      return "wait";
+    }
+
+    function allRows(items) {
+      return items.flatMap(exam => exam.answers.map((answer, index) => ({
+        ...exam,
+        questionNo: String(Number(exam.range.split("-")[0]) + index),
+        answer
+      })));
+    }
+
+    function currentExams() {
+      const q = els.searchInput.value.trim().toLowerCase();
+      const year = els.yearFilter.value;
+      const term = els.termFilter.value;
+      const confidence = els.confidenceFilter.value;
+      return exams.filter(exam => {
+        const text = [
+          exam.schoolYear, exam.term, exam.district, exam.exam, exam.range,
+          exam.answers.join(""), exam.answers.join(" "), exam.confidence, exam.sourceType, exam.note
+        ].join(" ").toLowerCase();
+        return (!q || text.includes(q))
+          && (year === "all" || exam.schoolYear === year)
+          && (term === "all" || exam.term === term)
+          && (confidence === "all" || exam.confidence === confidence);
+      });
+    }
+
+    function countBy(items, getter) {
+      return items.reduce((acc, item) => {
+        const key = getter(item);
+        acc[key] = (acc[key] || 0) + 1;
+        return acc;
+      }, {});
+    }
+
+    function renderBars(container, counts) {
+      const entries = Object.entries(counts).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+      const max = Math.max(1, ...entries.map(([, count]) => count));
+      container.innerHTML = entries.length ? entries.map(([key, count]) => `
+        <div class="bar-row">
+          <strong>${key}</strong>
+          <div class="track"><div class="fill" style="width:${Math.max(8, count / max * 100)}%"></div></div>
+          <span>${count}</span>
+        </div>
+      `).join("") : `<div class="empty" style="display:block">暂无数据</div>`;
+    }
+
+    function renderSets(items) {
+      els.sets.innerHTML = items.map(exam => `
+        <article class="set">
+          <div class="set-head">
+            <div>
+              <div class="exam">${exam.schoolYear} · ${exam.district} · ${exam.term}</div>
+              <div class="meta">${exam.exam} · 题号 ${exam.range}</div>
+            </div>
+            <span class="tag ${confidenceClass(exam.confidence)}">${exam.confidence}置信</span>
+          </div>
+          <div class="answer-line">
+            ${exam.answers.map((answer, index) => {
+              const start = Number(exam.range.split("-")[0]);
+              return `<div class="answer"><span>${start + index}</span><b>${answer}</b></div>`;
+            }).join("")}
+          </div>
+          <div class="tags">
+            <span class="tag src">${exam.sourceType}</span>
+            <span class="tag mid">${exam.answers.join("")}</span>
+          </div>
+          <div class="meta" style="margin-top:8px">${exam.note}</div>
+        </article>
+      `).join("");
+    }
+
+    function renderRows(rows) {
+      els.rows.innerHTML = rows.map(row => `
+        <tr>
+          <td>${row.schoolYear}</td>
+          <td>${row.term}</td>
+          <td>${row.district}</td>
+          <td>${row.questionNo}</td>
+          <td><strong>${row.answer}</strong></td>
+          <td><a href="${row.sourceUrl}" target="_blank" rel="noopener">${row.sourceType}</a></td>
+        </tr>
+      `).join("");
+    }
+
+    function renderGaps() {
+      els.gaps.innerHTML = gaps.map(item => `
+        <li>
+          <div class="source-title">
+            <a href="${item.url}" target="_blank" rel="noopener">${item.schoolYear} ${item.district} ${item.term}</a>
+            <span class="wait">${item.status}</span>
+          </div>
+          <div class="source-detail">${item.exam}。${item.note}</div>
+        </li>
+      `).join("");
+    }
+
+    function render() {
+      const items = currentExams();
+      const rows = allRows(items);
+      renderSets(items);
+      renderRows(rows);
+      renderBars(els.choiceBars, countBy(rows, row => row.answer));
+      renderBars(els.positionBars, countBy(rows, row => `${row.questionNo}:${row.answer}`));
+      els.resultHint.textContent = `${items.length} / ${exams.length} 套`;
+      els.tableHint.textContent = `${rows.length} 行`;
+      els.emptyState.style.display = items.length ? "none" : "block";
+    }
+
+    function copyAnswers() {
+      const text = currentExams().map(exam => `${exam.schoolYear} ${exam.district} ${exam.term} ${exam.range}: ${exam.answers.join(" ")}`).join("\n");
+      navigator.clipboard.writeText(text).then(() => {
+        els.copyBtn.textContent = "已复制";
+        setTimeout(() => { els.copyBtn.textContent = "复制答案"; }, 1300);
+      });
+    }
+
+    function init() {
+      fillSelect(els.yearFilter, "全部年份", [...new Set(exams.map(exam => exam.schoolYear))].sort().reverse());
+      fillSelect(els.termFilter, "全部学期", [...new Set(exams.map(exam => exam.term))].sort());
+      fillSelect(els.confidenceFilter, "全部置信度", ["高", "中"]);
+      els.setCount.textContent = exams.length;
+      els.answerCount.textContent = allRows(exams).length;
+      els.highCount.textContent = exams.filter(exam => exam.confidence === "高").length;
+      els.gapCount.textContent = gaps.length;
+      renderGaps();
+      render();
+      [els.searchInput, els.yearFilter, els.termFilter, els.confidenceFilter].forEach(el => el.addEventListener("input", render));
+      els.printBtn.addEventListener("click", () => window.print());
+      els.copyBtn.addEventListener("click", copyAnswers);
+    }
+
+    init();
+  </script>
+</body>
+</html>

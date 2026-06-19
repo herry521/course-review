@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>天津中考英语首字母填空 STM 记忆页</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #637083;
+      --line: #d7dde6;
+      --paper: #f6f7f9;
+      --card: #ffffff;
+      --blue: #2359a6;
+      --green: #23735a;
+      --amber: #9a6400;
+      --red: #a43f40;
+      --shadow: 0 18px 45px rgba(31, 41, 51, .08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+
+    button, input, select { font: inherit; }
+
+    .shell {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px 20px 56px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 22px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 650;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.08;
+      letter-spacing: 0;
+      font-weight: 680;
+    }
+
+    .subtitle {
+      margin: 14px 0 0;
+      color: var(--muted);
+      max-width: 820px;
+      font-size: 15px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      min-width: 245px;
+    }
+
+    .icon-btn, .pill-btn {
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      border-radius: 8px;
+      min-height: 38px;
+      padding: 8px 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .icon-btn {
+      width: 40px;
+      justify-content: center;
+      padding: 8px;
+    }
+
+    .icon-btn:hover, .pill-btn:hover, .letter:hover {
+      border-color: #9aa8ba;
+      background: #fbfcfd;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 22px 0;
+    }
+
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      box-shadow: 0 10px 30px rgba(31, 41, 51, .04);
+    }
+
+    .stat b {
+      display: block;
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 680;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: grid;
+      grid-template-columns: 1fr auto auto auto;
+      gap: 10px;
+      align-items: center;
+      padding: 12px;
+      margin: 0 -12px 20px;
+      background: rgba(246, 247, 249, .92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(215, 221, 230, .7);
+    }
+
+    .search {
+      position: relative;
+    }
+
+    .search svg {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+    }
+
+    input[type="search"] {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      border-radius: 8px;
+      min-height: 42px;
+      padding: 9px 12px 9px 40px;
+      outline: none;
+    }
+
+    input[type="search"]:focus, select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(35, 89, 166, .12);
+    }
+
+    select {
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      border-radius: 8px;
+      min-height: 42px;
+      padding: 8px 34px 8px 12px;
+      cursor: pointer;
+    }
+
+    .toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 42px;
+      white-space: nowrap;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .toggle input {
+      appearance: none;
+      width: 38px;
+      height: 22px;
+      background: #cfd7e3;
+      border-radius: 999px;
+      position: relative;
+      cursor: pointer;
+      transition: .18s ease;
+    }
+
+    .toggle input::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      left: 2px;
+      top: 2px;
+      background: white;
+      border-radius: 50%;
+      transition: .18s ease;
+      box-shadow: 0 1px 4px rgba(0,0,0,.25);
+    }
+
+    .toggle input:checked {
+      background: var(--blue);
+    }
+
+    .toggle input:checked::after {
+      transform: translateX(16px);
+    }
+
+    .letters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 8px 0 24px;
+    }
+
+    .letter {
+      width: 34px;
+      height: 34px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--card);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 680;
+      cursor: pointer;
+    }
+
+    .letter.active {
+      background: var(--ink);
+      color: white;
+      border-color: var(--ink);
+    }
+
+    .section {
+      margin-top: 26px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: 0;
+      font-weight: 660;
+    }
+
+    .hint {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .year-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .year-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .year-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .year-title b {
+      font-size: 18px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 620;
+      border: 1px solid transparent;
+    }
+
+    .tag.exam {
+      color: var(--green);
+      background: #e8f5f0;
+      border-color: #cce9df;
+    }
+
+    .tag.extend {
+      color: var(--amber);
+      background: #fff4db;
+      border-color: #f2dda9;
+    }
+
+    .answer-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .answer-token {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 3px 8px;
+      border-radius: 7px;
+      background: #f2f5f8;
+      color: #2f3a46;
+      font-size: 13px;
+    }
+
+    .groups {
+      display: grid;
+      gap: 16px;
+    }
+
+    .group {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .group-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border-bottom: 1px solid var(--line);
+      padding: 12px 14px;
+      background: #fbfcfd;
+    }
+
+    .group-title strong {
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      padding: 12px;
+    }
+
+    .card {
+      border: 1px solid #e1e6ee;
+      border-radius: 8px;
+      padding: 12px;
+      background: #fff;
+      min-height: 156px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .word-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .word {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.1;
+      color: #152235;
+      overflow-wrap: anywhere;
+    }
+
+    .meaning {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    body.hide-meaning .meaning, body.hide-meaning .pattern, body.hide-meaning .cue {
+      filter: blur(5px);
+      user-select: none;
+    }
+
+    .pattern {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      color: var(--blue);
+      font-size: 12px;
+    }
+
+    .pattern span {
+      background: #edf3fb;
+      border: 1px solid #d8e6f7;
+      border-radius: 999px;
+      padding: 2px 7px;
+    }
+
+    .cue {
+      margin-top: auto;
+      color: #4a5566;
+      font-size: 13px;
+      border-top: 1px solid #edf0f4;
+      padding-top: 8px;
+    }
+
+    .source-note {
+      margin-top: 28px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .source-note b {
+      color: var(--ink);
+    }
+
+    .empty {
+      display: none;
+      border: 1px dashed #bcc7d6;
+      border-radius: 8px;
+      padding: 22px;
+      color: var(--muted);
+      background: #fff;
+      text-align: center;
+    }
+
+    @media (max-width: 920px) {
+      .topbar, .section-head { align-items: flex-start; flex-direction: column; }
+      .actions { justify-content: flex-start; min-width: 0; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .toolbar { grid-template-columns: 1fr 1fr; }
+      .search { grid-column: 1 / -1; }
+      .year-grid { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 620px) {
+      .shell { padding: 20px 14px 42px; }
+      .stats, .toolbar, .cards { grid-template-columns: 1fr; }
+      .toolbar { position: static; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
+      .toggle { justify-content: space-between; }
+      .letter { width: 32px; height: 32px; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .shell { max-width: none; padding: 0; }
+      .actions, .toolbar, .letters { display: none !important; }
+      .topbar { display: block; }
+      .stats { grid-template-columns: repeat(4, 1fr); }
+      .year-grid, .cards { grid-template-columns: repeat(2, 1fr); }
+      .group, .year-card, .stat, .source-note { box-shadow: none; break-inside: avoid; }
+      .card { min-height: 0; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow" aria-label="页面类型"><i data-lucide="book-open-check"></i> STM 首字母填空记忆页</div>
+        <h1>天津中考英语首字母填空常考最终答案</h1>
+        <p class="subtitle">按 2016-2025 天津中考综合填空公开题干与答案整理，并加入同题型模拟卷常见扩展词。主目标不是背完整文章，而是训练孩子看到首字母、语境和词形时能快速调出“最终答案”。</p>
+      </div>
+      <div class="actions" aria-label="页面操作">
+        <button class="pill-btn" id="dailyBtn" title="抽取今天要背的一组"><i data-lucide="calendar-days"></i> 今日20词</button>
+        <button class="icon-btn" id="printBtn" title="打印页面"><i data-lucide="printer"></i></button>
+      </div>
+    </header>
+
+    <section class="stats" aria-label="词库统计">
+      <div class="stat"><b id="totalCount">0</b><span>收录答案词</span></div>
+      <div class="stat"><b>100</b><span>10年真题最终答案</span></div>
+      <div class="stat"><b>26</b><span>按 A-Z 首字母索引</span></div>
+      <div class="stat"><b>6</b><span>建议每周循环次数</span></div>
+    </section>
+
+    <section class="toolbar" aria-label="筛选工具">
+      <label class="search">
+        <i data-lucide="search"></i>
+        <input id="searchInput" type="search" placeholder="搜索英文、中文、年份、搭配，例如 pleased / 2023 / 介词">
+      </label>
+      <select id="typeFilter" aria-label="词库筛选">
+        <option value="all">全部词库</option>
+        <option value="exam">只看真题答案</option>
+        <option value="extend">只看扩展词</option>
+      </select>
+      <label class="toggle"><span>隐藏释义</span><input id="hideMeaning" type="checkbox"></label>
+      <label class="toggle"><span>按字母展开</span><input id="compactMode" type="checkbox" checked></label>
+    </section>
+
+    <nav class="letters" id="letters" aria-label="首字母索引"></nav>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>10年真题最终答案速览</h2>
+        <div class="hint">先横向看年份，再纵向按首字母背；每行都是卷面最终填写答案。</div>
+      </div>
+      <div class="year-grid" id="yearGrid"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>首字母 STM 记忆卡片</h2>
+        <div class="hint" id="resultHint">正在加载词卡</div>
+      </div>
+      <div class="empty" id="emptyState">没有匹配的词。换一个关键词或清空筛选。</div>
+      <div class="groups" id="groups"></div>
+    </section>
+
+    <section class="source-note">
+      <b>资料口径：</b>真题主表依据公开可检索的 2016-2025 天津中考英语综合填空题干/答案整理；其中 2024、2023、2022、2019 答案可由公开 PDF/网页片段交叉确认。模拟扩展词来自天津同题型训练中高频出现的词性、搭配和语境，不标作官方真题词频。后续如果你提供学校一模、二模、区统练 PDF，我可以继续把页面升级成“真实词频版”。
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    const yearlyAnswers = [
+      { year: 2025, words: ["ago", "colder", "call", "brought", "huge", "today", "energy", "another", "light", "burning"] },
+      { year: 2024, words: ["protect", "easy", "search", "anything", "until", "cover", "grew", "animals", "farmers", "larger"] },
+      { year: 2023, words: ["pleased", "reasons", "easier", "face", "look", "around", "spread", "sad", "Finally", "stay"] },
+      { year: 2022, words: ["so", "walk", "books", "come", "different", "libraries", "fall", "travel", "later", "world"] },
+      { year: 2021, words: ["expensive", "When", "popular", "caused", "either", "method", "down", "journeys", "pleased", "working"] },
+      { year: 2020, words: ["nice", "enjoy", "another", "bed", "quiet", "stories", "like", "together", "help", "when"] },
+      { year: 2019, words: ["idea", "pleased", "divided", "stop", "themselves", "spread", "actions", "ready", "difficulties", "especially"] },
+      { year: 2018, words: ["ways", "invented", "sun", "cloudy", "first", "level", "failed", "but", "improved", "change"] },
+      { year: 2017, words: ["fly", "strong", "quickly", "reduce", "dangerous", "under", "until", "country", "alive", "training"] },
+      { year: 2016, words: ["experience", "how", "starts", "meal", "prepared", "delicious", "made", "whole", "electricity", "about"] }
+    ];
+
+    const meanings = {
+      about: "大约；关于", actions: "行动；行为", ago: "以前", alive: "活着的", animals: "动物", another: "另一个；又一", anything: "任何东西", around: "在周围；围绕",
+      bed: "床", books: "书", brought: "带来", burning: "燃烧", but: "但是",
+      call: "称呼；叫作", caused: "导致", change: "改变", cloudy: "多云的", colder: "更冷的", come: "来；回来", country: "国家", cover: "覆盖；遮盖",
+      dangerous: "危险的", delicious: "美味的", different: "不同的", difficulties: "困难", divided: "分开；划分", down: "下降；向下",
+      easier: "更容易的", easy: "容易的", either: "也；两者之一", electricity: "电", energy: "能量", enjoy: "喜欢；享受", especially: "尤其", expensive: "昂贵的", experience: "经历；体验",
+      face: "脸", failed: "失败；未能", fall: "落下；降落", farmers: "农民", Finally: "最后", first: "第一的；首先", fly: "飞",
+      grew: "生长", help: "帮助", how: "怎样", huge: "巨大的",
+      idea: "主意", improved: "改善；提高", invented: "发明",
+      journeys: "旅程", larger: "更大的", later: "以后", level: "水平；高度", libraries: "图书馆", light: "光", like: "像；例如", look: "看起来",
+      made: "制造；制作", meal: "一餐", method: "方法",
+      nice: "好的；令人愉快的",
+      pleased: "满意的；高兴的", popular: "受欢迎的", prepared: "准备好的", protect: "保护",
+      quickly: "快速地", quiet: "安静的",
+      ready: "准备好的", reasons: "原因", reduce: "减少",
+      sad: "难过的", search: "寻找；搜寻", so: "所以", spread: "传播；扩散", starts: "开始", stay: "保持；停留", stop: "停止", stories: "故事", strong: "强烈的；强壮的", sun: "太阳",
+      themselves: "他们自己", today: "今天；现在", together: "一起", training: "训练", travel: "旅行；出行",
+      under: "在下面", until: "直到",
+      walk: "步行", ways: "方式；方法", When: "当……时", when: "当……时", whole: "整个的", working: "工作；合作", world: "世界"
+    };
+
+    const patterns = {
+      about: ["数量估计", "介词/副词"], actions: ["名词复数", "行为线索"], ago: ["时间状语", "过去对比"], alive: ["stay alive", "形容词"], animals: ["名词复数"], another: ["限定词", "another thing/cause"], anything: ["不定代词"], around: ["be around sb.", "介词"],
+      bed: ["名词", "生活场景"], books: ["名词复数"], brought: ["过去式", "bring-brought"], burning: ["动名词", "by doing"], but: ["转折连词"],
+      call: ["动词原形", "主谓一致"], caused: ["过去式", "cause pollution"], change: ["动词原形", "never + v."], cloudy: ["形容词", "weather"], colder: ["比较级"], come: ["come back"], country: ["名词单数"], cover: ["动词原形", "cover bodies"],
+      dangerous: ["形容词", "It is + adj."], delicious: ["形容词"], different: ["形容词"], difficulties: ["名词复数"], divided: ["过去式"], down: ["go down", "副词"],
+      easier: ["比较级"], easy: ["形容词"], either: ["否定句末", "也"], electricity: ["名词"], energy: ["不可数名词"], enjoy: ["enjoy doing"], especially: ["副词"], expensive: ["形容词"], experience: ["名词"],
+      face: ["名词"], failed: ["fail to do"], fall: ["动词原形"], farmers: ["名词复数"], Finally: ["段首副词"], first: ["序数词"], fly: ["情态动词后原形"],
+      grew: ["过去式", "grow-grew"], help: ["help do"], how: ["疑问副词"], huge: ["形容词"],
+      idea: ["名词单数"], improved: ["过去式"], invented: ["过去式"],
+      journeys: ["名词复数"], larger: ["比较级"], later: ["时间副词"], level: ["名词"], libraries: ["名词复数"], light: ["不可数名词"], like: ["介词", "举例"], look: ["look nice"],
+      made: ["被动语态", "made by"], meal: ["名词"], method: ["名词单数"],
+      nice: ["形容词"],
+      pleased: ["be pleased with"], popular: ["形容词"], prepared: ["被动/形容词"], protect: ["protect...from"],
+      quickly: ["副词修饰动词"], quiet: ["形容词"],
+      ready: ["be ready"], reasons: ["名词复数"], reduce: ["to + 原形"],
+      sad: ["形容词"], search: ["search for"], so: ["结果连词"], spread: ["动词原形/过去式同形"], starts: ["三单"], stay: ["stay + adj."], stop: ["stop doing"], stories: ["名词复数"], strong: ["形容词"], sun: ["名词"],
+      themselves: ["by themselves"], today: ["时间副词"], together: ["work together"], training: ["名词"], travel: ["动词"],
+      under: ["介词"], until: ["连词/介词"],
+      walk: ["动词"], ways: ["名词复数"], When: ["时间连词"], when: ["时间连词"], whole: ["形容词"], working: ["work together"], world: ["a world of"]
+    };
+
+    const cues = {
+      pleased: "p____ with progress / suggestion",
+      spread: "news / smiles s____ from one to another",
+      until: "stay there u____ the shaking stops",
+      another: "a____ thing / cause",
+      different: "in a d____ way",
+      especially: "happy to study, e____ in their new school",
+      electricity: "robots go for a meal, which is e____",
+      dangerous: "jump out of high buildings is d____",
+      libraries: "their l____ are carried by elephants",
+      journeys: "not useful for long j____"
+    };
+
+    const extensions = [
+      ["although", "虽然", "让步连词", "A____ it was raining, they kept working."],
+      ["because", "因为", "原因连词", "He smiled b____ he heard good news."],
+      ["before", "在……之前", "时间连词", "Turn off the lights b____ leaving."],
+      ["behind", "在后面；落后", "介词/副词", "They were b____ in their studies."],
+      ["between", "在两者之间", "介词", "The competition is b____ six and ten."],
+      ["carefully", "仔细地", "副词", "Read the passage c____ before filling."],
+      ["common", "普通的；常见的", "形容词", "It is a c____ problem for students."],
+      ["comfortable", "舒服的", "形容词", "a c____ bed"],
+      ["continue", "继续", "动词", "They can c____ their work."],
+      ["correct", "正确的", "形容词", "Find the c____ answer from context."],
+      ["decided", "决定", "过去式", "They d____ to finish it themselves."],
+      ["during", "在……期间", "介词", "D____ the earthquake, keep calm."],
+      ["enough", "足够的", "限定词/副词", "e____ food for several days"],
+      ["example", "例子", "名词", "For e____, springs were added."],
+      ["favourite", "最喜欢的", "形容词", "your f____ things"],
+      ["foreign", "外国的", "形容词", "two f____ visitors"],
+      ["happen", "发生", "动词", "prevent it from h____"],
+      ["healthy", "健康的", "形容词", "a h____ way of living"],
+      ["important", "重要的", "形容词", "life is the most i____ of all"],
+      ["inside", "在里面", "副词/介词", "shows books to the kids i____"],
+      ["instead", "代替；反而", "副词", "I____, petrol cars became popular."],
+      ["interesting", "有趣的", "形容词", "share i____ stories"],
+      ["less", "更少", "比较级", "less polluting cars"],
+      ["modern", "现代的", "形容词", "not m____, but useful"],
+      ["natural", "自然的", "形容词", "n____ cause"],
+      ["nearby", "在附近", "副词", "If there is no shelter n____"],
+      ["probably", "可能", "副词", "It was p____ another cause."],
+      ["proper", "合适的", "形容词", "another p____ place"],
+      ["realise", "意识到", "动词", "People began to r____ the problem."],
+      ["remember", "记得", "动词", "R____ the fixed phrase."],
+      ["several", "几个", "限定词", "for s____ days"],
+      ["similar", "相似的", "形容词", "s____ problems appear in mock tests"],
+      ["special", "特殊的", "形容词", "makes home s____"],
+      ["suggestion", "建议", "名词", "be pleased with his s____"],
+      ["survive", "幸存", "动词", "how to s____ earthquakes"],
+      ["usually", "通常", "副词", "They u____ lived in groups."],
+      ["without", "没有", "介词", "w____ stopping"],
+      ["wonderful", "精彩的", "形容词", "It is w____ to see robots work."]
+    ];
+
+    function buildEntries() {
+      const map = new Map();
+      yearlyAnswers.forEach(({ year, words }) => {
+        words.forEach((raw) => {
+          const key = raw.toLowerCase();
+          const entry = map.get(key) || {
+            word: raw,
+            meaning: meanings[raw] || meanings[key] || "结合上下文判断",
+            pattern: patterns[raw] || patterns[key] || ["语境词"],
+            cue: cues[raw] || cues[key] || `${raw[0].toLowerCase()}____`,
+            years: [],
+            type: "exam"
+          };
+          entry.years.push(year);
+          if (raw[0] === raw[0].toUpperCase()) entry.word = raw;
+          map.set(key, entry);
+        });
+      });
+
+      extensions.forEach(([word, meaning, pattern, cue]) => {
+        const key = word.toLowerCase();
+        if (!map.has(key)) {
+          map.set(key, {
+            word, meaning, pattern: [pattern, "模拟扩展"], cue, years: ["扩展"], type: "extend"
+          });
+        }
+      });
+
+      return [...map.values()].sort((a, b) => a.word.localeCompare(b.word, "en"));
+    }
+
+    const entries = buildEntries();
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+    let activeLetter = "ALL";
+    let dailyOnly = false;
+
+    const groupsEl = document.querySelector("#groups");
+    const lettersEl = document.querySelector("#letters");
+    const resultHint = document.querySelector("#resultHint");
+    const emptyState = document.querySelector("#emptyState");
+    const searchInput = document.querySelector("#searchInput");
+    const typeFilter = document.querySelector("#typeFilter");
+    const compactMode = document.querySelector("#compactMode");
+
+    document.querySelector("#totalCount").textContent = entries.length;
+
+    function renderYears() {
+      const grid = document.querySelector("#yearGrid");
+      grid.innerHTML = yearlyAnswers.map(({ year, words }) => `
+        <article class="year-card">
+          <div class="year-title"><b>${year}</b><span class="tag exam">真题最终答案</span></div>
+          <div class="answer-line">${words.map((word, i) => `<span class="answer-token">${i + 1}. ${word}</span>`).join("")}</div>
+        </article>
+      `).join("");
+    }
+
+    function renderLetters() {
+      lettersEl.innerHTML = `<button class="letter ${activeLetter === "ALL" ? "active" : ""}" data-letter="ALL">全</button>` +
+        letters.map(letter => `<button class="letter ${activeLetter === letter ? "active" : ""}" data-letter="${letter}">${letter}</button>`).join("");
+    }
+
+    function todaySet(list) {
+      const now = new Date();
+      const seed = Math.floor((Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) / 86400000));
+      return list.filter((_, index) => ((index * 17 + seed) % 7) < 1).slice(0, 20);
+    }
+
+    function matches(entry, query) {
+      if (!query) return true;
+      const text = [
+        entry.word,
+        entry.meaning,
+        entry.pattern.join(" "),
+        entry.cue,
+        entry.years.join(" ")
+      ].join(" ").toLowerCase();
+      return text.includes(query);
+    }
+
+    function renderCards() {
+      const query = searchInput.value.trim().toLowerCase();
+      const type = typeFilter.value;
+      let list = entries.filter(entry => {
+        const first = entry.word[0].toUpperCase();
+        return (activeLetter === "ALL" || first === activeLetter) &&
+          (type === "all" || entry.type === type) &&
+          matches(entry, query);
+      });
+      if (dailyOnly) list = todaySet(entries).filter(entry => list.includes(entry));
+
+      const grouped = list.reduce((acc, entry) => {
+        const letter = entry.word[0].toUpperCase();
+        (acc[letter] ||= []).push(entry);
+        return acc;
+      }, {});
+
+      groupsEl.innerHTML = Object.keys(grouped).sort().map(letter => `
+        <section class="group">
+          <div class="group-title">
+            <strong>${letter}</strong>
+            <span class="hint">${grouped[letter].length} 个词</span>
+          </div>
+          <div class="cards">
+            ${grouped[letter].map(cardTemplate).join("")}
+          </div>
+        </section>
+      `).join("");
+
+      resultHint.textContent = dailyOnly ? `今日抽背 ${list.length} 个词` : `当前显示 ${list.length} 个词`;
+      emptyState.style.display = list.length ? "none" : "block";
+      groupsEl.style.display = list.length ? "grid" : "none";
+    }
+
+    function cardTemplate(entry) {
+      const tagClass = entry.type === "exam" ? "exam" : "extend";
+      const tagText = entry.type === "exam" ? entry.years.join(" / ") : "模拟扩展";
+      return `
+        <article class="card">
+          <div class="word-row">
+            <div>
+              <div class="word">${entry.word}</div>
+              <div class="meaning">${entry.meaning}</div>
+            </div>
+            <span class="tag ${tagClass}">${tagText}</span>
+          </div>
+          <div class="pattern">${entry.pattern.map(item => `<span>${item}</span>`).join("")}</div>
+          <div class="cue">${entry.cue}</div>
+        </article>
+      `;
+    }
+
+    lettersEl.addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-letter]");
+      if (!button) return;
+      activeLetter = button.dataset.letter;
+      dailyOnly = false;
+      renderLetters();
+      renderCards();
+    });
+
+    searchInput.addEventListener("input", () => { dailyOnly = false; renderCards(); });
+    typeFilter.addEventListener("change", () => { dailyOnly = false; renderCards(); });
+    compactMode.addEventListener("change", () => {
+      document.querySelectorAll(".group").forEach((group) => {
+        group.open = compactMode.checked;
+      });
+    });
+    document.querySelector("#hideMeaning").addEventListener("change", (event) => {
+      document.body.classList.toggle("hide-meaning", event.target.checked);
+    });
+    document.querySelector("#printBtn").addEventListener("click", () => window.print());
+    document.querySelector("#dailyBtn").addEventListener("click", () => {
+      activeLetter = "ALL";
+      dailyOnly = true;
+      renderLetters();
+      renderCards();
+      window.scrollTo({ top: document.querySelector("#groups").offsetTop - 20, behavior: "smooth" });
+    });
+
+    renderYears();
+    renderLetters();
+    renderCards();
+    lucide.createIcons({ attrs: { "stroke-width": 1.5, width: 18, height: 18 } });
+  </script>
+</body>
+</html>
