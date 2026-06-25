@@ -1,12 +1,427 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=./tianjin-history-papers/">
-  <title>Course Review Materials</title>
+  <title>课程复习资料导航</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f8fb;
+      --panel: #ffffff;
+      --text: #17202a;
+      --muted: #5c6675;
+      --line: #dde3ea;
+      --accent: #1f7a6d;
+      --accent-2: #b45309;
+      --link: #185abc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: #ffffff;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 44px 0 28px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .quick {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 20px 0 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .quick a {
+      display: inline-flex;
+      min-height: 38px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #f9fafb;
+      padding: 7px 12px;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    main {
+      padding: 30px 0 54px;
+    }
+
+    section {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:last-child {
+      border-bottom: 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .count {
+      color: var(--muted);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .entry {
+      min-height: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 14px 15px;
+    }
+
+    .entry strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .entry span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-right: 6px;
+      color: var(--accent-2);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .primary {
+      border-color: rgba(31, 122, 109, 0.35);
+      background: #f4fbf8;
+    }
+
+    .primary .tag {
+      color: var(--accent);
+    }
+
+    footer {
+      padding: 24px 0 34px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        width: min(100% - 22px, 1120px);
+      }
+
+      .hero {
+        padding: 30px 0 22px;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .count {
+        display: block;
+        margin-top: 4px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <p><a href="./tianjin-history-papers/">Open course review materials</a></p>
+  <header>
+    <div class="wrap hero">
+      <h1>课程复习资料导航</h1>
+      <p class="lead">统一入口页，汇总当前仓库内可直接访问的复习页面、真题索引、练习工具和资料文件。</p>
+      <ul class="quick" aria-label="快速跳转">
+        <li><a href="#history">历史</a></li>
+        <li><a href="#english">英语</a></li>
+        <li><a href="#geography">地理</a></li>
+        <li><a href="#writing">作文</a></li>
+        <li><a href="#tianjin-papers">天津历史真题</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="history">
+      <div class="section-head">
+        <h2>历史学习</h2>
+        <span class="count">3 个入口</span>
+      </div>
+      <div class="grid">
+        <a class="entry primary" href="历史学习/七升八历史京津期末真题汇总与标准答案.html">
+          <strong><span class="tag">重点</span>七升八历史京津期末真题汇总与标准答案</strong>
+          <span>汇总真题、标准答案与复习材料。</span>
+        </a>
+        <a class="entry" href="历史学习/初一升初二历史复习材料.html">
+          <strong>初一升初二历史复习材料</strong>
+          <span>面向暑期衔接的历史复习页面。</span>
+        </a>
+        <a class="entry" href="历史学习/初一升初二历史快速复习大纲与材料.md">
+          <strong>初一升初二历史快速复习大纲与材料</strong>
+          <span>Markdown 版复习大纲。</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="english">
+      <div class="section-head">
+        <h2>英语首字母填空</h2>
+        <span class="count">8 个入口</span>
+      </div>
+      <div class="grid">
+        <a class="entry primary" href="英语首字母填空/word-trainer.html">
+          <strong><span class="tag">工具</span>Word Trainer</strong>
+          <span>词汇训练与复习工具。</span>
+        </a>
+        <a class="entry" href="英语首字母填空/tianjin-grade7-to8-first-letter-review.html">
+          <strong>天津七升八首字母填空复习</strong>
+          <span>按题型整理的复习页面。</span>
+        </a>
+        <a class="entry" href="英语首字母填空/tianjin-grade7-to8-cloze-answers.html">
+          <strong>七升八完形/填空答案</strong>
+          <span>答案整理页面。</span>
+        </a>
+        <a class="entry" href="英语首字母填空/tianjin-grade7-district-first-letter-answers.html">
+          <strong>天津七年级区级首字母答案</strong>
+          <span>HTML 版答案表。</span>
+        </a>
+        <a class="entry" href="英语首字母填空/tianjin-first-letter-answer-summary.html">
+          <strong>首字母答案汇总</strong>
+          <span>区级题目答案汇总。</span>
+        </a>
+        <a class="entry" href="英语首字母填空/tianjin-first-letter-stm.html">
+          <strong>首字母 STM 资料</strong>
+          <span>专项训练材料。</span>
+        </a>
+        <a class="entry" href="英语首字母填空/tianjin-grade7-district-first-letter-answers.csv">
+          <strong>区级首字母答案 CSV</strong>
+          <span>表格数据源。</span>
+        </a>
+        <a class="entry" href="英语首字母填空/word-bank-tianjin-national.csv">
+          <strong>天津/全国词库 CSV</strong>
+          <span>词库数据源。</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="geography">
+      <div class="section-head">
+        <h2>地理学习</h2>
+        <span class="count">1 个入口</span>
+      </div>
+      <div class="grid">
+        <a class="entry primary" href="地理学习/tianjin-geography-review.html">
+          <strong><span class="tag">复习</span>天津地理复习</strong>
+          <span>地理知识点与复习页面。</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="writing">
+      <div class="section-head">
+        <h2>优秀初中作文</h2>
+        <span class="count">1 个入口</span>
+      </div>
+      <div class="grid">
+        <a class="entry primary" href="优秀初中作文/初中作文经典范文学习手册.html">
+          <strong><span class="tag">范文</span>初中作文经典范文学习手册</strong>
+          <span>作文范文与写作参考。</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="tianjin-papers">
+      <div class="section-head">
+        <h2>天津七升八历史真题库</h2>
+        <span class="count">19 个入口</span>
+      </div>
+      <div class="grid">
+        <a class="entry primary" href="tianjin-history-papers/index.html">
+          <strong><span class="tag">索引</span>天津城六区七升八历史期末真题索引</strong>
+          <span>真题入口、预览图、核验记录与下载状态。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/天津七升八历史真题清晰校准版.html">
+          <strong>天津七升八历史真题清晰校准版</strong>
+          <span>HTML 版清晰校准题册。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/天津七升八历史真题原题图片版.html">
+          <strong>天津七升八历史真题原题图片版</strong>
+          <span>HTML 版原题图片题册。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/天津七升八历史真题文字版_OCR校订.html">
+          <strong>天津七升八历史真题文字版 OCR 校订</strong>
+          <span>HTML 版 OCR 校订文本。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/pages/2024-2025-hedong-jiexi-17253994.html">
+          <strong>2024-2025 河东区解析版</strong>
+          <span>教习网详情页与公开预览。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/pages/2024-2025-heping-jiexi-17181775.html">
+          <strong>2024-2025 和平区解析版</strong>
+          <span>教习网详情页与公开预览。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/pages/2024-2025-hexi-jiexi-a-17132188.html">
+          <strong>2024-2025 河西区解析版 A</strong>
+          <span>教习网详情页与公开预览。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/pages/2024-2025-hexi-jiexi-b-17172120.html">
+          <strong>2024-2025 河西区解析版 B</strong>
+          <span>教习网详情页与公开预览。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/pages/2023-2024-hebei-yuanjuan-15953970.html">
+          <strong>2023-2024 河北区原卷</strong>
+          <span>恩信龙详情页与公开预览。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/pages/2023-2024-heping-yuanjuan-15957689.html">
+          <strong>2023-2024 和平区原卷</strong>
+          <span>恩信龙详情页与公开预览。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/pages/2023-2024-hexi-yuanjie-16056300.html">
+          <strong>2023-2024 河西区原卷+解析</strong>
+          <span>恩信龙详情页与公开预览。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/pages/2023-2024-hexi-yuanjuan-16056420.html">
+          <strong>2023-2024 河西区原卷</strong>
+          <span>恩信龙详情页与公开预览。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/pages/2023-2024-baodi-5di-yuanjuan-16068416.html">
+          <strong>2023-2024 宝坻等 5 地原卷</strong>
+          <span>天津同届参考卷。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/quark-hebei-2022-2023.html">
+          <strong>2022-2023 河北区夸克文档</strong>
+          <span>夸克页面保存记录。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/zxxk-tianjin-history.html">
+          <strong>学科网天津历史页面</strong>
+          <span>平台页面壳与核验记录。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/zxxk-tianjin-2025-papers.html">
+          <strong>学科网天津 2025 试卷页面</strong>
+          <span>平台页面壳与核验记录。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/51jiaoxi-17253994-ua.html">
+          <strong>教习网河东区页面备份</strong>
+          <span>2024-2025 河东区条目页面。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/enxinlong-15932727.html">
+          <strong>恩信龙页面备份</strong>
+          <span>平台条目页面保存记录。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/enxinlong-15932727-ua.html">
+          <strong>恩信龙 UA 页面备份</strong>
+          <span>使用浏览器 UA 保存的平台条目页面。</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="downloads">
+      <div class="section-head">
+        <h2>可下载资料</h2>
+        <span class="count">7 个入口</span>
+      </div>
+      <div class="grid">
+        <a class="entry" href="tianjin-history-papers/天津七升八历史真题清晰校准版.pdf">
+          <strong>历史真题清晰校准版 PDF</strong>
+          <span>适合打印与离线阅读。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/天津七升八历史真题原题图片版.pdf">
+          <strong>历史真题原题图片版 PDF</strong>
+          <span>保留图片版原题。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/天津七升八历史真题文字版_OCR校订.pdf">
+          <strong>历史真题文字版 OCR 校订 PDF</strong>
+          <span>文字校订版 PDF。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/README.md">
+          <strong>天津历史真题 README</strong>
+          <span>索引说明与人工下载建议。</span>
+        </a>
+        <a class="entry" href="英语首字母填空/word-bank-sources.md">
+          <strong>英语词库来源说明</strong>
+          <span>Markdown 版来源记录。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/天津七升八历史真题原题图片版.md">
+          <strong>历史真题原题图片版 Markdown</strong>
+          <span>题册 Markdown 源文件。</span>
+        </a>
+        <a class="entry" href="tianjin-history-papers/天津七升八历史真题文字版_OCR校订.md">
+          <strong>历史真题文字版 OCR 校订 Markdown</strong>
+          <span>OCR 校订 Markdown 源文件。</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">GitHub Pages 默认入口：本页面。所有链接均为仓库内相对路径。</div>
+  </footer>
 </body>
 </html>
